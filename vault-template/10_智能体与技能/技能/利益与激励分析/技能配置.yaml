@@ -1,0 +1,52 @@
+{
+  "formatVersion": 3,
+  "id": "xingzhi-incentive-structure-analysis",
+  "label": "利益与激励分析",
+  "description": "当多方互动的可观察成本、收益、信息、控制权或重复关系会改变各方可选行动，而且重构激励能够改变方案、风险或下一步时使用；单方任务、普通价格比较、无证据动机猜测、理论介绍和文本转换不使用。",
+  "version": "1.0.0",
+  "source": "compiled",
+  "protected": false,
+  "enabled": true,
+  "loadMode": "on-demand",
+  "skillPath": "10_智能体与技能/技能/利益与激励分析/SKILL.md",
+  "surface": "user",
+  "invocation": "explicit",
+  "skillType": "cognitive-lens",
+  "primaryEligible": false,
+  "controlsFinalLayout": false,
+  "returnsStructuredResult": true,
+  "capabilities": [
+    "利益与激励分析"
+  ],
+  "intents": [
+    "利益与激励分析"
+  ],
+  "tags": [
+    "cognitive-lens",
+    "incentive-structure-analysis"
+  ],
+  "requires": [],
+  "optionalDependencies": [],
+  "conflicts": [],
+  "recommendedOperators": [
+    "incentive-structure-analysis"
+  ],
+  "readScopes": [],
+  "riskLevel": "bounded",
+  "maxDependencyDepth": 0,
+  "toolRequests": [],
+  "compiledFrom": {
+    "schemaVersion": "xingzhi-skill-compile/v1",
+    "sourceSchemaVersion": "xingzhi-skill/v1",
+    "sourcePath": "10_智能体与技能/技能/利益与激励分析/SKILL.md",
+    "sourceVersion": "1.0.0",
+    "contentHash": "sha256:a84827124ba4eacd5dfb47f50ba58fc3b7d4e3c1637216f3ca463681599d1624",
+    "skillType": "cognitive-lens",
+    "operators": [
+      {
+        "id": "incentive-structure-analysis",
+        "mode": "incentive-structure"
+      }
+    ]
+  }
+}

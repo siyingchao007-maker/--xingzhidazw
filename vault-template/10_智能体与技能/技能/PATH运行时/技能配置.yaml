@@ -1,0 +1,65 @@
+{
+  "formatVersion": 3,
+  "id": "xingzhi-path-runtime",
+  "label": "PATH 运行时",
+  "description": "处理真实、复杂或不确定的处境理解、选择、行动与结果复盘；承接已有思考并帮助发现相关视角、关系、解释、可能性和重要未知。PATH按本轮需要或用户明确要求呈现，不机械填满四阶段。",
+  "version": "1.6.0",
+  "source": "user",
+  "protected": false,
+  "enabled": true,
+  "loadMode": "on-demand",
+  "skillPath": "10_智能体与技能/技能/PATH运行时/SKILL.md",
+  "surface": "user",
+  "invocation": "implicit",
+  "capabilities": [
+    "观境：处境与行动空间分析",
+    "立心：价值澄清与方向确认",
+    "践真：具体成果、行动设计与观察",
+    "知变：成果回看、认识更新与下一轮条件",
+    "按需呈现 PATH 四阶段关系与真实状态",
+    "PATH 会话状态管理",
+    "可追溯写回协议"
+  ],
+  "intents": [
+    "观境：处境与行动空间分析",
+    "立心：价值澄清与方向确认",
+    "践真：具体成果、行动设计与观察",
+    "知变：成果回看、认识更新与下一轮条件",
+    "按需呈现 PATH 四阶段关系与真实状态",
+    "PATH 会话状态管理",
+    "可追溯写回协议",
+    "使用PATH",
+    "调用PATH",
+    "进入观境",
+    "进入观镜或关镜",
+    "进入立心",
+    "进入践真",
+    "进入见真",
+    "进入知变",
+    "完整PATH分析"
+  ],
+  "requires": [],
+  "optionalDependencies": [
+    "xingzhi-judgment-calibration",
+    "xingzhi-action-feedback",
+    "xingzhi-multi-perspective"
+  ],
+  "conflicts": [],
+  "recommendedOperators": [],
+  "readScopes": [
+    "01_当前的我",
+    "02_我的历史",
+    "03_环境",
+    "05_目标与项目",
+    "06_判断与决策",
+    "07_行动",
+    "08_结果与反馈",
+    "09_认知资产",
+    "11_证据与来源"
+  ],
+  "riskLevel": "bounded",
+  "maxDependencyDepth": 2,
+  "toolRequests": [
+    "xingzhi_search_knowledge"
+  ]
+}

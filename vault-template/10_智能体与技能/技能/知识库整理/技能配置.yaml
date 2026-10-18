@@ -1,0 +1,47 @@
+{
+  "formatVersion": 3,
+  "id": "xingzhi-knowledge-organization",
+  "label": "知识库整理",
+  "description": "用户需要整理目录、标签、引用、知识对象或排查结构问题时使用；操作前辨别当前稿、历史稿、候选和来源。",
+  "version": "1.5.1",
+  "source": "core",
+  "protected": true,
+  "enabled": true,
+  "loadMode": "on-demand",
+  "skillPath": "10_智能体与技能/技能/知识库整理/SKILL.md",
+  "surface": "user",
+  "invocation": "implicit",
+  "capabilities": [
+    "内容规范化",
+    "目录与标签整理",
+    "双向链接检查",
+    "Markdown 排版"
+  ],
+  "intents": [
+    "内容规范化",
+    "目录与标签整理",
+    "双向链接检查",
+    "Markdown 排版"
+  ],
+  "requires": [],
+  "optionalDependencies": [],
+  "conflicts": [],
+  "recommendedOperators": [],
+  "readScopes": [
+    "01_当前的我",
+    "02_我的历史",
+    "03_环境",
+    "04_关系",
+    "05_目标与项目",
+    "06_判断与决策",
+    "07_行动",
+    "08_结果与反馈",
+    "09_认知资产",
+    "11_证据与来源"
+  ],
+  "riskLevel": "bounded",
+  "maxDependencyDepth": 2,
+  "toolRequests": [
+    "xingzhi_search_knowledge"
+  ]
+}

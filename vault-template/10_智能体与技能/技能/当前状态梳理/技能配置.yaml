@@ -1,0 +1,64 @@
+{
+  "formatVersion": 3,
+  "id": "xingzhi-current-state-synthesis",
+  "label": "当前状态梳理",
+  "description": "当用户明确要求结合近期个人记录梳理我现在是什么状态、最近发生了什么变化或当前卡点时使用；单份材料摘要、人格定型或只查看当天任务不使用。",
+  "version": "1.0.1",
+  "source": "extension",
+  "protected": false,
+  "enabled": true,
+  "loadMode": "on-demand",
+  "skillPath": "10_智能体与技能/技能/当前状态梳理/SKILL.md",
+  "surface": "user",
+  "invocation": "implicit",
+  "capabilities": [
+    "有时间边界的状态快照",
+    "事实与自述分层",
+    "目标行动结果对齐",
+    "矛盾与信息时效检查"
+  ],
+  "intents": [
+    "当前状态梳理",
+    "我现在的真实状态",
+    "我的当前卡点",
+    "梳理我最近的真实状态",
+    "我现在是什么状态",
+    "我现在到底处于什么状态",
+    "结合近期记录看我的现状",
+    "我最近发生了什么变化",
+    "分析我当前的主要卡点"
+  ],
+  "tags": [
+    "状态快照",
+    "真实状态",
+    "近期变化",
+    "当前卡点",
+    "未闭环事项"
+  ],
+  "requires": [],
+  "optionalDependencies": [
+    {
+      "id": "xingzhi-judgment-calibration",
+      "requiresVersion": ">=1.5.0",
+      "whenIntents": ["判断", "选择", "是否应该", "方案比较", "风险"]
+    },
+    {
+      "id": "xingzhi-action-feedback",
+      "requiresVersion": ">=1.5.0",
+      "whenIntents": ["下一步", "行动", "推进", "具体计划", "记录反馈"]
+    }
+  ],
+  "conflicts": [],
+  "recommendedOperators": [],
+  "readScopes": [
+    "01_当前的我",
+    "05_目标与项目",
+    "06_判断与决策",
+    "07_行动",
+    "08_结果与反馈",
+    "11_证据与来源"
+  ],
+  "riskLevel": "bounded",
+  "maxDependencyDepth": 2,
+  "toolRequests": ["xingzhi_search_knowledge"]
+}

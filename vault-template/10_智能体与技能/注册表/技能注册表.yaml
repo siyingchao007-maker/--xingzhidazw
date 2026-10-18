@@ -1,0 +1,126 @@
+{
+  "formatVersion": 3,
+  "registryType": "xingzhi-skill-registry",
+  "skills": [
+    {
+      "id": "xingzhi-training-response",
+      "configPath": "10_智能体与技能/技能/训练式回答/技能配置.yaml",
+      "skillPath": "10_智能体与技能/技能/训练式回答/SKILL.md"
+    },
+    {
+      "id": "xingzhi-document-synthesis",
+      "configPath": "10_智能体与技能/技能/资料整合/技能配置.yaml",
+      "skillPath": "10_智能体与技能/技能/资料整合/SKILL.md"
+    },
+    {
+      "id": "xingzhi-knowledge-organization",
+      "configPath": "10_智能体与技能/技能/知识库整理/技能配置.yaml",
+      "skillPath": "10_智能体与技能/技能/知识库整理/SKILL.md"
+    },
+    {
+      "id": "xingzhi-knowledge-packaging",
+      "configPath": "10_智能体与技能/技能/知识分包/技能配置.yaml",
+      "skillPath": "10_智能体与技能/技能/知识分包/SKILL.md"
+    },
+    {
+      "id": "xingzhi-judgment-calibration",
+      "configPath": "10_智能体与技能/技能/判断校准/技能配置.yaml",
+      "skillPath": "10_智能体与技能/技能/判断校准/SKILL.md"
+    },
+    {
+      "id": "xingzhi-action-feedback",
+      "configPath": "10_智能体与技能/技能/行动反馈/技能配置.yaml",
+      "skillPath": "10_智能体与技能/技能/行动反馈/SKILL.md"
+    },
+    {
+      "id": "xingzhi-multi-perspective",
+      "configPath": "10_智能体与技能/技能/多视角分析/技能配置.yaml",
+      "skillPath": "10_智能体与技能/技能/多视角分析/SKILL.md"
+    },
+    {
+      "id": "xingzhi-interaction-event-extraction",
+      "configPath": "10_智能体与技能/技能/交互事件提取/技能配置.yaml",
+      "skillPath": "10_智能体与技能/技能/交互事件提取/SKILL.md"
+    },
+    {
+      "id": "xingzhi-user-profile-evolution",
+      "configPath": "10_智能体与技能/技能/用户画像演变/技能配置.yaml",
+      "skillPath": "10_智能体与技能/技能/用户画像演变/SKILL.md"
+    },
+    {
+      "id": "xingzhi-growth-path-synthesis",
+      "configPath": "10_智能体与技能/技能/成长路径生成/技能配置.yaml",
+      "skillPath": "10_智能体与技能/技能/成长路径生成/SKILL.md"
+    },
+    {
+      "id": "xingzhi-conversation-organization",
+      "configPath": "10_智能体与技能/技能/对话自动整理/技能配置.yaml",
+      "skillPath": "10_智能体与技能/技能/对话自动整理/SKILL.md"
+    },
+    {
+      "id": "adaptive-sales-coach",
+      "configPath": "10_智能体与技能/技能/自适应销售教练/技能配置.yaml",
+      "skillPath": "10_智能体与技能/技能/自适应销售教练/SKILL.md"
+    },
+    {
+      "id": "xingzhi-current-state-synthesis",
+      "configPath": "10_智能体与技能/技能/当前状态梳理/技能配置.yaml",
+      "skillPath": "10_智能体与技能/技能/当前状态梳理/SKILL.md"
+    },
+    {
+      "id": "xingzhi-periodic-review",
+      "configPath": "10_智能体与技能/技能/阶段复盘与路径校准/技能配置.yaml",
+      "skillPath": "10_智能体与技能/技能/阶段复盘与路径校准/SKILL.md"
+    },
+    {
+      "id": "xingzhi-career-path-validation",
+      "configPath": "10_智能体与技能/技能/职业路径验证/技能配置.yaml",
+      "skillPath": "10_智能体与技能/技能/职业路径验证/SKILL.md"
+    },
+    {
+      "id": "xingzhi-product-business-validation",
+      "configPath": "10_智能体与技能/技能/产品与商业验证/技能配置.yaml",
+      "skillPath": "10_智能体与技能/技能/产品与商业验证/SKILL.md"
+    },
+    {
+      "id": "xingzhi-first-principles",
+      "configPath": "10_智能体与技能/技能/第一性重建/技能配置.yaml",
+      "skillPath": "10_智能体与技能/技能/第一性重建/SKILL.md"
+    },
+    {
+      "id": "xingzhi-system-feedback-analysis",
+      "configPath": "10_智能体与技能/技能/系统与反馈分析/技能配置.yaml",
+      "skillPath": "10_智能体与技能/技能/系统与反馈分析/SKILL.md"
+    },
+    {
+      "id": "xingzhi-causal-evidence-audit",
+      "configPath": "10_智能体与技能/技能/因果与证据检验/技能配置.yaml",
+      "skillPath": "10_智能体与技能/技能/因果与证据检验/SKILL.md"
+    },
+    {
+      "id": "xingzhi-reversal-failure-conditions",
+      "configPath": "10_智能体与技能/技能/反演与失败条件/技能配置.yaml",
+      "skillPath": "10_智能体与技能/技能/反演与失败条件/SKILL.md"
+    },
+    {
+      "id": "xingzhi-contradiction-stage-analysis",
+      "configPath": "10_智能体与技能/技能/矛盾与阶段分析/技能配置.yaml",
+      "skillPath": "10_智能体与技能/技能/矛盾与阶段分析/SKILL.md"
+    },
+    {
+      "id": "xingzhi-incentive-structure-analysis",
+      "configPath": "10_智能体与技能/技能/利益与激励分析/技能配置.yaml",
+      "skillPath": "10_智能体与技能/技能/利益与激励分析/SKILL.md"
+    },
+    {
+      "id": "xingzhi-personal-business-opportunity-audit",
+      "configPath": "10_智能体与技能/技能/个人商业机会审计/技能配置.yaml",
+      "skillPath": "10_智能体与技能/技能/个人商业机会审计/SKILL.md"
+    },
+    {
+      "id": "xingzhi-path-runtime",
+      "configPath": "10_智能体与技能/技能/PATH运行时/技能配置.yaml",
+      "skillPath": "10_智能体与技能/技能/PATH运行时/SKILL.md"
+    }
+  ]
+}

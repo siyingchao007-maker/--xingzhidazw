@@ -1,0 +1,60 @@
+{
+  "formatVersion": 3,
+  "id": "xingzhi-causal-evidence-audit",
+  "label": "因果与证据检验",
+  "description": "当任务需要判断因果关系、作用机制、反向因果、共同原因、混杂或反事实，或者需要核验证据质量、反证、偏差、外推与适用边界时使用；普通事实查询、理论介绍、翻译、润色、摘要、直接执行和没有证据主张的一般原因询问不使用。",
+  "version": "1.0.0",
+  "source": "compiled",
+  "protected": false,
+  "enabled": true,
+  "loadMode": "on-demand",
+  "skillPath": "10_智能体与技能/技能/因果与证据检验/SKILL.md",
+  "surface": "user",
+  "invocation": "explicit",
+  "skillType": "cognitive-lens",
+  "primaryEligible": false,
+  "controlsFinalLayout": false,
+  "returnsStructuredResult": true,
+  "capabilities": [
+    "因果与证据检验",
+    "因果链分析",
+    "批判性核验"
+  ],
+  "intents": [
+    "因果与证据检验"
+  ],
+  "tags": [
+    "cognitive-lens",
+    "causal-analysis",
+    "critical-audit"
+  ],
+  "requires": [],
+  "optionalDependencies": [],
+  "conflicts": [],
+  "recommendedOperators": [
+    "causal-analysis",
+    "critical-audit"
+  ],
+  "readScopes": [],
+  "riskLevel": "bounded",
+  "maxDependencyDepth": 0,
+  "toolRequests": [],
+  "compiledFrom": {
+    "schemaVersion": "xingzhi-skill-compile/v1",
+    "sourceSchemaVersion": "xingzhi-skill/v1",
+    "sourcePath": "10_智能体与技能/技能/因果与证据检验/SKILL.md",
+    "sourceVersion": "1.0.0",
+    "contentHash": "sha256:4ade87a4cbe3c4b5e93f773139d0fbef2076484ef99a8bafe68c6cb516173c3b",
+    "skillType": "cognitive-lens",
+    "operators": [
+      {
+        "id": "causal-analysis",
+        "mode": "causal-explanation"
+      },
+      {
+        "id": "critical-audit",
+        "mode": "evidence-audit"
+      }
+    ]
+  }
+}

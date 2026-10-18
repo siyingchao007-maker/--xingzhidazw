@@ -1,0 +1,872 @@
+[
+  {
+    "id": "./real-progress-policy.cjs",
+    "header": "\"./real-progress-policy.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./view-turn-analysis-path.cjs",
+    "header": "\"./view-turn-analysis-path.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./view-point-card.cjs",
+    "header": "\"./view-point-card.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./view-growth-replay.cjs",
+    "header": "\"./view-growth-replay.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./view-growth-content.cjs",
+    "header": "\"./view-growth-content.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./view-daily-refresh.cjs",
+    "header": "\"./view-daily-refresh.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n\n"
+  },
+  {
+    "id": "./home-model.cjs",
+    "header": "\"./home-model.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./home-dialogs.cjs",
+    "header": "\"./home-dialogs.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./view-cognitive-home.cjs",
+    "header": "\"./view-cognitive-home.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./view-cognitive-forms.cjs",
+    "header": "\"./view-cognitive-forms.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./view-capability-release.cjs",
+    "header": "\"./view-capability-release.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./v2-capability-schema.cjs",
+    "header": "\"./v2-capability-schema.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./canonical-governance.cjs",
+    "header": "\"./canonical-governance.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./v2-capability-catalog.cjs",
+    "header": "\"./v2-capability-catalog.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./turn-diagnostics.cjs",
+    "header": "\"./turn-diagnostics.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./turn-analysis-path.cjs",
+    "header": "\"./turn-analysis-path.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./system-feedback-shadow-pilot.cjs",
+    "header": "\"./system-feedback-shadow-pilot.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./system-feedback-migration-activation.cjs",
+    "header": "\"./system-feedback-migration-activation.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./skill-source-schema.cjs",
+    "header": "\"./skill-source-schema.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./skill-release-store.cjs",
+    "header": "\"./skill-release-store.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./skill-compiler.cjs",
+    "header": "\"./skill-compiler.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./review-knowledge-delta.cjs",
+    "header": "\"./review-knowledge-delta.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./review-history.cjs",
+    "header": "\"./review-history.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./review-context-profile.cjs",
+    "header": "\"./review-context-profile.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./reversal-failure-shadow-pilot.cjs",
+    "header": "\"./reversal-failure-shadow-pilot.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./reversal-failure-migration-activation.cjs",
+    "header": "\"./reversal-failure-migration-activation.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./provider-models.cjs",
+    "header": "\"./provider-models.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./performance-baseline-v039.cjs",
+    "header": "\"./performance-baseline-v039.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./incentive-structure-shadow-pilot.cjs",
+    "header": "\"./incentive-structure-shadow-pilot.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./incentive-structure-migration-activation.cjs",
+    "header": "\"./incentive-structure-migration-activation.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./growth-status.cjs",
+    "header": "\"./growth-status.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./growth-snapshot.cjs",
+    "header": "\"./growth-snapshot.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./growth-records.cjs",
+    "header": "\"./growth-records.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./growth-points.cjs",
+    "header": "\"./growth-points.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./growth-contract.cjs",
+    "header": "\"./growth-contract.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./first-principles-shadow-probe.cjs",
+    "header": "\"./first-principles-shadow-probe.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./first-principles-shadow-pilot.cjs",
+    "header": "\"./first-principles-shadow-pilot.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./first-principles-migration-activation.cjs",
+    "header": "\"./first-principles-migration-activation.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./daily-review-refresh.cjs",
+    "header": "\"./daily-review-refresh.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./conversation-menu.cjs",
+    "header": "\"./conversation-menu.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./contradiction-stage-shadow-pilot.cjs",
+    "header": "\"./contradiction-stage-shadow-pilot.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./contradiction-stage-migration-activation.cjs",
+    "header": "\"./contradiction-stage-migration-activation.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./commercial-vault-gate.cjs",
+    "header": "\"./commercial-vault-gate.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./commercial-public-key.cjs",
+    "header": "\"./commercial-public-key.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./commercial-licensing.cjs",
+    "header": "\"./commercial-licensing.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./commercial-device-identity.cjs",
+    "header": "\"./commercial-device-identity.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./cognitive-workspace.cjs",
+    "header": "\"./cognitive-workspace.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./cognitive-records.cjs",
+    "header": "\"./cognitive-records.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./cognitive-lens-synthesis.cjs",
+    "header": "\"./cognitive-lens-synthesis.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./cognitive-lens-shadow.cjs",
+    "header": "\"./cognitive-lens-shadow.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./cognitive-lens-shadow-executor.cjs",
+    "header": "\"./cognitive-lens-shadow-executor.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./cognitive-lens-router.cjs",
+    "header": "\"./cognitive-lens-router.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./cognitive-lens-result.cjs",
+    "header": "\"./cognitive-lens-result.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./cognitive-lens-pilot.cjs",
+    "header": "\"./cognitive-lens-pilot.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./cognitive-lens-migration.cjs",
+    "header": "\"./cognitive-lens-migration.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./cognitive-lens-migration-activation.cjs",
+    "header": "\"./cognitive-lens-migration-activation.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./cognitive-lens-legacy-executor.cjs",
+    "header": "\"./cognitive-lens-legacy-executor.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./causal-evidence-shadow-pilot.cjs",
+    "header": "\"./causal-evidence-shadow-pilot.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./causal-evidence-migration-activation.cjs",
+    "header": "\"./causal-evidence-migration-activation.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./capability-surface.cjs",
+    "header": "\"./capability-surface.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./capability-selection.cjs",
+    "header": "\"./capability-selection.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./capability-release-manager.cjs",
+    "header": "\"./capability-release-manager.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./capability-evolution.cjs",
+    "header": "\"./capability-evolution.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./app-server-proxy.cjs",
+    "header": "\"./app-server-proxy.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./answer-contract.cjs",
+    "header": "\"./answer-contract.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./workbench-interface-model.cjs",
+    "header": "\"./workbench-interface-model.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./agent-registry.cjs",
+    "header": "\"./agent-registry.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./app-server-client.cjs",
+    "header": "\"./app-server-client.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./archive-planner.cjs",
+    "header": "\"./archive-planner.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./archive-review.cjs",
+    "header": "\"./archive-review.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./archive-scroll.cjs",
+    "header": "\"./archive-scroll.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./archive-workflow.cjs",
+    "header": "\"./archive-workflow.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./attachment-queue.cjs",
+    "header": "\"./attachment-queue.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./clipboard-attachments.cjs",
+    "header": "\"./clipboard-attachments.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./brand.cjs",
+    "header": "\"./brand.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./skill-call-state.cjs",
+    "header": "\"./skill-call-state.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./capability-orchestrator.cjs",
+    "header": "\"./capability-orchestrator.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./connection-diagnostics-service.cjs",
+    "header": "\"./connection-diagnostics-service.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./memory-recall.cjs",
+    "header": "\"./memory-recall.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./context-archive.cjs",
+    "header": "\"./context-archive.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./contracts.cjs",
+    "header": "\"./contracts.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./controlled-tool-registry.cjs",
+    "header": "\"./controlled-tool-registry.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./direct-md-delete.cjs",
+    "header": "\"./direct-md-delete.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./conversation-organization.cjs",
+    "header": "\"./conversation-organization.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./conversation-service.cjs",
+    "header": "\"./conversation-service.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./conversation-store.cjs",
+    "header": "\"./conversation-store.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./core.cjs",
+    "header": "\"./core.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./daily-review.cjs",
+    "header": "\"./daily-review.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./document-ingest.cjs",
+    "header": "\"./document-ingest.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./dynamic-capability-runtime.cjs",
+    "header": "\"./dynamic-capability-runtime.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./intent-signals.cjs",
+    "header": "\"./intent-signals.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./knowledge-automation.cjs",
+    "header": "\"./knowledge-automation.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./knowledge-card-presentation.cjs",
+    "header": "\"./knowledge-card-presentation.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./knowledge-governance-analysis.cjs",
+    "header": "\"./knowledge-governance-analysis.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./knowledge-governance-risk.cjs",
+    "header": "\"./knowledge-governance-risk.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./knowledge-governance.cjs",
+    "header": "\"./knowledge-governance.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./knowledge-health-repair.cjs",
+    "header": "\"./knowledge-health-repair.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./knowledge-health.cjs",
+    "header": "\"./knowledge-health.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./knowledge-indexer.cjs",
+    "header": "\"./knowledge-indexer.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./knowledge-lifecycle-plan.cjs",
+    "header": "\"./knowledge-lifecycle-plan.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./knowledge-lifecycle.cjs",
+    "header": "\"./knowledge-lifecycle.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./knowledge-merge-synthesis.cjs",
+    "header": "\"./knowledge-merge-synthesis.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./knowledge-policy.cjs",
+    "header": "\"./knowledge-policy.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./knowledge-router.cjs",
+    "header": "\"./knowledge-router.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./knowledge-semantic-enrichment.cjs",
+    "header": "\"./knowledge-semantic-enrichment.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./knowledge-structure-manager.cjs",
+    "header": "\"./knowledge-structure-manager.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./knowledge-tools.cjs",
+    "header": "\"./knowledge-tools.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./knowledge-usage.cjs",
+    "header": "\"./knowledge-usage.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./knowledge-writer.cjs",
+    "header": "\"./knowledge-writer.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./legacy-action-state.cjs",
+    "header": "\"./legacy-action-state.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./main.cjs",
+    "header": "\"./main.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./message-blocks.cjs",
+    "header": "\"./message-blocks.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./message-markdown.cjs",
+    "header": "\"./message-markdown.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./message-visibility.cjs",
+    "header": "\"./message-visibility.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./obsidian-file-opener.cjs",
+    "header": "\"./obsidian-file-opener.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./operation-events.cjs",
+    "header": "\"./operation-events.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./post-response-analysis.cjs",
+    "header": "\"./post-response-analysis.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./provider-client.cjs",
+    "header": "\"./provider-client.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./provider-selection.cjs",
+    "header": "\"./provider-selection.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./provider-registry.cjs",
+    "header": "\"./provider-registry.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./reasoning-operator-registry.cjs",
+    "header": "\"./reasoning-operator-registry.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./reasoning-plan.cjs",
+    "header": "\"./reasoning-plan.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./response-metrics.cjs",
+    "header": "\"./response-metrics.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./adaptive-retrieval.cjs",
+    "header": "\"./adaptive-retrieval.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./source-routing.cjs",
+    "header": "\"./source-routing.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./background-structured-retry.cjs",
+    "header": "\"./background-structured-retry.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./task-state-machine.cjs",
+    "header": "\"./task-state-machine.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./answer-quality-gate.cjs",
+    "header": "\"./answer-quality-gate.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./semantic-capability-router.cjs",
+    "header": "\"./semantic-capability-router.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./spreadsheet-index.cjs",
+    "header": "\"./spreadsheet-index.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./standard-vault.cjs",
+    "header": "\"./standard-vault.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./token-budget.cjs",
+    "header": "\"./token-budget.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./turn-telemetry.cjs",
+    "header": "\"./turn-telemetry.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./ui-control-state.cjs",
+    "header": "\"./ui-control-state.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./user-continuity-service.cjs",
+    "header": "\"./user-continuity-service.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./user-continuity.cjs",
+    "header": "\"./user-continuity.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./vault-capability-package.cjs",
+    "header": "\"./vault-capability-package.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./view-action-center.cjs",
+    "header": "\"./view-action-center.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./view-archive-review.cjs",
+    "header": "\"./view-archive-review.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./view-archive-status.cjs",
+    "header": "\"./view-archive-status.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./view-capability-manager.cjs",
+    "header": "\"./view-capability-manager.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./view-connections.cjs",
+    "header": "\"./view-connections.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./view-daily-review.cjs",
+    "header": "\"./view-daily-review.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./view-knowledge-decision.cjs",
+    "header": "\"./view-knowledge-decision.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./view-knowledge-governance.cjs",
+    "header": "\"./view-knowledge-governance.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./view-knowledge-health.cjs",
+    "header": "\"./view-knowledge-health.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./view-knowledge-reader.cjs",
+    "header": "\"./view-knowledge-reader.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./view-knowledge-repair-preview.cjs",
+    "header": "\"./view-knowledge-repair-preview.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./view-knowledge-review.cjs",
+    "header": "\"./view-knowledge-review.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./view-knowledge-structure.cjs",
+    "header": "\"./view-knowledge-structure.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./view-message-blocks.cjs",
+    "header": "\"./view-message-blocks.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./view-recycle-bin.cjs",
+    "header": "\"./view-recycle-bin.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./view-skill-picker.cjs",
+    "header": "\"./view-skill-picker.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./view-user-growth.cjs",
+    "header": "\"./view-user-growth.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./work-panel-lifecycle.cjs",
+    "header": "\"./work-panel-lifecycle.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./turn-lanes.cjs",
+    "header": "\"./turn-lanes.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./codex-model-capacity.cjs",
+    "header": "\"./codex-model-capacity.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./demand-skill-runtime.cjs",
+    "header": "\"./demand-skill-runtime.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./controlled-skill-load-attempt.cjs",
+    "header": "\"./controlled-skill-load-attempt.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./controlled-skill-candidates.cjs",
+    "header": "\"./controlled-skill-candidates.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./workbench-runtime.cjs",
+    "header": "\"./workbench-runtime.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./workbench-view.cjs",
+    "header": "\"./workbench-view.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./release-file-contract.cjs",
+    "header": "\"./release-file-contract.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./journal-storage.cjs",
+    "header": "\"./journal-storage.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./retrieval-index.cjs",
+    "header": "\"./retrieval-index.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./organization-path-resolver.cjs",
+    "header": "\"./organization-path-resolver.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./image-generation-client.cjs",
+    "header": "\"./image-generation-client.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./message-diagram.cjs",
+    "header": "\"./message-diagram.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./message-media-runtime.cjs",
+    "header": "\"./message-media-runtime.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./chat-image-runtime.cjs",
+    "header": "\"./chat-image-runtime.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./memory-entry.cjs",
+    "header": "\"./memory-entry.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./request-presentation.cjs",
+    "header": "\"./request-presentation.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./reference-ui.cjs",
+    "header": "\"./reference-ui.cjs\": function(module, exports, require) {\n",
+    "separator": "\n},\n"
+  },
+  {
+    "id": "./unified-workspace.cjs",
+    "header": "\"./unified-workspace.cjs\": function(module, exports, require) {\n",
+    "separator": ""
+  }
+]

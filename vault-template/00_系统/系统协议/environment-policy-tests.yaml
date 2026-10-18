@@ -1,0 +1,46 @@
+version: "0.2"
+suite: "03_环境规则层与审计整改测试样本"
+routing_cases:
+  - {input_subtype: "rules", expected_folder: "规则与制度"}
+  - {input_subtype: "policy", expected_folder: "规则与制度"}
+  - {input_subtype: "institution", expected_folder: "规则与制度"}
+  - {input_subtype: "technology", expected_folder: "技术环境"}
+  - {input_subtype: "regional", expected_folder: "区域环境"}
+  - {input_subtype: "social", expected_folder: "社会环境"}
+  - {input_subtype: "market", expected_folder: "市场环境"}
+  - {input_subtype: "industry", expected_folder: "行业环境"}
+  - {input_subtype: "organization", expected_folder: "组织环境"}
+  - {input_subtype: "unknown", expected_action: "require_confirmation"}
+validation_cases:
+  - {input_category: "market", expected: "valid"}
+  - {input_category: "政策", expected_canonical: "rules"}
+  - {input_category: "随意值", expected: "INVALID_ENVIRONMENT_CATEGORY"}
+  - {evidence_ids_count: 30, expected: "valid"}
+  - {evidence_ids_count: 31, expected: "ENVIRONMENT_EVIDENCE_LIMIT_EXCEEDED"}
+  - {review_at: "2026-13-40", expected: "INVALID_ENVIRONMENT_DATE"}
+evidence_bridge_cases:
+  - {scenario: "real web evidence id used by assistant environment candidate", expected: "retain trusted web id and mark linked"}
+  - {scenario: "assistant invents web evidence id", expected: "remove id and add unverified-environment-evidence"}
+  - {scenario: "online evidence exists but environment candidate links none", expected: "freshness=monitoring and environment-evidence-link-missing"}
+  - {scenario: "web search returns sources but no environment conclusion was formed", expected: "only 11 evidence candidates; do not auto-create 03 conclusion"}
+boundary_cases:
+  - {input: "完整行业报告 PDF", expected: "12_资料库"}
+  - {input: "报告中带出处的具体数据", expected: "11_证据与来源"}
+  - {input: "综合证据形成的当前市场状态", expected: "03_环境/市场环境"}
+  - {input: "因此我暂不扩大投入", expected: "06_判断与决策"}
+  - {input: "下周访谈10名客户", expected: "07_行动"}
+  - {input: "我感觉市场不太好了", expected: "不得直接进入03"}
+  - {input: "AI总结某行业将增长", expected: "不能直接成为03事实"}
+  - {input: "重大新闻但与当前问题无关", expected: "不进入03"}
+  - {input: "公司调整导致项目失去关键资源", expected: "03_环境/组织环境"}
+  - {input: "环境记录超过review_at", expected: "freshness=stale；当前信息需求依赖它时应进入复核/联网补证"}
+lifecycle_cases:
+  - {situation: "新环境首次建立", expected: "create"}
+  - {situation: "新证据补充旧环境", expected: "revise"}
+  - {situation: "新政策替代旧政策", expected: "supersede; preserve old revision; require confirmation"}
+  - {situation: "超过复核时间", expected: "stale"}
+  - {situation: "旧规则确认失效", expected: "invalid"}
+  - {situation: "新闻与用户无关", expected: "no-write"}
+impact_cases:
+  - {situation: "环境关联2个判断1个项目1个行动", expected: "show review summary only; do not rewrite 05/06/07"}
+  - {situation: "环境没有关联对象", expected: "no impact review prompt"}

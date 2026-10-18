@@ -1,0 +1,3 @@
+xingzhi_protected: true
+capability_pack: xzcap-b437d6ac8a8f57c30dd78c00
+message: "protected capability definition; runtime loads encrypted local pack"

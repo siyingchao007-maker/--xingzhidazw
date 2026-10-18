@@ -1,0 +1,67 @@
+{
+  "formatVersion": 3,
+  "id": "xingzhi-product-business-validation",
+  "label": "产品与商业验证",
+  "description": "当用户需要验证产品定位、用户问题、价值主张、MVP、变现、定价或市场进入假设时使用；单一客户沟通交给销售教练，界面实现和纯文案修改不使用。",
+  "version": "1.0.0",
+  "source": "extension",
+  "protected": false,
+  "enabled": true,
+  "loadMode": "on-demand",
+  "skillPath": "10_智能体与技能/技能/产品与商业验证/SKILL.md",
+  "surface": "user",
+  "invocation": "implicit",
+  "capabilities": [
+    "产品问题与价值假设验证",
+    "MVP范围审查",
+    "变现与单位经济建模",
+    "市场验证实验设计"
+  ],
+  "intents": [
+    "产品与商业验证",
+    "产品方案验证",
+    "产品定位",
+    "商业模式验证",
+    "变现路径验证",
+    "MVP范围",
+    "定价验证",
+    "市场进入策略",
+    "商业可行性"
+  ],
+  "tags": [
+    "MVP",
+    "商业模式",
+    "变现",
+    "定价",
+    "目标用户",
+    "单位经济",
+    "市场验证"
+  ],
+  "requires": [],
+  "optionalDependencies": [
+    {
+      "id": "xingzhi-judgment-calibration",
+      "requiresVersion": ">=1.5.0",
+      "whenIntents": ["是否值得", "方案比较", "优先级", "机会成本", "风险", "取舍"]
+    },
+    {
+      "id": "xingzhi-action-feedback",
+      "requiresVersion": ">=1.5.0",
+      "whenIntents": ["最小实验", "验证实验", "下一步", "执行计划", "上线", "测试"]
+    }
+  ],
+  "conflicts": [],
+  "recommendedOperators": [],
+  "readScopes": [
+    "03_环境",
+    "05_目标与项目",
+    "06_判断与决策",
+    "07_行动",
+    "08_结果与反馈",
+    "11_证据与来源",
+    "12_资料库"
+  ],
+  "riskLevel": "bounded",
+  "maxDependencyDepth": 2,
+  "toolRequests": ["xingzhi_search_knowledge"]
+}

@@ -1,0 +1,32 @@
+{
+  "formatVersion": 3,
+  "id": "xingzhi-interaction-event-extraction",
+  "label": "交互事件提取",
+  "description": "为本轮真实用户输入提取简短交互痕迹和来源索引，区分用户、助手、附件和第三方，避免把收到的材料当成用户经历。",
+  "version": "1.5.1",
+  "source": "core",
+  "protected": true,
+  "enabled": true,
+  "loadMode": "on-demand",
+  "skillPath": "10_智能体与技能/技能/交互事件提取/SKILL.md",
+  "surface": "internal",
+  "invocation": "workflow-only",
+  "capabilities": [
+    "交互事件提取",
+    "用户来源校验",
+    "证据边界控制"
+  ],
+  "intents": [
+    "记录本轮用户交互",
+    "提取用户消息事件",
+    "生成用户连续性证据"
+  ],
+  "requires": [],
+  "optionalDependencies": [],
+  "conflicts": [],
+  "recommendedOperators": [],
+  "readScopes": [],
+  "riskLevel": "bounded",
+  "maxDependencyDepth": 2,
+  "toolRequests": []
+}

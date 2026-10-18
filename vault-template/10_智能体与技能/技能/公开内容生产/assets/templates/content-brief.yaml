@@ -1,0 +1,35 @@
+# 可选简报。null 表示未知或未指定；不要为了填表虚构信息。
+schema_version: "1.0"
+content_id: null
+request_mode: "write" # topic / research / write / revise / style / adapt / audit
+topic: null
+reader: null
+reader_problem: null
+goal: null
+platforms: ["generic_longform"]
+author:
+  name: null
+  role: null
+  viewpoint: null
+  first_person_allowed: null
+inputs: [] # 每项记录 path_or_url、kind、date、public_use
+length:
+  target: null
+  unit: "han_characters" # 本地编辑口径，不是平台计数
+time_scope: null
+style_profile_path: null
+brand_profile_path: null
+brand_mode: null
+required_claims: [] # 用户希望讨论的命题，不自动视为真实
+must_preserve: []
+cta: null
+output_format: "markdown"
+output_path: null
+research_access: "unknown" # available / unavailable / provided_only / unknown
+external_action:
+  requested_action: "none" # none / upload_draft / publish / other
+  authorization_evidence: null # 当前会话原话或授权范围，不自填为已授权
+  account: null
+  content_version: null
+assumptions: []
+critical_unknowns: []

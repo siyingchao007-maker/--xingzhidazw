@@ -1,0 +1,39 @@
+{
+  "formatVersion": 3,
+  "id": "xingzhi-training-response",
+  "label": "训练式回答",
+  "description": "仅在用户明确要求练习、演练、教练式提问、模拟问答、回答点评或纠正表现时触发；普通问答、搜索、分析、资料准备和承接执行不使用。",
+  "version": "1.5.1",
+  "source": "core",
+  "protected": true,
+  "enabled": true,
+  "loadMode": "on-demand",
+  "skillPath": "10_智能体与技能/技能/训练式回答/SKILL.md",
+  "surface": "user",
+  "invocation": "implicit",
+  "capabilities": [
+    "问题框架",
+    "底层逻辑",
+    "参考答案方向",
+    "必要多视角",
+    "优劣势校准",
+    "总结与下一步"
+  ],
+  "intents": [
+    "训练式回答",
+    "训练模式",
+    "练习模式",
+    "陪我练习",
+    "模拟演练",
+    "复盘我的回答",
+    "点评我的回答"
+  ],
+  "requires": [],
+  "optionalDependencies": [],
+  "conflicts": [],
+  "recommendedOperators": [],
+  "readScopes": [],
+  "riskLevel": "bounded",
+  "maxDependencyDepth": 2,
+  "toolRequests": []
+}

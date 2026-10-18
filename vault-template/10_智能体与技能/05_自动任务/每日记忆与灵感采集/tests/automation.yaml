@@ -1,0 +1,15 @@
+schemaVersion: '2.0'
+suite: xingzhi-automation-daily-memory-inspiration-capture
+cases:
+- id: no-invented-time
+  expect:
+    time: null
+- id: draft-disabled
+  expect:
+    enabled: false
+- id: no-stable-trait
+  expect:
+    mayAutoCreateStableProfile: false
+- id: one-question-max
+  expect:
+    maxClarifyingQuestionWhenMaterial: 1

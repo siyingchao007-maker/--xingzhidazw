@@ -1,0 +1,68 @@
+{
+  "formatVersion": 3,
+  "id": "chinese-public-content",
+  "label": "公开内容生产",
+  "description": "生产或审改中文公开文章、公众号稿、微博与短内容，包含研究证据、作者风格和质量审计；不默认执行账号发布，也不接管一般问答。",
+  "version": "1.0.0",
+  "source": "extension",
+  "protected": false,
+  "enabled": true,
+  "loadMode": "on-demand",
+  "skillPath": "10_智能体与技能/技能/公开内容生产/SKILL.md",
+  "surface": "user",
+  "invocation": "implicit",
+  "skillType": "task",
+  "primaryEligible": true,
+  "controlsFinalLayout": true,
+  "returnsStructuredResult": false,
+  "capabilities": [
+    "中文公开内容生产",
+    "公众号文章与微博短内容编辑",
+    "个人风格学习与自然表达修订",
+    "公开稿件的证据与质量审计"
+  ],
+  "intents": [
+    "写公众号",
+    "公众号文章",
+    "公众号稿",
+    "公众号写作",
+    "发一条微博",
+    "写一条微博",
+    "微博文案",
+    "公开文章",
+    "公开内容",
+    "内容生产",
+    "个人风格学习",
+    "学习我的写作风格",
+    "去AI味",
+    "去 AI 味",
+    "平台改编",
+    "多平台改写",
+    "审这篇文章",
+    "文章审稿",
+    "小红书文案",
+    "口播稿",
+    "公众号与微博",
+    "公众号和微博"
+  ],
+  "tags": [
+    "公开写作流程",
+    "证据写作",
+    "作者文风",
+    "平台适配"
+  ],
+  "requires": [],
+  "optionalDependencies": [],
+  "conflicts": [],
+  "recommendedOperators": [],
+  "readScopes": [
+    "09_认知资产",
+    "11_证据与来源",
+    "12_资料库"
+  ],
+  "riskLevel": "bounded",
+  "maxDependencyDepth": 0,
+  "toolRequests": [
+    "xingzhi_search_knowledge"
+  ]
+}

@@ -1,0 +1,17 @@
+schemaVersion: '2.0'
+kind: tool
+id: xingzhi-tool-search-knowledge
+label: 搜索知识
+legacyAliases:
+- xingzhi_search_knowledge
+implementationStatus: legacy-runtime-hook
+sideEffect: none
+input:
+  query: string
+  scopes: string[]
+  limit: integer
+output:
+  matches: KnowledgeRef[]
+policyIds:
+- xingzhi-policy-evidence
+version: 2.0.0-rc1

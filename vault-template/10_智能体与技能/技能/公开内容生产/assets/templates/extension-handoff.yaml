@@ -1,0 +1,28 @@
+schema_version: "1.0"
+content_id: null
+source_version: null
+source_locator: null
+target: null # xiaohongshu_text / spoken_script / video_production
+reader: null
+goal: null
+speaker_or_author: null
+brand_profile_path: null
+style_profile_path: null
+core_claims: [] # claim_id / statement / evidence_ids / essential_conditions
+public_sources: []
+materials: [] # locator / kind / version / rights / public_use
+duration:
+  target_seconds: null
+  method: null # editing_estimate / human_read / actual_audio
+  measured_seconds: null
+length_target: null
+cta: null
+requested_deliverables: []
+constraints: []
+critical_unknowns: []
+outputs:
+  artifacts: []
+  claim_changes: []
+  unresolved_issues: []
+  status: "not_started" # text_package / script_only / timing_estimate / timing_measured
+  actual_production_state: null # 后续制作工具返回，不以文本写作补造

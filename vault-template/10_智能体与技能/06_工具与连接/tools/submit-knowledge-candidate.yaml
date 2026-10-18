@@ -1,0 +1,19 @@
+schemaVersion: '2.0'
+kind: tool
+id: xingzhi-tool-submit-knowledge-candidate
+label: 提交知识候选
+legacyAliases:
+- xingzhi_submit_knowledge_candidates
+implementationStatus: legacy-runtime-hook
+sideEffect: candidate-write
+input:
+  candidate: KnowledgeCandidate
+  idempotencyKey: string
+output:
+  status: success|rejected|waiting-confirmation|failed
+  candidateId: string|null
+policyIds:
+- xingzhi-policy-promotion
+- xingzhi-policy-sensitive-data
+- xingzhi-policy-conflict
+version: 2.0.0-rc1

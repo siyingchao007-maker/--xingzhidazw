@@ -1,0 +1,20 @@
+# 风格档案属于作者/项目；不要把此模板里的空条目当已学到的规则。
+schema_version: "1.0"
+profile_id: null
+author: null
+updated_at: null
+status: "provisional" # provisional / user_confirmed
+storage_authorization: null
+samples: []
+# 每项：id, locator, date, platform, genre,
+# provenance(author_original/author_approved/model_draft/third_party_reference),
+# approval_evidence, public_use。模型稿不自动进入作者原文集。
+rules: []
+# 每项：id, dimension, behavior, applicable_context, sample_ids,
+# evidence_excerpt_or_locator, counterexamples, confidence(low/medium/high),
+# status(inferred/user_confirmed/retired), confirmation_evidence。
+platform_overrides: {}
+genre_overrides: {}
+explicit_preferences: []
+revision_history: [] # date / old_rule / new_rule / feedback / scope
+known_limits: []

@@ -1,0 +1,18 @@
+schemaVersion: '2.0'
+kind: tool
+id: xingzhi-tool-write-growth-event
+label: 写入成长事件
+legacyAliases: []
+implementationStatus: contract-only
+sideEffect: growth-event-write
+input:
+  event: GrowthEvent
+  sourceRefs: string[]
+  idempotencyKey: string
+output:
+  status: success|duplicate|rejected|failed
+  eventId: string|null
+policyIds:
+- xingzhi-policy-evidence
+- xingzhi-policy-side-effect
+version: 2.0.0-rc1

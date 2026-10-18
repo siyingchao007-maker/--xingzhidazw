@@ -1,0 +1,41 @@
+{
+  "formatVersion": 3,
+  "id": "xingzhi-user-profile-evolution",
+  "label": "用户画像演变",
+  "description": "对用户明确自述或跨轮重复的使用偏好提出有来源的观察；单次任务、助手内容和外部材料不构成人格或稳定能力证据。",
+  "version": "1.5.1",
+  "source": "core",
+  "protected": true,
+  "enabled": true,
+  "loadMode": "on-demand",
+  "skillPath": "10_智能体与技能/技能/用户画像演变/SKILL.md",
+  "surface": "internal",
+  "invocation": "workflow-only",
+  "capabilities": [
+    "画像版本演变",
+    "跨时间证据聚合",
+    "敏感候选分流"
+  ],
+  "intents": [
+    "分析用户偏好变化",
+    "更新用户画像候选",
+    "识别跨时间使用习惯"
+  ],
+  "requires": [
+    {
+      "id": "xingzhi-interaction-event-extraction",
+      "requiresVersion": ">=1.1.0"
+    }
+  ],
+  "optionalDependencies": [],
+  "conflicts": [],
+  "recommendedOperators": [],
+  "readScopes": [
+    "01_当前的我",
+    "02_我的历史",
+    "11_证据与来源"
+  ],
+  "riskLevel": "bounded",
+  "maxDependencyDepth": 2,
+  "toolRequests": []
+}

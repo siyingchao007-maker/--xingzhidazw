@@ -1,0 +1,6 @@
+{
+  "xingzhi_protected": true,
+  "capability_pack": "xzcap-10cdf5caa3b5e13cb512ec17",
+  "auth_protocol": "XZ-DUAL-AUTH-v3.0-2026-09-25",
+  "message": "protected capability definition; runtime loads encrypted local pack"
+}

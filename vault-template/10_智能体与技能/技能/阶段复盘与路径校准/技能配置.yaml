@@ -1,0 +1,79 @@
+{
+  "formatVersion": 3,
+  "id": "xingzhi-periodic-review",
+  "label": "阶段复盘与路径校准",
+  "description": "当用户明确要求对一周、一月、一个项目阶段或一段路径做跨事件复盘，并依据实际结果校准下一阶段方向时使用；单次行动反馈和后台成长事件提取不使用。",
+  "version": "1.0.0",
+  "source": "extension",
+  "protected": false,
+  "enabled": true,
+  "loadMode": "on-demand",
+  "skillPath": "10_智能体与技能/技能/阶段复盘与路径校准/SKILL.md",
+  "surface": "user",
+  "invocation": "implicit",
+  "capabilities": [
+    "阶段基线与实际对照",
+    "跨事件复盘",
+    "路径继续调整停止判断",
+    "下一周期验证设计"
+  ],
+  "intents": [
+    "阶段复盘",
+    "周度复盘",
+    "月度复盘",
+    "季度复盘",
+    "项目阶段复盘",
+    "复盘这一阶段",
+    "回顾这段时间",
+    "路径校准"
+  ],
+  "tags": [
+    "周期复盘",
+    "阶段目标",
+    "路径调整",
+    "预期与实际",
+    "下一周期"
+  ],
+  "requires": [],
+  "optionalDependencies": [
+    "xingzhi-path-runtime",
+    {
+      "id": "xingzhi-judgment-calibration",
+      "requiresVersion": ">=1.5.0",
+      "whenIntents": [
+        "方向选择",
+        "是否继续",
+        "方案比较",
+        "机会成本",
+        "风险"
+      ]
+    },
+    {
+      "id": "xingzhi-action-feedback",
+      "requiresVersion": ">=1.5.0",
+      "whenIntents": [
+        "下一步",
+        "行动计划",
+        "具体执行",
+        "记录反馈",
+        "完成标准"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "recommendedOperators": [],
+  "readScopes": [
+    "02_我的历史",
+    "05_目标与项目",
+    "06_判断与决策",
+    "07_行动",
+    "08_结果与反馈",
+    "09_认知资产",
+    "11_证据与来源"
+  ],
+  "riskLevel": "bounded",
+  "maxDependencyDepth": 2,
+  "toolRequests": [
+    "xingzhi_search_knowledge"
+  ]
+}

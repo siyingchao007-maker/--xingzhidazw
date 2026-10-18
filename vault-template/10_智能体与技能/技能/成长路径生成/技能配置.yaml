@@ -1,0 +1,45 @@
+{
+  "formatVersion": 3,
+  "id": "xingzhi-growth-path-synthesis",
+  "label": "成长路径生成",
+  "description": "从有日期与用户来源的实际变化提取成长事件候选；后台返回运行时要求的 JSON，界面由程序生成。普通提问、收到建议和交互偏好更新不等于成长。",
+  "version": "1.5.1",
+  "source": "core",
+  "protected": true,
+  "enabled": true,
+  "loadMode": "on-demand",
+  "skillPath": "10_智能体与技能/技能/成长路径生成/SKILL.md",
+  "surface": "internal",
+  "invocation": "workflow-only",
+  "capabilities": [
+    "有来源的成长事件提取",
+    "实际变化与来源核验",
+    "阶段变化追溯"
+  ],
+  "intents": [
+    "生成用户成长路径",
+    "更新成长事件时间线",
+    "查看阶段变化"
+  ],
+  "requires": [
+    {
+      "id": "xingzhi-user-profile-evolution",
+      "requiresVersion": ">=1.1.0"
+    }
+  ],
+  "optionalDependencies": [],
+  "conflicts": [],
+  "recommendedOperators": [],
+  "readScopes": [
+    "01_当前的我",
+    "02_我的历史",
+    "05_目标与项目",
+    "06_判断与决策",
+    "07_行动",
+    "08_结果与反馈",
+    "11_证据与来源"
+  ],
+  "riskLevel": "bounded",
+  "maxDependencyDepth": 2,
+  "toolRequests": []
+}

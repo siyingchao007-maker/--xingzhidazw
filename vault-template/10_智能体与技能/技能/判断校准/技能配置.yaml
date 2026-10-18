@@ -1,0 +1,40 @@
+{
+  "formatVersion": 3,
+  "id": "xingzhi-judgment-calibration",
+  "label": "判断校准",
+  "description": "用于形成或审查决策、比较方案、核验前提与风险；普通事实问答或用户已选定方案后的执行不强行进入决策模板。",
+  "version": "1.5.1",
+  "source": "core",
+  "protected": true,
+  "enabled": true,
+  "loadMode": "on-demand",
+  "skillPath": "10_智能体与技能/技能/判断校准/SKILL.md",
+  "surface": "user",
+  "invocation": "implicit",
+  "capabilities": [
+    "决策问题定义",
+    "选项比较",
+    "可更新决策记录"
+  ],
+  "intents": [
+    "决策问题定义",
+    "选项比较",
+    "可更新决策记录"
+  ],
+  "requires": [],
+  "optionalDependencies": ["xingzhi-path-runtime"],
+  "conflicts": [],
+  "recommendedOperators": [],
+  "readScopes": [
+    "05_目标与项目",
+    "06_判断与决策",
+    "07_行动",
+    "08_结果与反馈",
+    "11_证据与来源"
+  ],
+  "riskLevel": "bounded",
+  "maxDependencyDepth": 2,
+  "toolRequests": [
+    "xingzhi_search_knowledge"
+  ]
+}

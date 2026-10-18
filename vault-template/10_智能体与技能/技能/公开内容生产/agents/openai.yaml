@@ -1,0 +1,6 @@
+interface:
+  display_name: "中文公开内容生产"
+  short_description: "研究证据、长文与短内容写作、作者风格学习及平台适配与审稿"
+  default_prompt: "使用 $chinese-public-content，把我的主题或资料写成适合目标平台的中文公开内容，核验关键事实并保留我的表达风格。"
+policy:
+  allow_implicit_invocation: true

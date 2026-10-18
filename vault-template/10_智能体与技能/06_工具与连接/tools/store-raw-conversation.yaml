@@ -1,0 +1,18 @@
+schemaVersion: '2.0'
+kind: tool
+id: xingzhi-tool-store-raw-conversation
+label: 保存原始对话
+legacyAliases: []
+implementationStatus: contract-only
+sideEffect: raw-write
+input:
+  conversationId: string
+  messages: Message[]
+  idempotencyKey: string
+output:
+  status: success|skipped|failed
+  sourceRefs: string[]
+policyIds:
+- xingzhi-policy-retention
+- xingzhi-policy-side-effect
+version: 2.0.0-rc1

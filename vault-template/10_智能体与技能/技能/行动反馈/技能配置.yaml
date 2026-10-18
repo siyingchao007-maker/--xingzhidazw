@@ -1,0 +1,39 @@
+{
+  "formatVersion": 3,
+  "id": "xingzhi-action-feedback",
+  "label": "行动反馈",
+  "description": "用户已选定方向，需要具体行动、实际结果复盘或下一轮调整时使用；仅有建议或计划时不得写成已经完成。",
+  "version": "1.5.1",
+  "source": "core",
+  "protected": true,
+  "enabled": true,
+  "loadMode": "on-demand",
+  "skillPath": "10_智能体与技能/技能/行动反馈/SKILL.md",
+  "surface": "user",
+  "invocation": "implicit",
+  "capabilities": [
+    "行动闭环",
+    "执行记录",
+    "反馈校正"
+  ],
+  "intents": [
+    "行动闭环",
+    "执行记录",
+    "反馈校正"
+  ],
+  "requires": [],
+  "optionalDependencies": ["xingzhi-path-runtime"],
+  "conflicts": [],
+  "recommendedOperators": [],
+  "readScopes": [
+    "05_目标与项目",
+    "06_判断与决策",
+    "07_行动",
+    "08_结果与反馈"
+  ],
+  "riskLevel": "bounded",
+  "maxDependencyDepth": 2,
+  "toolRequests": [
+    "xingzhi_search_knowledge"
+  ]
+}

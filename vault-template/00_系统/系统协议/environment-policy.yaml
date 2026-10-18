@@ -1,0 +1,81 @@
+version: "0.2"
+policy_name: environment-policy
+root: "03_环境"
+definition:
+  zh: "03_环境是个人当前现实模型，维护与用户当前目标、项目、判断和行动相关的外部现实条件及其变化。"
+boundaries:
+  resource_library: {directory: "12_资料库", role: "原始资料"}
+  evidence: {directory: "11_证据与来源", role: "参与判断的可追溯证据"}
+  environment: {directory: "03_环境", role: "与当前用户有关的现实状态"}
+  judgment: {directory: "06_判断与决策", role: "用户当前判断与选择"}
+categories:
+  rules: {folder: "规则与制度", aliases: ["policy", "institution"]}
+  technology: {folder: "技术环境", aliases: []}
+  regional: {folder: "区域环境", aliases: []}
+  social: {folder: "社会环境", aliases: []}
+  market: {folder: "市场环境", aliases: []}
+  industry: {folder: "行业环境", aliases: []}
+  organization: {folder: "组织环境", aliases: []}
+category_validation:
+  canonical_values: ["rules", "technology", "regional", "social", "market", "industry", "organization"]
+  reject_manual_unknown_values: true
+  normalize_aliases_before_validation: true
+require_subtype: true
+unknown_subtype:
+  normalized_value: "unknown"
+  action: "require_confirmation"
+  confirmation_options: ["rules", "technology", "regional", "social", "market", "industry", "organization"]
+  forbidden_default_folder: "社会环境"
+field_convention:
+  canonical_style: "camelCase"
+  canonical_fields: ["observedAt", "reviewAt", "freshness", "scope", "evidenceIds", "relatedProjects", "relatedJudgments", "relatedActions", "supersedes"]
+  accepted_input_aliases:
+    observed_at: "observedAt"
+    review_at: "reviewAt"
+    evidence_refs: "evidenceIds"
+    related_projects: "relatedProjects"
+    related_judgments: "relatedJudgments"
+    related_actions: "relatedActions"
+limits:
+  evidence_ids_per_environment: 30
+  related_items_per_dimension: 100
+freshness_states:
+  current: {usable_as_current_context: true, requires_review_before_use: false}
+  monitoring: {usable_as_current_context: true, requires_review_before_use: false}
+  stale: {usable_as_current_context: false, requires_review_before_use: true}
+  invalid: {usable_as_current_context: false, historical_only: true}
+evidence_policy:
+  raw_external_content_is_environment: false
+  ai_summary_is_evidence_by_itself: false
+  environment_major_update_requires_evidence: true
+  web_reference_must_be_internally_verified: true
+  untrusted_web_reference_action: "reject_reference_and_require_review"
+  assistant_environment_with_online_evidence_requires_trusted_link: true
+  missing_trusted_link_freshness: "monitoring"
+evidence_bridge:
+  flow: ["real_web_result", "11_evidence_candidate", "03_environment_candidate", "user_confirmation"]
+  auto_create_environment_conclusion_from_web_result: false
+  max_online_evidence_items_per_turn: 12
+  preserve_existing_governance_pipeline: true
+review_policy:
+  trigger_types: ["time", "event", "decision"]
+  fixed_review_period_for_all_categories: false
+  stale_or_invalid_counts_as_current_evidence: false
+  if_network_allowed_and_current_need_depends_on_stale_environment: "revalidate_via_existing_web_flow"
+write_policy:
+  create: "candidate_then_confirm"
+  revise: "candidate_then_confirm"
+  supersede: "strong_confirmation"
+  invalidate: "strong_confirmation"
+  silent_overwrite: false
+  delete_old_version: false
+  external_search_auto_write: false
+impact_policy:
+  check_on: ["revise", "supersede", "stale", "invalid"]
+  inspect_related: ["05_目标与项目", "06_判断与决策", "07_行动"]
+  action: "suggest_review"
+  auto_change_user_judgment: false
+ui_policy:
+  unknown_subtype: "show_existing_clarification_ui_with_category_options"
+  evidence_bridge: "show_diagnostics_in_work_panel"
+  environment_impact: "show_review_summary_in_work_panel"

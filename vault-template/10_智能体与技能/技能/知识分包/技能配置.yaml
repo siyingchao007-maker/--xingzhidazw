@@ -1,0 +1,46 @@
+{
+  "formatVersion": 3,
+  "id": "xingzhi-knowledge-packaging",
+  "label": "知识分包",
+  "description": "把已具备复用价值且来源明确的命题整理为知识候选；后台与显式归档遵循各自数据契约，不把普通提问、附件指令或助手建议当成用户事实。",
+  "version": "1.5.1",
+  "source": "core",
+  "protected": true,
+  "enabled": true,
+  "loadMode": "on-demand",
+  "skillPath": "10_智能体与技能/技能/知识分包/SKILL.md",
+  "surface": "user",
+  "invocation": "implicit",
+  "capabilities": [
+    "知识分包",
+    "来源校验",
+    "冲突澄清"
+  ],
+  "intents": [
+    "知识分包",
+    "来源校验",
+    "冲突澄清"
+  ],
+  "requires": [],
+  "optionalDependencies": [],
+  "conflicts": [],
+  "recommendedOperators": [],
+  "readScopes": [
+    "01_当前的我",
+    "02_我的历史",
+    "03_环境",
+    "04_关系",
+    "05_目标与项目",
+    "06_判断与决策",
+    "07_行动",
+    "08_结果与反馈",
+    "09_认知资产",
+    "11_证据与来源"
+  ],
+  "riskLevel": "bounded",
+  "maxDependencyDepth": 2,
+  "toolRequests": [
+    "xingzhi_search_knowledge",
+    "xingzhi_submit_knowledge_candidates"
+  ]
+}

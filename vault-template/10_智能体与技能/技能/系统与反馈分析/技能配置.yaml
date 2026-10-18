@@ -1,0 +1,53 @@
+{
+  "formatVersion": 3,
+  "id": "xingzhi-system-feedback-analysis",
+  "label": "系统与反馈分析",
+  "description": "当问题涉及持续积累、流入流出、反馈回路、时间延迟、瓶颈、局部优化反噬或杠杆点，并且系统关系会改变判断或行动时使用；一次性事件、普通原因询问、理论介绍、翻译、润色、摘要和直接执行任务不使用。",
+  "version": "1.0.0",
+  "source": "compiled",
+  "protected": false,
+  "enabled": true,
+  "loadMode": "on-demand",
+  "skillPath": "10_智能体与技能/技能/系统与反馈分析/SKILL.md",
+  "surface": "user",
+  "invocation": "explicit",
+  "skillType": "cognitive-lens",
+  "primaryEligible": false,
+  "controlsFinalLayout": false,
+  "returnsStructuredResult": true,
+  "capabilities": [
+    "系统与反馈分析",
+    "系统动力分析"
+  ],
+  "intents": [
+    "系统与反馈分析"
+  ],
+  "tags": [
+    "cognitive-lens",
+    "system-dynamics"
+  ],
+  "requires": [],
+  "optionalDependencies": [],
+  "conflicts": [],
+  "recommendedOperators": [
+    "system-dynamics"
+  ],
+  "readScopes": [],
+  "riskLevel": "bounded",
+  "maxDependencyDepth": 0,
+  "toolRequests": [],
+  "compiledFrom": {
+    "schemaVersion": "xingzhi-skill-compile/v1",
+    "sourceSchemaVersion": "xingzhi-skill/v1",
+    "sourcePath": "10_智能体与技能/技能/系统与反馈分析/SKILL.md",
+    "sourceVersion": "1.0.0",
+    "contentHash": "sha256:31c0161d357bbe5872547e2812aa96dd6cfcaffef0b9ff11a4c4ad95d0f31e47",
+    "skillType": "cognitive-lens",
+    "operators": [
+      {
+        "id": "system-dynamics",
+        "mode": "system-feedback"
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+schema_version: "1.0"
+brand_id: "xingzhi"
+name: "行知"
+status: "candidate_configuration"
+activation: "explicit_xingzhi_mode_or_xingzhi_content_task"
+identity:
+  author_role: null
+  organization_role: null
+  confirmation_source: "本次用户需求只确认项目名为行知；其他身份按本次资料确认"
+  confirmed_at: "2026-10-04"
+reader: null
+positioning: null
+editorial_preferences:
+  - id: "XZ-P01"
+    rule: "以人的具体处境、理解、判断与选择为叙述中心；人保留决定权"
+    status: "candidate_from_prior_context"
+    source: "2026-09-26 历史品牌讨论；本次未复核为最终品牌定位"
+    applicable_context: "行知理念与产品内容，作为启用模式后的编辑起点"
+  - id: "XZ-P02"
+    rule: "AI 作为支持能力出现；实际作用须由当前资料支持"
+    status: "candidate_from_prior_context"
+    source: "历史行知讨论的表达取向，非产品效果验证"
+    applicable_context: "涉及 AI 的品牌内容"
+  - id: "XZ-P03"
+    rule: "保留事实、作者自述、推断、价值与未知的区别"
+    status: "user_instruction"
+    source: "本次用户提供的独立判断模式"
+    applicable_context: "全部内容"
+claims: [] # 本包没有核验行知产品、功能、商业结果和用户数据
+restricted_promises:
+  - "没有证据的用户数、收入、成功率、提效百分比和判断力提升"
+  - "把规划、原型、候选定位或品牌愿望说成已实现结果"
+  - "替用户决定人生、保证正确判断或保证商业成功"
+  - "将单一循环、方法名称写成行知产品的全部定义"
+  - "把配置文件或技能登记页当功能运行证据"
+allowed_personal_materials: [] # 私人故事需要本次公开许可，不从历史上下文自动导入
+private_materials: []
+preferred_terms: [] # 不预设未确认口号
+visual_assets: []
+style_profile_path: null
+platform_overrides: {}
+cta:
+  allowed_actions: []
+  verified_destinations: []
+updated_at: "2026-10-04"
+known_unknowns:
+  - "最终定位、目标用户和品牌用语"
+  - "当前产品功能、版本及可公开演示"
+  - "可公开案例、用户反馈与效果证据"
+  - "作者身份、真实个人风格与公开素材权限"

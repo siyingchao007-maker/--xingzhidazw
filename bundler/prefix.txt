@@ -1,0 +1,45 @@
+"use strict";
+// Compatibility bridge; implementation lives in one explicit module.
+globalThis.__xzResolveOrganizationPath = (...args) => __require('./organization-path-resolver.cjs').resolveOrganizationPath(...args);
+const __nativeRequire = require;
+const __externalModuleIds = new Set([
+  "./entity-knowledge-engine.cjs",
+  "./environment-policy-engine.cjs",
+  "./evidence-environment-bridge.cjs",
+  "./knowledge-current-revision.cjs",
+  "./knowledge-record-schema.cjs",
+  "./path-output-contract.cjs",
+  "./question-calibration.cjs",
+  "./dynamic-thinking-policy.cjs",
+  "./decision-record-schema.cjs",
+  "./decision-evidence-bridge.cjs",
+  "./decision-lens-adapter.cjs",
+  "./decision-kernel.cjs",
+  "./decision-action-feedback.cjs",
+  "./decision-candidate-envelope.cjs",
+  "./decision-runtime-governance.cjs",
+  "./decision-legacy-compat.cjs",
+  "./decision-runtime-e2e.cjs",
+  "./judgment-kernel-v3-addon.cjs",
+  "./reasoning-profile.cjs",
+  "./public-web-evidence.cjs",
+]);
+function __requireExternalModule(id) {
+  const adapter = globalThis.app?.vault?.adapter;
+  const manifestDir = globalThis.app?.plugins?.manifests?.["xingzhi-workbench"]?.dir;
+  let vaultBase = typeof adapter?.basePath === "string" ? adapter.basePath : "";
+  if (!vaultBase && typeof adapter?.getBasePath === "function") {
+    vaultBase = adapter.getBasePath();
+  }
+  if (!vaultBase || typeof manifestDir !== "string" || !manifestDir.trim()) {
+    return __nativeRequire(id);
+  }
+  const path = __nativeRequire("node:path");
+  const pluginDirectory = path.resolve(vaultBase, manifestDir);
+  const externalPath = path.resolve(pluginDirectory, id.replace(/^\.\//u, ""));
+  if (path.dirname(externalPath) !== pluginDirectory) {
+    throw new Error(`Refusing external module outside the plugin directory: ${id}`);
+  }
+  return __nativeRequire(externalPath);
+}
+const __modules = {

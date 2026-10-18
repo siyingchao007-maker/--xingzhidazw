@@ -1,0 +1,73 @@
+
+}
+};
+const __cache = {};
+function __require(id) {
+  if (id === 'obsidian' || id.startsWith('node:')) return __nativeRequire(id);
+  if (__externalModuleIds.has(id)) return __requireExternalModule(id);
+  if (__cache[id]) return __cache[id].exports;
+  const factory = __modules[id];
+  if (!factory) throw new Error(`Unknown bundled module: ${id}`);
+  const module = { exports: {} };
+  __cache[id] = module;
+  factory(module, module.exports, __require);
+  return module.exports;
+}
+module.exports = __require('./main.cjs');
+
+// XINGZHI_HOME_PATH_UPGRADE_BEGIN
+;(() => {
+  const Entry = module.exports;
+  const key = Symbol.for("xingzhi.home-path-upgrade.boot.v2");
+  if (!Entry?.prototype || Entry.prototype[key]) return;
+  const original = Entry.prototype.onload;
+  if (typeof original !== "function") return;
+  Entry.prototype.onload = async function (...args) {
+    try {
+      const native = typeof __nativeRequire === "function" ? __nativeRequire : require;
+      const nodePath = native("node:path");
+      const adapter = this.app?.vault?.adapter;
+      const base = adapter?.getBasePath?.() || adapter?.basePath;
+      const dir = this.manifest?.dir || ".obsidian/plugins/xingzhi-workbench";
+      if (!base) throw new Error("首页增强仅支持桌面本地库");
+      const createAddon = native(nodePath.join(base, dir, "home-path-upgrade.cjs"));
+      const addon = createAddon(require("obsidian"));
+      addon.install(Entry, { requireBundled: __require });
+    } catch (error) {
+      console.error("[行知 PATH完整运行时]", error);
+      try { const { Notice } = require("obsidian"); new Notice("PATH完整运行时未加载，原插件继续运行。请检查兼容性或查看安装说明。"); } catch {}
+    }
+    return original.apply(this, args);
+  };
+  Object.defineProperty(Entry.prototype, key, { value: true });
+})();
+// XINGZHI_HOME_PATH_UPGRADE_END
+
+// XINGZHI_JUDGMENT_KERNEL_V3_BEGIN
+;(() => {
+  const Entry = module.exports;
+  const key = Symbol.for("xingzhi.judgment-kernel-v3.boot.v1");
+  if (!Entry?.prototype || Entry.prototype[key]) return;
+  const original = Entry.prototype.onload;
+  if (typeof original !== "function") return;
+  Entry.prototype.onload = async function (...args) {
+    const result = await original.apply(this, args);
+    if (this.startupFailure) return result;
+    try {
+      const addon = __require("./judgment-kernel-v3-addon.cjs");
+      const obsidian = typeof __nativeRequire === "function" ? __nativeRequire("obsidian") : require("obsidian");
+      const runtime = addon.install(this, obsidian);
+      const selfCheck = runtime.runKernelSelfCheck();
+      if (!selfCheck.ok) throw new Error("Judgment Kernel V3 startup self-check failed");
+    } catch (error) {
+      console.error("[行知 Judgment Kernel V3]", error);
+      try {
+        const { Notice } = require("obsidian");
+        new Notice("Judgment Kernel V3 未加载；行知原有功能继续运行。请执行升级包校验或回滚。");
+      } catch {}
+    }
+    return result;
+  };
+  Object.defineProperty(Entry.prototype, key, { value: true });
+})();
+// XINGZHI_JUDGMENT_KERNEL_V3_END

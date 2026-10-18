@@ -1,0 +1,52 @@
+{
+  "formatVersion": 3,
+  "id": "xingzhi-contradiction-stage-analysis",
+  "label": "矛盾与阶段分析",
+  "description": "当问题存在相互制约的目标、约束或机制，而且识别主要矛盾、主导方面、当前阶段与转化信号能够改变优先级、验证或行动时使用；普通分歧、单一问题、理论介绍、文本转换和直接执行任务不使用。",
+  "version": "1.0.0",
+  "source": "compiled",
+  "protected": false,
+  "enabled": true,
+  "loadMode": "on-demand",
+  "skillPath": "10_智能体与技能/技能/矛盾与阶段分析/SKILL.md",
+  "surface": "user",
+  "invocation": "explicit",
+  "skillType": "cognitive-lens",
+  "primaryEligible": false,
+  "controlsFinalLayout": false,
+  "returnsStructuredResult": true,
+  "capabilities": [
+    "矛盾与阶段分析"
+  ],
+  "intents": [
+    "矛盾与阶段分析"
+  ],
+  "tags": [
+    "cognitive-lens",
+    "contradiction-stage-analysis"
+  ],
+  "requires": [],
+  "optionalDependencies": [],
+  "conflicts": [],
+  "recommendedOperators": [
+    "contradiction-stage-analysis"
+  ],
+  "readScopes": [],
+  "riskLevel": "bounded",
+  "maxDependencyDepth": 0,
+  "toolRequests": [],
+  "compiledFrom": {
+    "schemaVersion": "xingzhi-skill-compile/v1",
+    "sourceSchemaVersion": "xingzhi-skill/v1",
+    "sourcePath": "10_智能体与技能/技能/矛盾与阶段分析/SKILL.md",
+    "sourceVersion": "1.0.0",
+    "contentHash": "sha256:118c821b9e71ed77a095d9459b30e824b84855553714b35c180dda2545b8c6cd",
+    "skillType": "cognitive-lens",
+    "operators": [
+      {
+        "id": "contradiction-stage-analysis",
+        "mode": "contradiction-stage"
+      }
+    ]
+  }
+}

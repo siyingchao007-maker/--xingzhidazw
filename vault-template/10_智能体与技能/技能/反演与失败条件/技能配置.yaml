@@ -1,0 +1,60 @@
+{
+  "formatVersion": 3,
+  "id": "xingzhi-reversal-failure-conditions",
+  "label": "反演与失败条件",
+  "description": "当任务需要对尚未实施或正在规划的方案进行失败预演，识别失效机制、早期预警、缓解和停止条件，或者从明确终局验收反推必要条件、依赖、阶段证据与最晚决策点时使用；实际已经失败的复盘、普通日程安排、一次性应急、理论介绍、翻译、润色和摘要不使用。",
+  "version": "1.0.0",
+  "source": "compiled",
+  "protected": false,
+  "enabled": true,
+  "loadMode": "on-demand",
+  "skillPath": "10_智能体与技能/技能/反演与失败条件/SKILL.md",
+  "surface": "user",
+  "invocation": "explicit",
+  "skillType": "cognitive-lens",
+  "primaryEligible": false,
+  "controlsFinalLayout": false,
+  "returnsStructuredResult": true,
+  "capabilities": [
+    "反演与失败条件",
+    "失败预演",
+    "目标倒推"
+  ],
+  "intents": [
+    "反演与失败条件"
+  ],
+  "tags": [
+    "cognitive-lens",
+    "premortem",
+    "backcasting"
+  ],
+  "requires": [],
+  "optionalDependencies": [],
+  "conflicts": [],
+  "recommendedOperators": [
+    "premortem",
+    "backcasting"
+  ],
+  "readScopes": [],
+  "riskLevel": "bounded",
+  "maxDependencyDepth": 0,
+  "toolRequests": [],
+  "compiledFrom": {
+    "schemaVersion": "xingzhi-skill-compile/v1",
+    "sourceSchemaVersion": "xingzhi-skill/v1",
+    "sourcePath": "10_智能体与技能/技能/反演与失败条件/SKILL.md",
+    "sourceVersion": "1.0.0",
+    "contentHash": "sha256:aa9a7789d409f1c00f6ea367d6a39e8f046015e6631c507ce985f89e445e2ffb",
+    "skillType": "cognitive-lens",
+    "operators": [
+      {
+        "id": "premortem",
+        "mode": "failure-premortem"
+      },
+      {
+        "id": "backcasting",
+        "mode": "goal-backcasting"
+      }
+    ]
+  }
+}

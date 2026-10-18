@@ -1,0 +1,18 @@
+schemaVersion: '2.0'
+kind: tool
+id: xingzhi-tool-update-continuity-state
+label: 更新连续性状态
+legacyAliases: []
+implementationStatus: contract-only
+sideEffect: state-write
+input:
+  statePatch: object
+  expectedVersion: string|null
+  idempotencyKey: string
+output:
+  status: success|conflict|failed
+  newVersion: string|null
+policyIds:
+- xingzhi-policy-conflict
+- xingzhi-policy-side-effect
+version: 2.0.0-rc1

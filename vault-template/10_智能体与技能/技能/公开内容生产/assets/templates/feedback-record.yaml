@@ -1,0 +1,27 @@
+schema_version: "1.0"
+content_id: null
+version: null
+platform: null
+published_at: null
+feedback_type: null # author / editor / distribution
+data_source: null
+observation_window:
+  start: null
+  end: null
+metrics: [] # name / value / definition / denominator / source
+author_feedback: [] # 原意、口吻、结构、事实更正分别记录
+reader_feedback: [] # 原话/定位、公开许可、样本范围
+comparison:
+  baseline: null
+  comparable_conditions: []
+  changed_variables: []
+  confounders: []
+hypotheses: [] # explanation / evidence / alternatives / confidence
+candidate_changes: []
+next_test:
+  action: null
+  observation: null
+  failure_condition: null
+profile_update_authorization: null
+actual_profile_updates: []
+known_limits: []

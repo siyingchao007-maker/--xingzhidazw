@@ -1,0 +1,40 @@
+{
+  "formatVersion": 3,
+  "id": "xingzhi-multi-perspective",
+  "label": "多视角分析",
+  "description": "只有不同视角能改变决策或暴露关键假设时使用；选择少量必要角度，不把模拟角色称为真实独立专家或多 Agent 执行。",
+  "version": "1.5.1",
+  "source": "core",
+  "protected": true,
+  "enabled": true,
+  "loadMode": "on-demand",
+  "skillPath": "10_智能体与技能/技能/多视角分析/SKILL.md",
+  "surface": "user",
+  "invocation": "implicit",
+  "capabilities": [
+    "视角选择",
+    "视角比较",
+    "综合解释"
+  ],
+  "intents": [
+    "视角选择",
+    "视角比较",
+    "综合解释"
+  ],
+  "requires": [],
+  "optionalDependencies": [],
+  "conflicts": [],
+  "recommendedOperators": [],
+  "readScopes": [
+    "03_环境",
+    "04_关系",
+    "05_目标与项目",
+    "06_判断与决策",
+    "09_认知资产"
+  ],
+  "riskLevel": "bounded",
+  "maxDependencyDepth": 2,
+  "toolRequests": [
+    "xingzhi_search_knowledge"
+  ]
+}

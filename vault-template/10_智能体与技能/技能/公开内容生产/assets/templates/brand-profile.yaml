@@ -1,0 +1,30 @@
+# 复制到用户项目后按确认资料填写。偏好与产品事实分开。
+schema_version: "1.0"
+brand_id: null
+name: null
+status: "candidate"
+activation: "explicit_request_or_confirmed_project_config"
+identity:
+  author_role: null
+  organization_role: null
+  confirmation_source: null
+  confirmed_at: null
+reader: null
+positioning: null
+editorial_preferences: []
+# 每项：id, rule, status, source, applicable_context。
+claims: []
+# 每项：id, statement, status(user_confirmed/evidence_verified/candidate/unknown/retired),
+# sources, date, scope, allowed_public_wording。
+restricted_promises: []
+allowed_personal_materials: []
+private_materials: []
+preferred_terms: []
+visual_assets: [] # locator / rights / version；无素材无需填充
+style_profile_path: null
+platform_overrides: {}
+cta:
+  allowed_actions: []
+  verified_destinations: []
+updated_at: null
+known_unknowns: []

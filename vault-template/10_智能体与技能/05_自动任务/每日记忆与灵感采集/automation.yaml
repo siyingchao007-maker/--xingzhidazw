@@ -1,0 +1,24 @@
+schemaVersion: '2.0'
+id: xingzhi-automation-daily-memory-inspiration-capture
+kind: automation
+label: 每日记忆与灵感采集
+version: 2.0.0-rc1
+status: draft
+enabled: false
+source:
+  path: 10_智能体与技能/自动任务/每日记忆与灵感采集.md
+  sourceStatus: draft
+schedule:
+  cadence: daily
+  time: null
+  timezone: user-local
+  requiresUserConfiguration: true
+target:
+  agentId: xingzhi-agent-orchestrator
+permissions:
+  mayCaptureRawInput: true
+  mayAutoCreateStableProfile: false
+  externalAction: false
+runtime:
+  retentionPolicyId: xingzhi-policy-retention
+  sideEffectPolicyId: xingzhi-policy-side-effect

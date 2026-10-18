@@ -1,0 +1,70 @@
+{
+  "formatVersion": 3,
+  "id": "xingzhi-career-path-validation",
+  "label": "职业路径验证",
+  "description": "当用户需要评估职业方向、岗位选择、转行可行性、能力差距或学习投入，并要求结合本人证据与外部岗位要求时使用；简历润色、泛泛职业建议或单项决策不使用。",
+  "version": "1.0.1",
+  "source": "extension",
+  "protected": false,
+  "enabled": true,
+  "loadMode": "on-demand",
+  "skillPath": "10_智能体与技能/技能/职业路径验证/SKILL.md",
+  "surface": "user",
+  "invocation": "implicit",
+  "capabilities": [
+    "职业方向证据审查",
+    "岗位要求与能力差距映射",
+    "候选职业路径比较",
+    "可逆职业实验设计"
+  ],
+  "intents": [
+    "职业路径验证",
+    "我是否适合转向",
+    "职业转向",
+    "职业路径规划",
+    "职业方向选择",
+    "转行可行性",
+    "岗位选择",
+    "职业发展方案",
+    "能力差距分析",
+    "职业学习路径规划",
+    "评估这条职业路径"
+  ],
+  "tags": [
+    "职业路径",
+    "转行",
+    "岗位匹配",
+    "能力证据",
+    "学习路径",
+    "收入路径"
+  ],
+  "requires": [],
+  "optionalDependencies": [
+    {
+      "id": "xingzhi-judgment-calibration",
+      "requiresVersion": ">=1.5.0",
+      "whenIntents": ["选择", "是否适合", "要不要", "机会成本", "风险", "比较"]
+    },
+    {
+      "id": "xingzhi-action-feedback",
+      "requiresVersion": ">=1.5.0",
+      "whenIntents": ["下一步", "实验", "行动计划", "投递", "作品", "具体执行"]
+    }
+  ],
+  "conflicts": [],
+  "recommendedOperators": [],
+  "readScopes": [
+    "01_当前的我",
+    "02_我的历史",
+    "03_环境",
+    "05_目标与项目",
+    "06_判断与决策",
+    "07_行动",
+    "08_结果与反馈",
+    "11_证据与来源",
+    "12_资料库"
+  ],
+  "riskLevel": "bounded",
+  "maxDependencyDepth": 2,
+  "toolRequests": ["xingzhi_search_knowledge"]
+}

@@ -1,0 +1,44 @@
+{
+  "formatVersion": 3,
+  "id": "xingzhi-document-synthesis",
+  "label": "资料整合",
+  "description": "用户要求整合多份资料、设计方案或映射业务事实时使用；按来源、主体、时间与冲突整理材料，不把第三方资料归入用户自我认知。",
+  "version": "1.5.1",
+  "source": "core",
+  "protected": true,
+  "enabled": true,
+  "loadMode": "on-demand",
+  "skillPath": "10_智能体与技能/技能/资料整合/SKILL.md",
+  "surface": "user",
+  "invocation": "implicit",
+  "capabilities": [
+    "多资料整合",
+    "来源追溯",
+    "差异与冲突识别",
+    "统一方案生成"
+  ],
+  "intents": [
+    "多资料整合",
+    "来源追溯",
+    "差异与冲突识别",
+    "统一方案生成"
+  ],
+  "requires": [],
+  "optionalDependencies": [],
+  "conflicts": [],
+  "recommendedOperators": [],
+  "readScopes": [
+    "03_环境",
+    "05_目标与项目",
+    "06_判断与决策",
+    "07_行动",
+    "09_认知资产",
+    "11_证据与来源",
+    "12_资料库"
+  ],
+  "riskLevel": "bounded",
+  "maxDependencyDepth": 2,
+  "toolRequests": [
+    "xingzhi_search_knowledge"
+  ]
+}

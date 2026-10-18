@@ -1,0 +1,17 @@
+schemaVersion: '2.0'
+kind: tool
+id: xingzhi-tool-write-memory-record
+label: 写入结构化记忆
+legacyAliases: []
+implementationStatus: contract-only
+sideEffect: memory-write
+input:
+  records: MemoryRecord[]
+  idempotencyKey: string
+output:
+  status: success|partial|failed
+  recordIds: string[]
+policyIds:
+- xingzhi-policy-evidence
+- xingzhi-policy-side-effect
+version: 2.0.0-rc1

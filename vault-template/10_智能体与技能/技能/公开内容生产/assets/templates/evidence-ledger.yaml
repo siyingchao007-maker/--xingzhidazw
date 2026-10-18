@@ -1,0 +1,25 @@
+# 一条主张可有多个来源；来源数不等于真值。
+schema_version: "1.0"
+content_id: null
+updated_at: null
+claims:
+  - id: "C01"
+    statement: null
+    kind: "unknown" # fact / self_report / inference / value / unknown
+    status: "unverified" # verified / provided_only / disputed / unverified
+    scope:
+      population: null
+      time: null
+      region: null
+      version: null
+    sources: []
+    # sources 每项：id, title, author_or_org, locator, published_at,
+    # event_at, accessed_at, source_class(P/S/E/L), supports, limitations,
+    # independence_group, public_use。仅能访问摘要时明确记录。
+    reasoning: null
+    calculation: null # formula / inputs / units / rounding；不需要时为 null
+    counterevidence: []
+    uncertainty: null
+    public_use: "unknown" # allowed / anonymized_only / restricted / unknown
+    used_in: [] # file / version / paragraph_anchor 或 post_id
+    next_verification: null

@@ -1,0 +1,216 @@
+{
+  "formatVersion": 3,
+  "registryType": "xingzhi-agent-registry",
+  "defaultAgentId": "xingzhi-orchestrator",
+  "agents": [
+    {
+      "id": "xingzhi-orchestrator",
+      "label": "行知总控智能体",
+      "description": "在连续对话中协调理解、澄清、知识整理、判断校准与行动反馈。",
+      "isDefault": true,
+      "internal": false,
+      "recommendedSkills": [
+        "xingzhi-path-runtime",
+        "xingzhi-document-synthesis",
+        "xingzhi-knowledge-organization",
+        "xingzhi-knowledge-packaging",
+        "xingzhi-judgment-calibration",
+        "xingzhi-action-feedback",
+        "xingzhi-multi-perspective"
+      ],
+      "allowedSkillIds": [
+        "*"
+      ],
+      "capabilities": [
+        "综合访谈与问题分流",
+        "多资料整合与方案归纳",
+        "知识结构诊断与整理预览",
+        "个人知识候选整理",
+        "判断与行动闭环协调",
+        "按需多视角分析"
+      ],
+      "intents": [
+        "综合访谈与问题分流",
+        "多资料整合与方案归纳",
+        "知识结构诊断与整理预览",
+        "个人知识候选整理",
+        "判断与行动闭环协调",
+        "按需多视角分析"
+      ],
+      "version": "1.6.0",
+      "source": "core",
+      "protected": true,
+      "configPath": "10_智能体与技能/智能体/行知总控/智能体配置.yaml",
+      "descriptionPath": "10_智能体与技能/智能体/行知总控/智能体说明.md"
+    },
+    {
+      "id": "xingzhi-knowledge-steward",
+      "label": "知识整理智能体",
+      "description": "从自然对话中识别可沉淀信息，校验来源、时效和冲突后形成知识候选。",
+      "isDefault": false,
+      "internal": false,
+      "recommendedSkills": [
+        "xingzhi-document-synthesis",
+        "xingzhi-knowledge-organization",
+        "xingzhi-knowledge-packaging"
+      ],
+      "allowedSkillIds": [
+        "*"
+      ],
+      "capabilities": [
+        "对话信息结构化",
+        "多资料去重、归纳与目标体系映射",
+        "知识目录、标签、链接与排版整理",
+        "来源与时效标注",
+        "知识冲突识别"
+      ],
+      "intents": [
+        "对话信息结构化",
+        "多资料去重、归纳与目标体系映射",
+        "知识目录、标签、链接与排版整理",
+        "来源与时效标注",
+        "知识冲突识别"
+      ],
+      "version": "1.5.1",
+      "source": "core",
+      "protected": true,
+      "configPath": "10_智能体与技能/智能体/知识整理/智能体配置.yaml",
+      "descriptionPath": "10_智能体与技能/智能体/知识整理/智能体说明.md"
+    },
+    {
+      "id": "xingzhi-judgment-calibrator",
+      "label": "判断校准智能体",
+      "description": "检查关键前提、证据强度、反证与失败条件，帮助形成可校准的判断。",
+      "isDefault": false,
+      "internal": false,
+      "recommendedSkills": [
+        "xingzhi-judgment-calibration"
+      ],
+      "allowedSkillIds": [
+        "*"
+      ],
+      "capabilities": [
+        "关键前提检查",
+        "证据与反证校准",
+        "失败条件识别",
+        "多视角综合判断"
+      ],
+      "intents": [
+        "关键前提检查",
+        "证据与反证校准",
+        "失败条件识别",
+        "多视角综合判断"
+      ],
+      "version": "1.5.1",
+      "source": "core",
+      "protected": true,
+      "configPath": "10_智能体与技能/智能体/判断校准/智能体配置.yaml",
+      "descriptionPath": "10_智能体与技能/智能体/判断校准/智能体说明.md"
+    },
+    {
+      "id": "xingzhi-action-coach",
+      "label": "行动教练智能体",
+      "description": "把判断转成边界清楚的下一步，并依据真实结果持续复盘和修正。",
+      "isDefault": false,
+      "internal": false,
+      "recommendedSkills": [
+        "xingzhi-action-feedback"
+      ],
+      "allowedSkillIds": [
+        "*"
+      ],
+      "capabilities": [
+        "最小行动设计",
+        "完成标准与停止条件",
+        "结果反馈与复盘"
+      ],
+      "intents": [
+        "最小行动设计",
+        "完成标准与停止条件",
+        "结果反馈与复盘"
+      ],
+      "version": "1.5.1",
+      "source": "core",
+      "protected": true,
+      "configPath": "10_智能体与技能/智能体/行动教练/智能体配置.yaml",
+      "descriptionPath": "10_智能体与技能/智能体/行动教练/智能体说明.md"
+    },
+    {
+      "id": "xingzhi-user-continuity",
+      "label": "用户连续性与成长分析智能体",
+      "description": "把真实用户消息整理为可追溯的交互事件、使用偏好候选与成长路径更新。",
+      "isDefault": false,
+      "internal": false,
+      "recommendedSkills": [
+        "xingzhi-growth-path-synthesis"
+      ],
+      "allowedSkillIds": [
+        "*"
+      ],
+      "capabilities": [
+        "交互事件提取",
+        "使用偏好与行为模式演变",
+        "用户成长路径更新",
+        "敏感与冲突信息分流"
+      ],
+      "intents": [
+        "交互事件提取",
+        "使用偏好与行为模式演变",
+        "用户成长路径更新",
+        "敏感与冲突信息分流"
+      ],
+      "version": "1.5.1",
+      "source": "core",
+      "protected": true,
+      "configPath": "10_智能体与技能/智能体/用户连续性与成长/智能体配置.yaml",
+      "descriptionPath": "10_智能体与技能/智能体/用户连续性与成长/智能体说明.md"
+    },
+    {
+      "id": "xingzhi-conversation-organizer",
+      "label": "对话整理工作流智能体",
+      "description": "在可见回复完成后，以一次合并分析完成对话整理、用户连续性观察和成长事件提取，再由本地门槛决定是否形成知识候选。",
+      "isDefault": false,
+      "internal": true,
+      "recommendedSkills": [
+        "xingzhi-conversation-organization",
+        "xingzhi-growth-path-synthesis"
+      ],
+      "allowedSkillIds": [
+        "xingzhi-training-response",
+        "xingzhi-document-synthesis",
+        "xingzhi-knowledge-organization",
+        "xingzhi-knowledge-packaging",
+        "xingzhi-judgment-calibration",
+        "xingzhi-action-feedback",
+        "xingzhi-multi-perspective",
+        "xingzhi-interaction-event-extraction",
+        "xingzhi-user-profile-evolution",
+        "xingzhi-growth-path-synthesis",
+        "xingzhi-conversation-organization"
+      ],
+      "capabilities": [
+        "用户与助手证据角色分离",
+        "对话主题、标签与知识类型识别",
+        "新旧知识关系判断",
+        "用户连续性观察与成长事件提取",
+        "跨轮证据门槛判断",
+        "普通候选与重点待审分流",
+        "可追溯对话整理报告"
+      ],
+      "intents": [
+        "用户与助手证据角色分离",
+        "对话主题、标签与知识类型识别",
+        "新旧知识关系判断",
+        "用户连续性观察与成长事件提取",
+        "跨轮证据门槛判断",
+        "普通候选与重点待审分流",
+        "可追溯对话整理报告"
+      ],
+      "version": "1.5.1",
+      "source": "core",
+      "protected": true,
+      "configPath": "10_智能体与技能/智能体/对话整理工作流/智能体配置.yaml",
+      "descriptionPath": "10_智能体与技能/智能体/对话整理工作流/智能体说明.md"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "version": "0.45.27",
+  "source": "Installed release snapshot; no personal state or original Git history included",
+  "moduleCount": 174,
+  "expected": {
+    "main.js": "2bef265d32c8365f091aaaafc161a4eb31eb27db13f2f3bb126633913750a0a0",
+    "styles.css": "bdfe2daa54b10fb78dbb5548ad6703e7fbdd0631561c90549a4b8cefb677b2ea",
+    "manifest.json": "1483bb51344c8bd416c3cc8644e3e31cd7b79bd127d5e4b4b7d892968d4d5ea5",
+    "versions.json": "4399fd1d85858fd8eae51c30a3d662304ed8ace2811cff6932dff24a58842e07"
+  }
+}

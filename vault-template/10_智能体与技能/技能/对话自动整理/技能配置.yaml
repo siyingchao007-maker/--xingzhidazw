@@ -1,0 +1,36 @@
+{
+  "formatVersion": 3,
+  "id": "xingzhi-conversation-organization",
+  "label": "对话自动整理",
+  "description": "对话完成后的后台整理：生成有来源的可检索条目和知识、成长候选；与前台答复分工，不改变用户当前任务或把空结果包装成更新。",
+  "version": "1.5.1",
+  "source": "core",
+  "protected": true,
+  "enabled": true,
+  "loadMode": "on-demand",
+  "skillPath": "10_智能体与技能/技能/对话自动整理/SKILL.md",
+  "surface": "internal",
+  "invocation": "workflow-only",
+  "capabilities": [
+    "对话证据分层",
+    "主题标签与知识类型识别",
+    "新旧知识关系判断",
+    "跨轮观察门槛",
+    "用户连续性与成长事件",
+    "普通候选与重点待审分流"
+  ],
+  "intents": [
+    "后台整理本轮对话",
+    "观察重复用户信息",
+    "更新用户连续性",
+    "生成对话整理报告"
+  ],
+  "requires": [],
+  "optionalDependencies": [],
+  "conflicts": [],
+  "recommendedOperators": [],
+  "readScopes": [],
+  "riskLevel": "bounded",
+  "maxDependencyDepth": 2,
+  "toolRequests": []
+}

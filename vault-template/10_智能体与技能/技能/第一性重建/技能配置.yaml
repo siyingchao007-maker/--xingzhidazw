@@ -1,0 +1,52 @@
+{
+  "formatVersion": 3,
+  "id": "xingzhi-first-principles",
+  "label": "第一性重建",
+  "description": "当问题被行业惯例、默认前提或混淆的约束限制，并且重新区分事实、假设与必要条件能够改变理解、风险或方案时使用；普通事实查询、理论介绍、润色、摘要和直接执行任务不使用。",
+  "version": "1.0.1",
+  "source": "compiled",
+  "protected": false,
+  "enabled": true,
+  "loadMode": "on-demand",
+  "skillPath": "10_智能体与技能/技能/第一性重建/SKILL.md",
+  "surface": "user",
+  "invocation": "explicit",
+  "skillType": "cognitive-lens",
+  "primaryEligible": false,
+  "controlsFinalLayout": false,
+  "returnsStructuredResult": true,
+  "capabilities": [
+    "第一性重建"
+  ],
+  "intents": [
+    "第一性重建"
+  ],
+  "tags": [
+    "cognitive-lens",
+    "first-principles-reconstruction"
+  ],
+  "requires": [],
+  "optionalDependencies": [],
+  "conflicts": [],
+  "recommendedOperators": [
+    "first-principles-reconstruction"
+  ],
+  "readScopes": [],
+  "riskLevel": "bounded",
+  "maxDependencyDepth": 0,
+  "toolRequests": [],
+  "compiledFrom": {
+    "schemaVersion": "xingzhi-skill-compile/v1",
+    "sourceSchemaVersion": "xingzhi-skill/v1",
+    "sourcePath": "10_智能体与技能/技能/第一性重建/SKILL.md",
+    "sourceVersion": "1.0.1",
+    "contentHash": "sha256:3c233a32e555325530f34b20f977b8ad00489a6445184db862980c7b41e1bbdb",
+    "skillType": "cognitive-lens",
+    "operators": [
+      {
+        "id": "first-principles-reconstruction",
+        "mode": "reconstruction"
+      }
+    ]
+  }
+}
