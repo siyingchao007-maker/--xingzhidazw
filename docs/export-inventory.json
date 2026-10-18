@@ -338,8 +338,8 @@
   {
     "path": "docs/VALIDATION.md",
     "origin": "portable-project-tooling",
-    "bytes": 1366,
-    "sha256": "f1717b9cf173c0de7ac9f8189643bb24adf88038c97a6ad7f7c5d209491b9e30"
+    "bytes": 2292,
+    "sha256": "ac027257bdfa8aae0f48afb743ee1e018e064fd8208849c6aba9788aa977eeab"
   },
   {
     "path": "docs/installed-baseline.json",
