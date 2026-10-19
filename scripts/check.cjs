@@ -70,4 +70,3 @@ console.log(JSON.stringify({passed: true, version: manifest.version, syntaxCheck
   sourceBuildEquivalent: true, installedBaselineVersion: baseline.version,
   installedReleaseByteEquivalent: Object.entries(baseline.expected).every(([name, expected]) => hashes[name] === expected),
   authorizationCenter, hashes}));
-

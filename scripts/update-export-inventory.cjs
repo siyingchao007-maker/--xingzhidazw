@@ -31,4 +31,3 @@ const next = [...byPath.values()].map(entry => {
 }).sort((a, b) => a.path.localeCompare(b.path, "en"));
 fs.writeFileSync(inventoryPath, `${JSON.stringify(next, null, 2)}\n`, "utf8");
 console.log(JSON.stringify({ updated: true, files: next.length, output: "docs/export-inventory.json" }));
-

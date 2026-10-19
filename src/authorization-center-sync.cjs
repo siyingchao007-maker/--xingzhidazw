@@ -216,4 +216,3 @@ module.exports = {
   inspectAuthorizationCenter,
   syncAuthorizationCenter,
 };
-

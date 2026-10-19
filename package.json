@@ -15,4 +15,3 @@
     "release:local": "npm run test && npm run build && npm run auth-center:sync && npm run check && npm run scan && npm run inventory:update"
   }
 }
-

@@ -105,4 +105,3 @@ test("sync refuses to claim compatibility when capability packs differ", () => {
   assert.throws(() => syncAuthorizationCenter(fixture), /能力包.*不一致/u);
   fs.rmSync(fixture.root, { recursive: true, force: true });
 });
-

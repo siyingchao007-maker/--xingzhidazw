@@ -39,4 +39,3 @@ console.log(JSON.stringify({
   authorizationCenterRoot: options.authorizationCenterRoot,
 }, null, 2));
 if (!result.ok) process.exitCode = 1;
-
