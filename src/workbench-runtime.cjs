@@ -13538,6 +13538,10 @@ class WorkbenchRuntime extends EventEmitter {
     const lane = turnLane(active);
     const laneKey = turnLaneKey(active.conversationId, lane);
     this._clearTurnWatchdog(active.conversationId, lane);
+    // Foreground answers end on a provider terminal event or an explicit user
+    // stop, never because a long but productive answer crossed a time limit.
+    // Keep the bounded watchdog for internal background maintenance only.
+    if (lane === TURN_LANES.dialogue) return;
     const identity = `${active.threadId || ""}\u0000${active.turnId || ""}\u0000${active.assistantMessageId || ""}`;
     const watchdog = setTimeout(() => {
       const current = this._turnForConversation(active.conversationId, lane);

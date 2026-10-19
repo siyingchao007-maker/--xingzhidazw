@@ -14,8 +14,8 @@
   {
     "path": "README.md",
     "origin": "portable-project-tooling",
-    "bytes": 2800,
-    "sha256": "9988395f3df7e35e15fe3b720e1c8fb10d501f0f93e8c9072c558004d9ae6a94"
+    "bytes": 2913,
+    "sha256": "0773a8be8a5fa0c5b514d72e880d8530db852eda085067d49b33124dcce5df75"
   },
   {
     "path": "assets/home-landscape.png",
@@ -336,10 +336,16 @@
     "sha256": "f0d620d8090a7036075270955b07dcbf6379fd33462c9bc29f2f7e6d86948399"
   },
   {
+    "path": "docs/RELEASE-0.45.28.md",
+    "origin": "portable-project-tooling",
+    "bytes": 2112,
+    "sha256": "1e306f3e9acce00b0d5fd07e600b5fc36fa40159b063078b6c8aa45150d2d762"
+  },
+  {
     "path": "docs/VALIDATION.md",
     "origin": "portable-project-tooling",
-    "bytes": 2292,
-    "sha256": "ac027257bdfa8aae0f48afb743ee1e018e064fd8208849c6aba9788aa977eeab"
+    "bytes": 3814,
+    "sha256": "8e8fde2e7baa4a03b3e5dbb79c5c090f9b4df770ab62188b4c12fa9217fcddb4"
   },
   {
     "path": "docs/installed-baseline.json",
@@ -351,19 +357,19 @@
     "path": "manifest.json",
     "origin": "installed-manifest",
     "bytes": 311,
-    "sha256": "1483bb51344c8bd416c3cc8644e3e31cd7b79bd127d5e4b4b7d892968d4d5ea5"
+    "sha256": "4e1ea68e109944961348d78e55d6214235022d2c32c0fc7b8fcaa383339e1fa3"
   },
   {
     "path": "package-lock.json",
     "origin": "portable-project-tooling",
     "bytes": 252,
-    "sha256": "b19ef04ecf44c34176adc62b511f7e367d7c75d56b6cef7ab6dee893cc86eac6"
+    "sha256": "2566c3d11ad9cdfd10496854107169ec87d37fbc08ab5e26ffb62e2e49b1a483"
   },
   {
     "path": "package.json",
     "origin": "portable-project-tooling",
     "bytes": 391,
-    "sha256": "79b5490b9337a57e354eceff4f1bf0d9d8033139c2b9f24a89c745f4ef83340f"
+    "sha256": "fcd17fcc63aa58af0ce65e20a2e168c7e96431193aeae13331cca53adffb8f0e"
   },
   {
     "path": "scripts/build.cjs",
@@ -374,8 +380,8 @@
   {
     "path": "scripts/check.cjs",
     "origin": "portable-project-tooling",
-    "bytes": 1828,
-    "sha256": "3ab1bdfd0588369d53d57185d2af0ba6954c0cf913a81227dd0a6fc097d6cdd7"
+    "bytes": 3559,
+    "sha256": "72016edd37f45dc3495080b02c7269a2ce568f824b2b0d040dc68678b22ef813"
   },
   {
     "path": "scripts/scan.cjs",
@@ -1065,7 +1071,7 @@
     "path": "src/release-file-contract.cjs",
     "origin": "installed-bundled-module",
     "bytes": 1281,
-    "sha256": "d8547218e55018bdb1f5f05f04b9b28ca514c80669b849e8429a064021abc282"
+    "sha256": "08775b8be0c3b522b4914ff52df250e282e1310b2acf44889b6f7b074ea65f40"
   },
   {
     "path": "src/request-presentation.cjs",
@@ -1418,14 +1424,14 @@
   {
     "path": "src/workbench-runtime.cjs",
     "origin": "installed-bundled-module",
-    "bytes": 641256,
-    "sha256": "2d65434f1af5ad4ffd7cc49a1571fde141e98d51366f14334c6e7ebe00ddd134"
+    "bytes": 641535,
+    "sha256": "caf16dc692d9bb3a59c603d5279265f9aa5c8d7d532928503842361321b61ef9"
   },
   {
     "path": "src/workbench-view.cjs",
     "origin": "installed-bundled-module",
-    "bytes": 340544,
-    "sha256": "ce66d8ead1a26e01f1b0b1274279f8582f648e6c76c04a18ea1647918fdeb850"
+    "bytes": 340549,
+    "sha256": "fb30d868c057f5e1caeccd3f3be24175c099a53064644a89010c8c63e35ebf26"
   },
   {
     "path": "tests/codex-capacity.test.cjs",
@@ -1470,6 +1476,12 @@
     "sha256": "e4eb2b49c7bf20a4af3ade592fcbfde734d9aa1124d258f5200d078eca8b1052"
   },
   {
+    "path": "tests/interrupted-answer.test.cjs",
+    "origin": "portable-project-tooling",
+    "bytes": 5213,
+    "sha256": "e9a43d6f8b6cf4e44e4ba3b0bd4c40e9deb99c3bb68553e8c84b83f3aa7e7c54"
+  },
+  {
     "path": "tests/model-capacity.test.cjs",
     "origin": "prior-offline-regression",
     "bytes": 734,
@@ -1496,8 +1508,8 @@
   {
     "path": "tests/runtime-loader.cjs",
     "origin": "portable-project-tooling",
-    "bytes": 2026,
-    "sha256": "15b4fafe36d998974bedba3c398c22a1b98b806a4432a983bf586340e2a8fcb3"
+    "bytes": 2075,
+    "sha256": "0e78ddb6335a603e2894ab4223d1867c6375be75d36dc7e39e1b3a8cdbcf281b"
   },
   {
     "path": "vault-template/00_系统/方法与契约/Judgment Kernel V3 使用说明.md",
@@ -6542,7 +6554,7 @@
   {
     "path": "versions.json",
     "origin": "installed-manifest",
-    "bytes": 4076,
-    "sha256": "4399fd1d85858fd8eae51c30a3d662304ed8ace2811cff6932dff24a58842e07"
+    "bytes": 4099,
+    "sha256": "e74798aa8ca535fc6ec83be7f2a7a30741d98667ca6e189f76c5733346af488d"
   }
 ]

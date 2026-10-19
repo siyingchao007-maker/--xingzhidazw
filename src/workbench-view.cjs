@@ -191,13 +191,14 @@ function boundedMessageErrorSummary(value) {
     : slice.text;
 }
 
-function hasIncompleteProviderCompletion(message) {
-  const completion = message?.providerCompletion;
-  if (!completion || typeof completion !== "object" || Array.isArray(completion)) return false;
-  return Boolean(completion.incompleteReason)
-    || (typeof completion.finishReason === "string"
-      && !new Set(["stop", "tool_calls", "function_call"]).has(completion.finishReason))
-    || (typeof completion.responseStatus === "string" && completion.responseStatus !== "completed");
+function hasRetainedAnswerBody(message) {
+  if (message?.contentDeletedAt) return false;
+  const body = messageText(message).trim();
+  if (!body) return false;
+  // Older failures stored their error as content when no text had arrived.
+  // Exclude only that exact placeholder, never truncate a real partial answer.
+  const error = String(message?.error || "").trim();
+  return body !== error && body !== `本轮未能完成：${error}` && body !== "本轮已停止。";
 }
 
 function extractMessageMermaidBlocks(markdown) {
@@ -3449,16 +3450,17 @@ class XingzhiWorkbenchView extends ItemView {
       mandatoryOnline: work?.mandatoryOnline === true,
     });
     entry.failureRecovery.toggleAttribute("hidden", !presentation);
-    const preserveIncompleteProviderBody = message?.status === "failed"
-      && Boolean(message?.content)
-      && hasIncompleteProviderCompletion(message);
-    entry.text.toggleAttribute("hidden", Boolean(presentation) && !preserveIncompleteProviderBody);
+    const preserveBody = hasRetainedAnswerBody(message);
+    entry.text.toggleAttribute("hidden", Boolean(presentation) && !preserveBody);
     if (!presentation) return;
     const icon = entry.failureRecovery.createSpan({ cls: "xz-failure-recovery-icon", attr: { "aria-hidden": "true" } });
     setIcon(icon, presentation.title === "本轮已停止" ? "circle-stop" : "circle-alert");
     const copy = entry.failureRecovery.createDiv({ cls: "xz-failure-recovery-copy" });
     copy.createEl("strong", { text: presentation.title });
     copy.createEl("p", { text: presentation.detail });
+    if (preserveBody) copy.createEl("p", {
+      text: "已收到的正文保留在对话中，可继续阅读和复制；本轮未完成，内容可能尚未输出完整。重试会发起新的请求，不会撤销这份正文。",
+    });
     const actions = copy.createDiv({ cls: "xz-failure-recovery-actions" });
     if (presentation.canRetryAfterAuthentication && typeof this.plugin?.retryFailedResponse === "function") {
       const retry = actions.createEl("button", {
@@ -3529,18 +3531,15 @@ class XingzhiWorkbenchView extends ItemView {
       entry.mediaBadge.setText("");
     }
     entry.time.setText(formatTimestamp(message?.createdAt || message?.timestamp || message?.updatedAt));
-    const preserveIncompleteProviderBody = isFailed
-      && Boolean(message?.content)
-      && hasIncompleteProviderCompletion(message);
-    const boundPlainBody = (isFailed && !preserveIncompleteProviderBody) || (isStopped && !content);
+    const preserveBody = hasRetainedAnswerBody(message);
+    const boundPlainBody = (isFailed || isStopped) && !preserveBody;
     let displayText = boundPlainBody ? failureSummary : content;
     if (isUser && asArray(message?.references).length) {
       displayText = displayText.replace(/\[\[(12_资料库\/导入资料\/资料记录\/[^\]|\r\n]+)\|([^\]\r\n]+)\]\]/gu, "$2");
     }
     const renderMarkdown = isAssistant
       && message?.status !== "streaming"
-      && (!isFailed || preserveIncompleteProviderBody)
-      && (!isStopped || Boolean(content));
+      && (!(isFailed || isStopped) || preserveBody);
     const conversationId = normalizeId(this.getActiveConversation());
     const currentMessageId = firstText(message?.id, message?.messageId, entry.messageId);
     this.renderMessageContent(entry, displayText, {
@@ -3569,7 +3568,8 @@ class XingzhiWorkbenchView extends ItemView {
     entry.copy.disabled = !canCopy;
     entry.manageBlocks.disabled = !canManageBlocks;
     entry.manageBlocks.toggleAttribute("hidden", !canManageBlocks);
-    entry.article.toggleClass("is-error", message?.status === "failed" || message?.status === "error");
+    entry.article.toggleClass("is-error", isFailed && !preserveBody);
+    entry.article.toggleClass("is-incomplete", (isFailed || isStopped) && preserveBody);
 
     entry.metrics.empty();
     const metricsSummary = isAssistant ? buildResponseMetricsSummary(message?.responseMetrics) : null;

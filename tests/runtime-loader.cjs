@@ -4,13 +4,13 @@ const path = require('node:path');
 const vm = require('node:vm');
 const assert = require('node:assert/strict');
 const root = path.resolve(__dirname, '..');
-function createLoader() {
+function createLoader(options = {}) {
   const cache = new Map();
   const deny = name => () => { throw new Error(`External operation forbidden in offline test: ${name}`); };
   const denied = new Proxy({}, {get: (_, key) => key === 'promises' ? denied : deny(String(key))});
   class HostClass {}
   const host = new Proxy({Modal: HostClass, SuggestModal: HostClass, FuzzySuggestModal: HostClass,
-    ItemView: HostClass, Component: HostClass, Plugin: HostClass},
+    ItemView: HostClass, Component: HostClass, Plugin: HostClass, ...options.host},
     {get: (object, key) => key in object ? object[key] : deny(`obsidian.${String(key)}`)});
   function load(id) {
     if (cache.has(id)) return cache.get(id).exports;
@@ -25,7 +25,7 @@ function createLoader() {
     const module = {exports: {}}; cache.set(id, module);
     const factory = vm.runInNewContext(`(function(module,exports,require){\n${body}\n})`, {
       Buffer, console, structuredClone, AbortController, TextEncoder, TextDecoder, URL,
-      setTimeout, clearTimeout, process: {platform: process.platform, env: {}},
+      setTimeout, clearTimeout, process: {platform: process.platform, env: {}}, ...options.globals,
     }, {filename: id});
     factory(module, module.exports, load);
     return module.exports;
