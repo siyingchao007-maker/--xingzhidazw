@@ -21,7 +21,7 @@ function createLoader(options = {}) {
     const source = ['src', 'companion'].map(folder => path.join(root, folder, id.slice(2))).find(file => fs.existsSync(file));
     assert.ok(source, `Local module exists: ${id}`);
     let body = fs.readFileSync(source, 'utf8');
-    if (id === './workbench-runtime.cjs') body += '\nmodule.exports.__controlledSkillTest = {dynamicToolSpecs, providerToolSpecs};';
+    if (id === './workbench-runtime.cjs') body += '\nmodule.exports.__controlledSkillTest = {dynamicToolSpecs, providerToolSpecs, normalizeWorkPanelSummary};';
     const module = {exports: {}}; cache.set(id, module);
     const factory = vm.runInNewContext(`(function(module,exports,require){\n${body}\n})`, {
       Buffer, console, structuredClone, AbortController, TextEncoder, TextDecoder, URL,

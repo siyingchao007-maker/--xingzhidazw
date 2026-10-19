@@ -342,6 +342,12 @@
     "sha256": "1e306f3e9acce00b0d5fd07e600b5fc36fa40159b063078b6c8aa45150d2d762"
   },
   {
+    "path": "docs/RELEASE-0.45.29.md",
+    "origin": "portable-project-tooling",
+    "bytes": 924,
+    "sha256": "36048f966d83e2b0f373ef595d500423ddab692d7c67ffb7a15b38427afd9740"
+  },
+  {
     "path": "docs/VALIDATION.md",
     "origin": "portable-project-tooling",
     "bytes": 3814,
@@ -357,19 +363,19 @@
     "path": "manifest.json",
     "origin": "installed-manifest",
     "bytes": 311,
-    "sha256": "4e1ea68e109944961348d78e55d6214235022d2c32c0fc7b8fcaa383339e1fa3"
+    "sha256": "5be0288dab77b65a144d469ec0463532b0dd2958f52f86c590f288715ee25a78"
   },
   {
     "path": "package-lock.json",
     "origin": "portable-project-tooling",
     "bytes": 252,
-    "sha256": "2566c3d11ad9cdfd10496854107169ec87d37fbc08ab5e26ffb62e2e49b1a483"
+    "sha256": "18ba66ecce0c1373d474c5eefb77fc191164d9f97837663f59606d27eecacae4"
   },
   {
     "path": "package.json",
     "origin": "portable-project-tooling",
     "bytes": 391,
-    "sha256": "fcd17fcc63aa58af0ce65e20a2e168c7e96431193aeae13331cca53adffb8f0e"
+    "sha256": "d5d428acc9e49126cbb36eb8db4db5aa136fe2b9e7af850fddc693f21a936153"
   },
   {
     "path": "scripts/build.cjs",
@@ -662,8 +668,8 @@
   {
     "path": "src/controlled-skill-load-attempt.cjs",
     "origin": "installed-bundled-module",
-    "bytes": 13001,
-    "sha256": "4de3c4f9d0d4c2ffc8c9618648e88f9b7f45a2c7fe6abf45758a6f8f2b93b690"
+    "bytes": 13105,
+    "sha256": "27a1f7e9f2b494c60b73bdef9873639f81d4a352ad6ca7af9492d69fc3e6e205"
   },
   {
     "path": "src/controlled-tool-registry.cjs",
@@ -716,8 +722,8 @@
   {
     "path": "src/demand-skill-runtime.cjs",
     "origin": "installed-bundled-module",
-    "bytes": 14311,
-    "sha256": "a042701e8134c7e491d33ffa371157548fee9108a79b8ecec8a81e64fb84c55d"
+    "bytes": 17674,
+    "sha256": "4533ec509b6883e415ac8928b1069d23246aa3addae8968870e2bc41f54a4375"
   },
   {
     "path": "src/direct-md-delete.cjs",
@@ -1071,7 +1077,7 @@
     "path": "src/release-file-contract.cjs",
     "origin": "installed-bundled-module",
     "bytes": 1281,
-    "sha256": "08775b8be0c3b522b4914ff52df250e282e1310b2acf44889b6f7b074ea65f40"
+    "sha256": "a2da5f7f991c6f28f51c60184c38e2b5f9948a4fb13c33c16e252be72c1c03a8"
   },
   {
     "path": "src/request-presentation.cjs",
@@ -1424,14 +1430,14 @@
   {
     "path": "src/workbench-runtime.cjs",
     "origin": "installed-bundled-module",
-    "bytes": 641535,
-    "sha256": "caf16dc692d9bb3a59c603d5279265f9aa5c8d7d532928503842361321b61ef9"
+    "bytes": 642383,
+    "sha256": "41fb302142ef11dba0cc4231f7d82d5d95da79256604d0657eedec2d010b845b"
   },
   {
     "path": "src/workbench-view.cjs",
     "origin": "installed-bundled-module",
-    "bytes": 340549,
-    "sha256": "fb30d868c057f5e1caeccd3f3be24175c099a53064644a89010c8c63e35ebf26"
+    "bytes": 341948,
+    "sha256": "e0ab1f3eab51b8089f6ebe058703012e8db211194db7cbf666e7ae93a16fc317"
   },
   {
     "path": "tests/codex-capacity.test.cjs",
@@ -1472,8 +1478,14 @@
   {
     "path": "tests/demand-runtime.test.cjs",
     "origin": "prior-offline-regression",
-    "bytes": 8583,
-    "sha256": "e4eb2b49c7bf20a4af3ade592fcbfde734d9aa1124d258f5200d078eca8b1052"
+    "bytes": 15000,
+    "sha256": "e22b539da4e618c585b9cb58e51b8aede2a9bba07af4f73cfcb99edd0cff8386"
+  },
+  {
+    "path": "tests/demand-status.test.cjs",
+    "origin": "portable-project-tooling",
+    "bytes": 1608,
+    "sha256": "27c8f5fbe5eba570969fc2a92d7cb6fd3a8edbe2c610f6391751464c2dc24f64"
   },
   {
     "path": "tests/interrupted-answer.test.cjs",
@@ -1508,8 +1520,8 @@
   {
     "path": "tests/runtime-loader.cjs",
     "origin": "portable-project-tooling",
-    "bytes": 2075,
-    "sha256": "0e78ddb6335a603e2894ab4223d1867c6375be75d36dc7e39e1b3a8cdbcf281b"
+    "bytes": 2102,
+    "sha256": "0c897e589209dc4dcbd2a7035c0887af22f786a4b5faa04fff72d67c23f6757b"
   },
   {
     "path": "vault-template/00_系统/方法与契约/Judgment Kernel V3 使用说明.md",
@@ -6554,7 +6566,7 @@
   {
     "path": "versions.json",
     "origin": "installed-manifest",
-    "bytes": 4099,
-    "sha256": "e74798aa8ca535fc6ec83be7f2a7a30741d98667ca6e189f76c5733346af488d"
+    "bytes": 4122,
+    "sha256": "5e49c89980bea3bfbc8a0043d6837572ee0bd2b9eb9a20ebf85ab91de7e6f644"
   }
 ]

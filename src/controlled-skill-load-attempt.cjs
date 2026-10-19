@@ -198,7 +198,9 @@ function createControlledSkillLoadAttempt(options = {}) {
       return failure("NOT_ELIGIBLE", { reasonCode: "NOT_IN_CANDIDATE_SNAPSHOT" });
     }
     if (skillSnapshot.eligible !== true) {
-      return failure(clean(skillSnapshot.code, 80) || "NOT_ELIGIBLE");
+      return failure(clean(skillSnapshot.code, 80) || "NOT_ELIGIBLE", {
+        reasonCode: clean(skillSnapshot.reasonCode, 100) || "CANDIDATE_NO_LONGER_ELIGIBLE",
+      });
     }
     const version = clean(skillSnapshot.version, 64);
     const definitionHash = clean(skillSnapshot.definitionHash, 160);

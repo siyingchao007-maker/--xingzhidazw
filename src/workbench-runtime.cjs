@@ -844,6 +844,7 @@ function createEmptyWorkPanel() {
     agentMode: "orchestrator",
     agentStatus: "orchestrator",
     agentReason: "等待本轮任务。",
+    demandSkill: { status: "not-run", requestedSkillId: "", reasonCode: "", reason: "" },
     analysisPath: null,
     skills: [],
     capabilities: [],
@@ -1208,6 +1209,17 @@ function normalizeWorkPanelSummary(raw, conversationId) {
     agentMode: traceText(raw.agentMode, 40) || base.agentMode,
     agentStatus: traceText(raw.agentStatus, 60) || base.agentStatus,
     agentReason: traceText(raw.agentReason, 600) || base.agentReason,
+    demandSkill: {
+      status: new Set([
+        "not-run", "disabled", "inactive", "closed", "empty", "available",
+        "available-pending-context-check", "local-read", "BUDGET_EXCEEDED",
+        "NOT_ELIGIBLE", "VERSION_CHANGED", "PERMISSION_DENIED", "TURN_CANCELLED",
+        "INVALID_ARGUMENTS", "TOO_MANY_TOOL_CALLS",
+      ]).has(raw.demandSkill?.status) ? raw.demandSkill.status : "unknown",
+      requestedSkillId: traceText(raw.demandSkill?.requestedSkillId, 128),
+      reasonCode: traceText(raw.demandSkill?.reasonCode, 100),
+      reason: traceText(raw.demandSkill?.reason, 600),
+    },
     coordinationTrace: normalizeCoordinationTrace(raw.coordinationTrace),
     analysisPath: normalizeTurnAnalysisPath(raw.analysisPath),
     skills,
@@ -11170,7 +11182,7 @@ class WorkbenchRuntime extends EventEmitter {
       ...(needsTrailingManagedCore || startingFreshThread ? [] : [context.managedCoreBlock]),
     ].filter(Boolean);
     const modelTurnText = additions.length ? `${turnText}\n\n${additions.join("\n\n")}` : turnText;
-    const inputs = buildToolInputs(modelTurnText, skills);
+    let inputs = buildToolInputs(modelTurnText, skills);
     const vaultRoot = path.resolve(this.vaultPath);
     for (const visual of Array.isArray(options.visualAttachments) ? options.visualAttachments : []) {
       const imagePath = path.resolve(String(visual?.absolutePath || ""));
@@ -11184,8 +11196,13 @@ class WorkbenchRuntime extends EventEmitter {
     }
     if (context.demandSkillBlock) {
       const capacity = await this.appServer.readModelCapacity?.(model) || null;
-      this._setDemandSkillBudget(context, capacity, { baseInstructions: startThreadInstructions, inputs,
-        dynamicTools: dynamicToolSpecs({ allowedToolIds: context.allowedToolIds }) });
+      const demandRequest = this._reserveDemandSkillHeadroom(context, capacity, {
+        baseInstructions: startThreadInstructions,
+        inputs,
+        dynamicTools: dynamicToolSpecs({ allowedToolIds: context.allowedToolIds }),
+      });
+      inputs = demandRequest.inputs;
+      this._setDemandSkillBudget(context, capacity, demandRequest);
     }
     if (!isCurrentRun()) return;
     const turnPromise = this._createTurnWaiter(threadId);

@@ -1,6 +1,6 @@
 {
   "name": "xingzhi-workbench",
-  "version": "0.45.28",
+  "version": "0.45.29",
   "private": true,
   "description": "Xingzhi Obsidian desktop plugin — maintainable installed-release source snapshot",
   "engines": { "node": ">=22" },

@@ -4803,6 +4803,8 @@ class XingzhiWorkbenchView extends ItemView {
     const isLens = (item) => normalizedSkillType(item) === "cognitive-lens" || lensIds.has(normalizeId(item));
     const taskSkills = skills.filter((item) => !isLens(item));
     const lensSkills = skills.filter(isLens);
+    const demandSkill = work.demandSkill && typeof work.demandSkill === "object"
+      ? work.demandSkill : {};
     const executionPipeline = asArray(work.executionPipeline);
     const actualReadRoots = asArray(work.actualReadRoots);
     const matchedReadRoots = asArray(work.matchedReadRoots || work.readScopes);
@@ -5303,7 +5305,7 @@ class XingzhiWorkbenchView extends ItemView {
       const row = overview.createDiv({ cls: "xz-work-key-value is-top" });
       row.createSpan({ text: label });
       const tags = row.createDiv({ cls: "xz-tag-list" });
-      if (!items.length) tags.createSpan({ cls: "xz-muted-tag", text: "本轮未选择" });
+      if (!items.length) tags.createSpan({ cls: "xz-muted-tag", text: "本轮未加载" });
       items.forEach((item) => {
         const id = normalizeId(item);
         const tag = tags.createSpan({ cls: "xz-tag is-soft", text: `${normalizeLabel(item, id)} · ${skillCallLabel(item)}` });
@@ -5313,6 +5315,26 @@ class XingzhiWorkbenchView extends ItemView {
     };
     addSkillStatusRows("本轮 Skill 状态", taskSkills);
     addSkillStatusRows("本轮透镜状态", lensSkills);
+    const demandRow = overview.createDiv({ cls: "xz-work-key-value is-top" });
+    demandRow.createSpan({ text: "自动调用" });
+    const demandValue = demandRow.createDiv({ cls: "xz-work-value-stack" });
+    const demandLabels = {
+      "available": "候选已提供 · 等待模型判断",
+      "available-pending-context-check": "候选已提供 · 调用时复核预算",
+      "local-read": "模型已申请 · 正文已确认读取",
+      "BUDGET_EXCEEDED": "模型已申请 · 上下文预算不足",
+      "NOT_ELIGIBLE": "模型已申请 · 候选状态已变化",
+      "VERSION_CHANGED": "模型已申请 · 版本已变化",
+      "PERMISSION_DENIED": "模型已申请 · 权限复核未通过",
+      "TURN_CANCELLED": "模型已申请 · 本轮已停止",
+      "empty": "当前没有可用候选",
+      "closed": "本轮已有明确调用",
+      "disabled": "受控按需加载未启用",
+    };
+    demandValue.createEl("strong", { text: demandLabels[demandSkill.status]
+      || (demandSkill.requestedSkillId ? "模型已申请 · 未加载" : "模型本轮未申请加载") });
+    if (demandSkill.requestedSkillId) demandValue.createSpan({ text: demandSkill.requestedSkillId });
+    if (demandSkill.reason) demandValue.createSpan({ text: demandSkill.reason });
     overview.createDiv({ cls: "xz-help-text", text: "已推荐 / 已选择 / 已提交 / 已确认读取 / 本轮完成分别记录。插件读取回执不代表模型已遵循方法。" });
     const reasoningRow = overview.createDiv({ cls: "xz-work-key-value is-top" });
     reasoningRow.createSpan({ text: "推理方法" });
