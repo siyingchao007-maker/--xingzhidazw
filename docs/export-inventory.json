@@ -12,12 +12,6 @@
     "sha256": "252bc035c2e524703e3924f18cd902f03ab2df361d30f24bbbd725c213927685"
   },
   {
-    "path": "README.md",
-    "origin": "portable-project-tooling",
-    "bytes": 2913,
-    "sha256": "0773a8be8a5fa0c5b514d72e880d8530db852eda085067d49b33124dcce5df75"
-  },
-  {
     "path": "assets/home-landscape.png",
     "origin": "installed-visual-asset",
     "bytes": 90702,
@@ -330,10 +324,16 @@
     "sha256": "80ebaa3b090bdd056d4f0ac00a3b2f5a20eb9bb0b5d80508c31258c91e6be1ae"
   },
   {
+    "path": "docs/installed-baseline.json",
+    "origin": "generated",
+    "bytes": 510,
+    "sha256": "709ab3fa28d5ac2347f5dbf0ebf5db4e4851523eabe303e705897991b548353a"
+  },
+  {
     "path": "docs/PACKAGING.md",
     "origin": "portable-project-tooling",
-    "bytes": 1527,
-    "sha256": "f0d620d8090a7036075270955b07dcbf6379fd33462c9bc29f2f7e6d86948399"
+    "bytes": 2248,
+    "sha256": "ef519d11cfc6911f9226bdbb042fce1396748f4a9a68e9b51349b26ad744953f"
   },
   {
     "path": "docs/RELEASE-0.45.28.md",
@@ -344,20 +344,14 @@
   {
     "path": "docs/RELEASE-0.45.29.md",
     "origin": "portable-project-tooling",
-    "bytes": 924,
-    "sha256": "36048f966d83e2b0f373ef595d500423ddab692d7c67ffb7a15b38427afd9740"
+    "bytes": 1487,
+    "sha256": "f50e7a1a560a67eac777882d17692859c72c5a3a99a3c1cdb7e97d6822662828"
   },
   {
     "path": "docs/VALIDATION.md",
     "origin": "portable-project-tooling",
     "bytes": 3814,
     "sha256": "8e8fde2e7baa4a03b3e5dbb79c5c090f9b4df770ab62188b4c12fa9217fcddb4"
-  },
-  {
-    "path": "docs/installed-baseline.json",
-    "origin": "generated",
-    "bytes": 510,
-    "sha256": "709ab3fa28d5ac2347f5dbf0ebf5db4e4851523eabe303e705897991b548353a"
   },
   {
     "path": "manifest.json",
@@ -374,8 +368,26 @@
   {
     "path": "package.json",
     "origin": "portable-project-tooling",
-    "bytes": 391,
-    "sha256": "d5d428acc9e49126cbb36eb8db4db5aa136fe2b9e7af850fddc693f21a936153"
+    "bytes": 748,
+    "sha256": "b4652f3d0a0d86be7f4c67452b07404688ffe408fc6edd7b0ef8439fba85b457"
+  },
+  {
+    "path": "README.md",
+    "origin": "portable-project-tooling",
+    "bytes": 2913,
+    "sha256": "0773a8be8a5fa0c5b514d72e880d8530db852eda085067d49b33124dcce5df75"
+  },
+  {
+    "path": "release.local.example.json",
+    "origin": "portable-project-tooling",
+    "bytes": 185,
+    "sha256": "39a493ad35daaf379ae77923e05dfba079ddb8ecb0d3d7f9661ef6e02c25dc0f"
+  },
+  {
+    "path": "scripts/authorization-center.cjs",
+    "origin": "portable-project-tooling",
+    "bytes": 1197,
+    "sha256": "1c4110fbc715293a699b23af714402bb2e5ae2d2cff9a87cd3dc5a20b746c1e4"
   },
   {
     "path": "scripts/build.cjs",
@@ -386,14 +398,20 @@
   {
     "path": "scripts/check.cjs",
     "origin": "portable-project-tooling",
-    "bytes": 3559,
-    "sha256": "72016edd37f45dc3495080b02c7269a2ce568f824b2b0d040dc68678b22ef813"
+    "bytes": 4338,
+    "sha256": "b11bc6f5014c9b57d1bb51ffe7ad8d15662fb46ace72434473b3e3b400d277b7"
   },
   {
     "path": "scripts/scan.cjs",
     "origin": "portable-project-tooling",
     "bytes": 3344,
     "sha256": "72dda5ded1ccf2437e4e60381584b6a4e0da3aa7663393db2515cae0f4f231be"
+  },
+  {
+    "path": "scripts/update-export-inventory.cjs",
+    "origin": "portable-project-tooling",
+    "bytes": 1371,
+    "sha256": "9d5c966de8c6b62303df38a0c9c665ffc9883bfe25152dcda8df6aa99dd2bb89"
   },
   {
     "path": "src/adaptive-retrieval.cjs",
@@ -460,6 +478,12 @@
     "origin": "installed-bundled-module",
     "bytes": 4005,
     "sha256": "ff8c2fefe35187425c7849de0795a873d655cf4bd4bd3c289a219af65a6928cf"
+  },
+  {
+    "path": "src/authorization-center-sync.cjs",
+    "origin": "portable-project-tooling",
+    "bytes": 9358,
+    "sha256": "8668b72caba4ff14b6a65beb382ff18285cc8f3ee763ec5a1e7f2ea4c3383d14"
   },
   {
     "path": "src/background-structured-retry.cjs",
@@ -1440,6 +1464,12 @@
     "sha256": "e0ab1f3eab51b8089f6ebe058703012e8db211194db7cbf666e7ae93a16fc317"
   },
   {
+    "path": "tests/authorization-center-sync.test.cjs",
+    "origin": "portable-project-tooling",
+    "bytes": 6006,
+    "sha256": "f4bcd3a2068069405250ece561f7a4edae8d531e6bc9d19dbda55a85c19dddd9"
+  },
+  {
     "path": "tests/codex-capacity.test.cjs",
     "origin": "prior-offline-regression",
     "bytes": 1254,
@@ -1980,12 +2010,6 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
-    "path": "vault-template/10_智能体与技能/01_智能体/判断校准/README.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/01_智能体/判断校准/agent.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -2016,6 +2040,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/01_智能体/判断校准/README.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/01_智能体/判断校准/references/intent-examples.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
@@ -2035,12 +2065,6 @@
   },
   {
     "path": "vault-template/10_智能体与技能/01_智能体/用户连续性与成长/AGENT.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/01_智能体/用户连续性与成长/README.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
@@ -2076,6 +2100,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/01_智能体/用户连续性与成长/README.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/01_智能体/用户连续性与成长/references/intent-examples.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
@@ -2095,12 +2125,6 @@
   },
   {
     "path": "vault-template/10_智能体与技能/01_智能体/知识整理/AGENT.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/01_智能体/知识整理/README.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
@@ -2136,6 +2160,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/01_智能体/知识整理/README.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/01_智能体/知识整理/references/intent-examples.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
@@ -2155,12 +2185,6 @@
   },
   {
     "path": "vault-template/10_智能体与技能/01_智能体/行动教练/AGENT.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/01_智能体/行动教练/README.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
@@ -2196,6 +2220,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/01_智能体/行动教练/README.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/01_智能体/行动教练/references/intent-examples.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
@@ -2215,12 +2245,6 @@
   },
   {
     "path": "vault-template/10_智能体与技能/01_智能体/行知总控/AGENT.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/01_智能体/行知总控/README.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
@@ -2256,6 +2280,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/01_智能体/行知总控/README.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/01_智能体/行知总控/references/intent-examples.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
@@ -2272,12 +2302,6 @@
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/02_技能/个人商业机会审计/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/02_技能/个人商业机会审计/agents/openai.yaml",
@@ -2304,6 +2328,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/02_技能/个人商业机会审计/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/02_技能/个人商业机会审计/skill.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -2314,12 +2344,6 @@
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/02_技能/交互事件提取/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/02_技能/交互事件提取/agents/openai.yaml",
@@ -2346,6 +2370,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/02_技能/交互事件提取/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/02_技能/交互事件提取/skill.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -2356,12 +2386,6 @@
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/02_技能/产品与商业验证/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/02_技能/产品与商业验证/agents/openai.yaml",
@@ -2388,6 +2412,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/02_技能/产品与商业验证/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/02_技能/产品与商业验证/skill.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -2398,12 +2428,6 @@
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/02_技能/判断校准/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/02_技能/判断校准/agents/openai.yaml",
@@ -2430,6 +2454,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/02_技能/判断校准/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/02_技能/判断校准/skill.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -2440,12 +2470,6 @@
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/02_技能/多视角分析/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/02_技能/多视角分析/agents/openai.yaml",
@@ -2472,6 +2496,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/02_技能/多视角分析/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/02_技能/多视角分析/skill.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -2482,12 +2512,6 @@
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/02_技能/对话结构化整理/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/02_技能/对话结构化整理/agents/openai.yaml",
@@ -2514,6 +2538,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/02_技能/对话结构化整理/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/02_技能/对话结构化整理/skill.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -2524,12 +2554,6 @@
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/02_技能/当前状态梳理/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/02_技能/当前状态梳理/agents/openai.yaml",
@@ -2556,6 +2580,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/02_技能/当前状态梳理/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/02_技能/当前状态梳理/skill.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -2566,12 +2596,6 @@
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/02_技能/成长路径生成/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/02_技能/成长路径生成/agents/openai.yaml",
@@ -2598,6 +2622,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/02_技能/成长路径生成/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/02_技能/成长路径生成/skill.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -2608,12 +2638,6 @@
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/02_技能/用户画像演变/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/02_技能/用户画像演变/agents/openai.yaml",
@@ -2640,6 +2664,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/02_技能/用户画像演变/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/02_技能/用户画像演变/skill.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -2650,12 +2680,6 @@
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/02_技能/知识候选封装/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/02_技能/知识候选封装/agents/openai.yaml",
@@ -2682,6 +2706,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/02_技能/知识候选封装/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/02_技能/知识候选封装/skill.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -2692,12 +2722,6 @@
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/02_技能/知识库整理/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/02_技能/知识库整理/agents/openai.yaml",
@@ -2724,6 +2748,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/02_技能/知识库整理/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/02_技能/知识库整理/skill.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -2734,12 +2764,6 @@
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/02_技能/职业路径验证/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/02_技能/职业路径验证/agents/openai.yaml",
@@ -2766,6 +2790,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/02_技能/职业路径验证/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/02_技能/职业路径验证/skill.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -2776,12 +2806,6 @@
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/02_技能/自适应销售教练/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/02_技能/自适应销售教练/agents/openai.yaml",
@@ -2808,6 +2832,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/02_技能/自适应销售教练/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/02_技能/自适应销售教练/skill.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -2818,12 +2848,6 @@
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/02_技能/行动反馈/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/02_技能/行动反馈/agents/openai.yaml",
@@ -2850,6 +2874,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/02_技能/行动反馈/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/02_技能/行动反馈/skill.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -2860,12 +2890,6 @@
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/02_技能/训练式回答/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/02_技能/训练式回答/agents/openai.yaml",
@@ -2892,6 +2916,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/02_技能/训练式回答/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/02_技能/训练式回答/skill.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -2902,12 +2932,6 @@
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/02_技能/资料整合/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/02_技能/资料整合/agents/openai.yaml",
@@ -2934,6 +2958,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/02_技能/资料整合/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/02_技能/资料整合/skill.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -2944,12 +2974,6 @@
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/02_技能/阶段复盘与路径校准/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/02_技能/阶段复盘与路径校准/agents/openai.yaml",
@@ -2976,6 +3000,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/02_技能/阶段复盘与路径校准/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/02_技能/阶段复盘与路径校准/skill.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -2988,12 +3018,6 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/03_认知透镜/利益与激励分析/LENS.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/03_认知透镜/利益与激励分析/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -3001,6 +3025,12 @@
   },
   {
     "path": "vault-template/10_智能体与技能/03_认知透镜/利益与激励分析/examples/examples.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/03_认知透镜/利益与激励分析/LENS.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
@@ -3042,12 +3072,6 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/03_认知透镜/反演与失败条件/LENS.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/03_认知透镜/反演与失败条件/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -3055,6 +3079,12 @@
   },
   {
     "path": "vault-template/10_智能体与技能/03_认知透镜/反演与失败条件/examples/examples.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/03_认知透镜/反演与失败条件/LENS.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
@@ -3096,12 +3126,6 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/03_认知透镜/因果与证据检验/LENS.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/03_认知透镜/因果与证据检验/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -3109,6 +3133,12 @@
   },
   {
     "path": "vault-template/10_智能体与技能/03_认知透镜/因果与证据检验/examples/examples.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/03_认知透镜/因果与证据检验/LENS.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
@@ -3150,12 +3180,6 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/03_认知透镜/矛盾与阶段分析/LENS.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/03_认知透镜/矛盾与阶段分析/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -3163,6 +3187,12 @@
   },
   {
     "path": "vault-template/10_智能体与技能/03_认知透镜/矛盾与阶段分析/examples/examples.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/03_认知透镜/矛盾与阶段分析/LENS.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
@@ -3204,12 +3234,6 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/03_认知透镜/第一性重建/LENS.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/03_认知透镜/第一性重建/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -3217,6 +3241,12 @@
   },
   {
     "path": "vault-template/10_智能体与技能/03_认知透镜/第一性重建/examples/examples.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/03_认知透镜/第一性重建/LENS.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
@@ -3258,12 +3288,6 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/03_认知透镜/系统与反馈分析/LENS.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/03_认知透镜/系统与反馈分析/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -3271,6 +3295,12 @@
   },
   {
     "path": "vault-template/10_智能体与技能/03_认知透镜/系统与反馈分析/examples/examples.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/03_认知透镜/系统与反馈分析/LENS.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
@@ -3312,16 +3342,16 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/04_工作流/对话记忆与整理/WORKFLOW.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/04_工作流/对话记忆与整理/tests/workflow.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/04_工作流/对话记忆与整理/WORKFLOW.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/04_工作流/对话记忆与整理/workflow.yaml",
@@ -3402,12 +3432,6 @@
     "sha256": "58da2a8863d4871dea4290da6f30045996b0e6e3266ef97db79f09912650048c"
   },
   {
-    "path": "vault-template/10_智能体与技能/07_权限与策略/README.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/07_权限与策略/conflict-policy.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -3424,6 +3448,12 @@
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/07_权限与策略/README.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/07_权限与策略/retention-policy.yaml",
@@ -3564,12 +3594,6 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/个人商业机会审计/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/个人商业机会审计/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -3606,7 +3630,19 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/个人商业机会审计/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/个人商业机会审计/技能配置.yaml",
+    "origin": "capability-or-system-template",
+    "bytes": 151,
+    "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/交互事件提取/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
@@ -3618,13 +3654,13 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/交互事件提取/agents/openai.yaml",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/交互事件提取/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/交互事件提取/技能配置.yaml",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/产品与商业验证/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
@@ -3636,13 +3672,13 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/产品与商业验证/agents/openai.yaml",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/产品与商业验证/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/产品与商业验证/技能配置.yaml",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/判断校准/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
@@ -3654,22 +3690,10 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/判断校准/agents/openai.yaml",
-    "origin": "capability-or-system-template",
-    "bytes": 151,
-    "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/判断校准/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/利益与激励分析/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/利益与激励分析/agents/openai.yaml",
@@ -3690,16 +3714,16 @@
     "sha256": "b7c892f39ee5e8f17eec15a16fe0d1e517b1ddf75af13ac77ba4ea6d56228661"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/利益与激励分析/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/利益与激励分析/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/反演与失败条件/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/反演与失败条件/agents/openai.yaml",
@@ -3720,16 +3744,16 @@
     "sha256": "b7c892f39ee5e8f17eec15a16fe0d1e517b1ddf75af13ac77ba4ea6d56228661"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/反演与失败条件/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/反演与失败条件/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/因果与证据检验/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/因果与证据检验/agents/openai.yaml",
@@ -3750,7 +3774,19 @@
     "sha256": "b7c892f39ee5e8f17eec15a16fe0d1e517b1ddf75af13ac77ba4ea6d56228661"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/因果与证据检验/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/因果与证据检验/技能配置.yaml",
+    "origin": "capability-or-system-template",
+    "bytes": 151,
+    "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/多视角分析/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
@@ -3762,13 +3798,13 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/多视角分析/agents/openai.yaml",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/多视角分析/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/多视角分析/技能配置.yaml",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/对话自动整理/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
@@ -3780,13 +3816,13 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/对话自动整理/agents/openai.yaml",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/对话自动整理/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/对话自动整理/技能配置.yaml",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/当前状态梳理/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
@@ -3798,13 +3834,13 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/当前状态梳理/agents/openai.yaml",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/当前状态梳理/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/当前状态梳理/技能配置.yaml",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/成长路径生成/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
@@ -3814,12 +3850,6 @@
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/成长路径生成/agents/openai.yaml",
-    "origin": "capability-or-system-template",
-    "bytes": 151,
-    "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/成长路径生成/技能配置.yaml",
@@ -3834,28 +3864,22 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/用户画像演变/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/用户画像演变/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/用户画像演变/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/用户画像演变/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/矛盾与阶段分析/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/矛盾与阶段分析/agents/openai.yaml",
@@ -3876,7 +3900,19 @@
     "sha256": "b7c892f39ee5e8f17eec15a16fe0d1e517b1ddf75af13ac77ba4ea6d56228661"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/矛盾与阶段分析/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/矛盾与阶段分析/技能配置.yaml",
+    "origin": "capability-or-system-template",
+    "bytes": 151,
+    "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/知识分包/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
@@ -3888,13 +3924,13 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/知识分包/agents/openai.yaml",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/知识分包/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/知识分包/技能配置.yaml",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/知识库整理/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
@@ -3906,22 +3942,10 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/知识库整理/agents/openai.yaml",
-    "origin": "capability-or-system-template",
-    "bytes": 151,
-    "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/知识库整理/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/第一性重建/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/第一性重建/agents/openai.yaml",
@@ -3942,16 +3966,16 @@
     "sha256": "b7c892f39ee5e8f17eec15a16fe0d1e517b1ddf75af13ac77ba4ea6d56228661"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/第一性重建/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/第一性重建/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/系统与反馈分析/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/系统与反馈分析/agents/openai.yaml",
@@ -3972,7 +3996,19 @@
     "sha256": "b7c892f39ee5e8f17eec15a16fe0d1e517b1ddf75af13ac77ba4ea6d56228661"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/系统与反馈分析/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/系统与反馈分析/技能配置.yaml",
+    "origin": "capability-or-system-template",
+    "bytes": 151,
+    "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/职业路径验证/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
@@ -3982,12 +4018,6 @@
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/职业路径验证/agents/openai.yaml",
-    "origin": "capability-or-system-template",
-    "bytes": 151,
-    "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/职业路径验证/技能配置.yaml",
@@ -4008,19 +4038,25 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/行动反馈/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/行动反馈/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/行动反馈/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/行动反馈/技能配置.yaml",
+    "origin": "capability-or-system-template",
+    "bytes": 151,
+    "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/训练式回答/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
@@ -4032,13 +4068,13 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/训练式回答/agents/openai.yaml",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/训练式回答/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/训练式回答/技能配置.yaml",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/资料整合/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
@@ -4050,13 +4086,13 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/资料整合/agents/openai.yaml",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/资料整合/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/资料整合/技能配置.yaml",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/阶段复盘与路径校准/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
@@ -4066,12 +4102,6 @@
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/阶段复盘与路径校准/agents/openai.yaml",
-    "origin": "capability-or-system-template",
-    "bytes": 151,
-    "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v1-旧结构/技能/阶段复盘与路径校准/技能配置.yaml",
@@ -4338,12 +4368,6 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/01_智能体/判断校准/README.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/01_智能体/判断校准/agent.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -4374,6 +4398,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/01_智能体/判断校准/README.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/01_智能体/判断校准/references/intent-examples.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
@@ -4393,12 +4423,6 @@
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/01_智能体/用户连续性与成长/AGENT.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/01_智能体/用户连续性与成长/README.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
@@ -4434,6 +4458,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/01_智能体/用户连续性与成长/README.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/01_智能体/用户连续性与成长/references/intent-examples.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
@@ -4453,12 +4483,6 @@
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/01_智能体/知识整理/AGENT.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/01_智能体/知识整理/README.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
@@ -4494,6 +4518,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/01_智能体/知识整理/README.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/01_智能体/知识整理/references/intent-examples.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
@@ -4513,12 +4543,6 @@
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/01_智能体/行动教练/AGENT.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/01_智能体/行动教练/README.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
@@ -4554,6 +4578,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/01_智能体/行动教练/README.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/01_智能体/行动教练/references/intent-examples.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
@@ -4573,12 +4603,6 @@
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/01_智能体/行知总控/AGENT.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/01_智能体/行知总控/README.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
@@ -4614,6 +4638,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/01_智能体/行知总控/README.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/01_智能体/行知总控/references/intent-examples.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
@@ -4632,16 +4662,16 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/交互与训练/训练式回答/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/交互与训练/训练式回答/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/交互与训练/训练式回答/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/交互与训练/训练式回答/skill.yaml",
@@ -4656,16 +4686,16 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/判断与行动/判断校准/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/判断与行动/判断校准/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/判断与行动/判断校准/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/判断与行动/判断校准/skill.yaml",
@@ -4680,16 +4710,16 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/判断与行动/多视角分析/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/判断与行动/多视角分析/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/判断与行动/多视角分析/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/判断与行动/多视角分析/skill.yaml",
@@ -4704,16 +4734,16 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/判断与行动/行动反馈/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/判断与行动/行动反馈/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/判断与行动/行动反馈/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/判断与行动/行动反馈/skill.yaml",
@@ -4728,16 +4758,16 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/知识与资料/知识候选封装/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/知识与资料/知识候选封装/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/知识与资料/知识候选封装/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/知识与资料/知识候选封装/skill.yaml",
@@ -4752,16 +4782,16 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/知识与资料/知识库整理/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/知识与资料/知识库整理/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/知识与资料/知识库整理/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/知识与资料/知识库整理/skill.yaml",
@@ -4776,16 +4806,16 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/知识与资料/资料整合/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/知识与资料/资料整合/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/知识与资料/资料整合/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/知识与资料/资料整合/skill.yaml",
@@ -4800,16 +4830,16 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/记忆与连续性/交互事件提取/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/记忆与连续性/交互事件提取/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/记忆与连续性/交互事件提取/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/记忆与连续性/交互事件提取/skill.yaml",
@@ -4824,16 +4854,16 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/记忆与连续性/对话结构化整理/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/记忆与连续性/对话结构化整理/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/记忆与连续性/对话结构化整理/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/记忆与连续性/对话结构化整理/skill.yaml",
@@ -4848,16 +4878,16 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/记忆与连续性/当前状态梳理/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/记忆与连续性/当前状态梳理/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/记忆与连续性/当前状态梳理/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/记忆与连续性/当前状态梳理/skill.yaml",
@@ -4872,16 +4902,16 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/记忆与连续性/成长路径生成/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/记忆与连续性/成长路径生成/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/记忆与连续性/成长路径生成/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/记忆与连续性/成长路径生成/skill.yaml",
@@ -4896,16 +4926,16 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/记忆与连续性/用户画像演变/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/记忆与连续性/用户画像演变/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/记忆与连续性/用户画像演变/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/记忆与连续性/用户画像演变/skill.yaml",
@@ -4920,16 +4950,16 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/记忆与连续性/阶段复盘与路径校准/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/记忆与连续性/阶段复盘与路径校准/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/记忆与连续性/阶段复盘与路径校准/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/记忆与连续性/阶段复盘与路径校准/skill.yaml",
@@ -4942,12 +4972,6 @@
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/领域能力/个人商业机会审计/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/领域能力/个人商业机会审计/agents/openai.yaml",
@@ -4986,6 +5010,12 @@
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/领域能力/个人商业机会审计/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/领域能力/个人商业机会审计/skill.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -4998,16 +5028,16 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/领域能力/产品与商业验证/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/领域能力/产品与商业验证/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/领域能力/产品与商业验证/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/领域能力/产品与商业验证/skill.yaml",
@@ -5022,16 +5052,16 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/领域能力/职业路径验证/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/领域能力/职业路径验证/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/领域能力/职业路径验证/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/02_技能/领域能力/职业路径验证/skill.yaml",
@@ -5064,18 +5094,6 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/利益与激励/LENS.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/利益与激励/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/利益与激励/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
@@ -5094,28 +5112,28 @@
     "sha256": "b7c892f39ee5e8f17eec15a16fe0d1e517b1ddf75af13ac77ba4ea6d56228661"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/利益与激励/LENS.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/利益与激励/lens.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/利益与激励/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/利益与激励/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/反演与失败条件/LENS.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/反演与失败条件/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/反演与失败条件/agents/openai.yaml",
@@ -5136,28 +5154,28 @@
     "sha256": "b7c892f39ee5e8f17eec15a16fe0d1e517b1ddf75af13ac77ba4ea6d56228661"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/反演与失败条件/LENS.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/反演与失败条件/lens.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/反演与失败条件/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/反演与失败条件/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/因果与证据检验/LENS.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/因果与证据检验/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/因果与证据检验/agents/openai.yaml",
@@ -5178,28 +5196,28 @@
     "sha256": "b7c892f39ee5e8f17eec15a16fe0d1e517b1ddf75af13ac77ba4ea6d56228661"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/因果与证据检验/LENS.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/因果与证据检验/lens.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/因果与证据检验/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/因果与证据检验/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/矛盾与阶段/LENS.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/矛盾与阶段/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/矛盾与阶段/agents/openai.yaml",
@@ -5220,28 +5238,28 @@
     "sha256": "b7c892f39ee5e8f17eec15a16fe0d1e517b1ddf75af13ac77ba4ea6d56228661"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/矛盾与阶段/LENS.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/矛盾与阶段/lens.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/矛盾与阶段/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/矛盾与阶段/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/第一性重建/LENS.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/第一性重建/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/第一性重建/agents/openai.yaml",
@@ -5262,28 +5280,28 @@
     "sha256": "b7c892f39ee5e8f17eec15a16fe0d1e517b1ddf75af13ac77ba4ea6d56228661"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/第一性重建/LENS.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/第一性重建/lens.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/第一性重建/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/第一性重建/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/系统与反馈/LENS.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/系统与反馈/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/系统与反馈/agents/openai.yaml",
@@ -5304,22 +5322,28 @@
     "sha256": "b7c892f39ee5e8f17eec15a16fe0d1e517b1ddf75af13ac77ba4ea6d56228661"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/系统与反馈/LENS.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/系统与反馈/lens.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/系统与反馈/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/03_认知透镜/系统与反馈/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/04_工作流/对话记忆与整理/WORKFLOW.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/04_工作流/对话记忆与整理/references/legacy-agent/智能体说明.md",
@@ -5334,22 +5358,28 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/04_工作流/对话记忆与整理/references/legacy-skill/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/04_工作流/对话记忆与整理/references/legacy-skill/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/04_工作流/对话记忆与整理/references/legacy-skill/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/04_工作流/对话记忆与整理/references/legacy-skill/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/04_工作流/对话记忆与整理/WORKFLOW.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/v2-早期变体/04_工作流/对话记忆与整理/workflow.yaml",
@@ -5430,19 +5460,13 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/认知透镜-SKILL包装/利益与激励分析/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 280,
-    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
-  },
-  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/认知透镜-SKILL包装/利益与激励分析/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 151,
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/认知透镜-SKILL包装/反演与失败条件/SKILL.md",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/认知透镜-SKILL包装/利益与激励分析/SKILL.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
@@ -5454,7 +5478,7 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/认知透镜-SKILL包装/因果与证据检验/SKILL.md",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/认知透镜-SKILL包装/反演与失败条件/SKILL.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
@@ -5466,7 +5490,7 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/认知透镜-SKILL包装/矛盾与阶段分析/SKILL.md",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/认知透镜-SKILL包装/因果与证据检验/SKILL.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
@@ -5478,7 +5502,7 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/认知透镜-SKILL包装/第一性重建/SKILL.md",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/认知透镜-SKILL包装/矛盾与阶段分析/SKILL.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
@@ -5490,7 +5514,7 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/认知透镜-SKILL包装/系统与反馈分析/SKILL.md",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/认知透镜-SKILL包装/第一性重建/SKILL.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
@@ -5502,13 +5526,19 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
+    "path": "vault-template/10_智能体与技能/10_维护与版本/legacy-compat/认知透镜-SKILL包装/系统与反馈分析/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 280,
+    "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/10_维护与版本/v1-v2-基础设施迁移.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/批次记录/批次A/README.md",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/最终v1-v2迁移报告.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
@@ -5520,13 +5550,13 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/批次记录/批次A/迁移说明.md",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/批次记录/批次A/README.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/批次记录/批次B/README.md",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/批次记录/批次A/迁移说明.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
@@ -5538,13 +5568,13 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/批次记录/批次B/迁移说明.md",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/批次记录/批次B/README.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/批次记录/批次C/README.md",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/批次记录/批次B/迁移说明.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
@@ -5556,13 +5586,13 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/批次记录/批次C/迁移说明.md",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/批次记录/批次C/README.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/批次记录/批次D/README.md",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/批次记录/批次C/迁移说明.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
@@ -5574,13 +5604,13 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/批次记录/批次D/迁移说明.md",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/批次记录/批次D/README.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/批次记录/批次E/README.md",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/批次记录/批次D/迁移说明.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
@@ -5592,13 +5622,13 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/批次记录/批次E/迁移说明.md",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/批次记录/批次E/README.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/批次记录/批次F/README.md",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/批次记录/批次E/迁移说明.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
@@ -5610,7 +5640,7 @@
     "sha256": "41873d4d4a96dafece67ef6f200219f0c90e8c5abb07189f85a0a29ee96d8e1d"
   },
   {
-    "path": "vault-template/10_智能体与技能/10_维护与版本/最终v1-v2迁移报告.md",
+    "path": "vault-template/10_智能体与技能/10_维护与版本/批次记录/批次F/README.md",
     "origin": "capability-or-system-template",
     "bytes": 280,
     "sha256": "3654607aecd99b319581f7450c6ea5ac70c5dae46249bd4fd4615fc6b6c347e3"
@@ -5658,12 +5688,6 @@
     "sha256": "71d8ceec5004d9a5bef4b48907755162649872d01d144e5b94e5ec6858f097e7"
   },
   {
-    "path": "vault-template/10_智能体与技能/技能/个人商业机会审计/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 3848,
-    "sha256": "17d2c1af04a50047912955750d1785848fbb95f19a4b44085f40f4e6f1852601"
-  },
-  {
     "path": "vault-template/10_智能体与技能/技能/个人商业机会审计/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 195,
@@ -5700,16 +5724,16 @@
     "sha256": "709a5829683179087483379dc72c58ea781216ea45a37e765c31d723a5a726f4"
   },
   {
+    "path": "vault-template/10_智能体与技能/技能/个人商业机会审计/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 3848,
+    "sha256": "17d2c1af04a50047912955750d1785848fbb95f19a4b44085f40f4e6f1852601"
+  },
+  {
     "path": "vault-template/10_智能体与技能/技能/个人商业机会审计/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 3724,
     "sha256": "788c88f668c050c789529e8601ca43c46018ff0aa00bb13901cb7b88fdce687a"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/技能/交互事件提取/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 1158,
-    "sha256": "5044d05953831cdb3da4f950293ac35e5b7616b8e9a89685c574ee3a0740366e"
   },
   {
     "path": "vault-template/10_智能体与技能/技能/交互事件提取/agents/openai.yaml",
@@ -5718,16 +5742,16 @@
     "sha256": "9a92b692e95863a39cdc44ee7c9a1b89dde60e0ac16eaa6c10ae0a86a6f54446"
   },
   {
+    "path": "vault-template/10_智能体与技能/技能/交互事件提取/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 1158,
+    "sha256": "5044d05953831cdb3da4f950293ac35e5b7616b8e9a89685c574ee3a0740366e"
+  },
+  {
     "path": "vault-template/10_智能体与技能/技能/交互事件提取/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 940,
     "sha256": "4cd92355238754498f6769e13e503f73ee802656287adb312584dfaf2ba73085"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/技能/产品与商业验证/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 2800,
-    "sha256": "f342cb3dceb64cb0285a93236ad85b001eaee0a49549bb993bbb13d3ba1b4af3"
   },
   {
     "path": "vault-template/10_智能体与技能/技能/产品与商业验证/agents/openai.yaml",
@@ -5736,22 +5760,16 @@
     "sha256": "9a92b692e95863a39cdc44ee7c9a1b89dde60e0ac16eaa6c10ae0a86a6f54446"
   },
   {
+    "path": "vault-template/10_智能体与技能/技能/产品与商业验证/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 2800,
+    "sha256": "f342cb3dceb64cb0285a93236ad85b001eaee0a49549bb993bbb13d3ba1b4af3"
+  },
+  {
     "path": "vault-template/10_智能体与技能/技能/产品与商业验证/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 1861,
     "sha256": "918d4e453ad887a32ebafeb60b4647c59e18e2565f6bb2ca5e25241dec8f3c7c"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/技能/公开内容生产/GENERIC-SOURCE.md",
-    "origin": "capability-or-system-template",
-    "bytes": 13460,
-    "sha256": "141195ace679b2d293636ddc95f066214cd718227adc8cff8ba7734e154cff8b"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/技能/公开内容生产/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 52070,
-    "sha256": "3a5bffc2829e344153447f91d54ba51daf25ac74765398b8160cc2ef4d78bfd7"
   },
   {
     "path": "vault-template/10_智能体与技能/技能/公开内容生产/agents/openai.yaml",
@@ -5818,6 +5836,12 @@
     "origin": "capability-or-system-template",
     "bytes": 3252,
     "sha256": "1b10d47dc4d4f822f2a6dd902a834e77966399093fb80976eb64e5955177cbe1"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/技能/公开内容生产/GENERIC-SOURCE.md",
+    "origin": "capability-or-system-template",
+    "bytes": 13460,
+    "sha256": "141195ace679b2d293636ddc95f066214cd718227adc8cff8ba7734e154cff8b"
   },
   {
     "path": "vault-template/10_智能体与技能/技能/公开内容生产/references/brand-config.md",
@@ -5898,16 +5922,16 @@
     "sha256": "e9844dfc03b95a016ff99c48d9fa117e86f8d5dc7f20feeb75919edbc67109a8"
   },
   {
+    "path": "vault-template/10_智能体与技能/技能/公开内容生产/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 52070,
+    "sha256": "3a5bffc2829e344153447f91d54ba51daf25ac74765398b8160cc2ef4d78bfd7"
+  },
+  {
     "path": "vault-template/10_智能体与技能/技能/公开内容生产/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 1811,
     "sha256": "d758ed92407e571a0b8f3193b8e346b75a708a20c0d7ebe6e2c10fcc0d5daa0a"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/技能/判断校准/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 1464,
-    "sha256": "1c7567b1b984086c36cd3c1accad781ee82e5a4ec8ed1f74a006ac94ee3c1156"
   },
   {
     "path": "vault-template/10_智能体与技能/技能/判断校准/agents/openai.yaml",
@@ -5916,16 +5940,16 @@
     "sha256": "9a92b692e95863a39cdc44ee7c9a1b89dde60e0ac16eaa6c10ae0a86a6f54446"
   },
   {
+    "path": "vault-template/10_智能体与技能/技能/判断校准/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 1464,
+    "sha256": "1c7567b1b984086c36cd3c1accad781ee82e5a4ec8ed1f74a006ac94ee3c1156"
+  },
+  {
     "path": "vault-template/10_智能体与技能/技能/判断校准/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 1057,
     "sha256": "268a44948b4374f84a8a115a44d6f124023f0f76bb41fc9b10ddd655aff583c2"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/技能/利益与激励分析/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 9831,
-    "sha256": "a84827124ba4eacd5dfb47f50ba58fc3b7d4e3c1637216f3ca463681599d1624"
   },
   {
     "path": "vault-template/10_智能体与技能/技能/利益与激励分析/agents/openai.yaml",
@@ -5946,16 +5970,16 @@
     "sha256": "112a43019d578c8e3b6a31f88bc70c9e8cfb9925ed8fc823b13ab69d1059a584"
   },
   {
+    "path": "vault-template/10_智能体与技能/技能/利益与激励分析/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 9831,
+    "sha256": "a84827124ba4eacd5dfb47f50ba58fc3b7d4e3c1637216f3ca463681599d1624"
+  },
+  {
     "path": "vault-template/10_智能体与技能/技能/利益与激励分析/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 1666,
     "sha256": "f34fe945c11bb6677fd740618c6c39c27a77b2fd073a2de1b29b5c2647418049"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/技能/反演与失败条件/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 10576,
-    "sha256": "aa9a7789d409f1c00f6ea367d6a39e8f046015e6631c507ce985f89e445e2ffb"
   },
   {
     "path": "vault-template/10_智能体与技能/技能/反演与失败条件/agents/openai.yaml",
@@ -5976,16 +6000,16 @@
     "sha256": "112a43019d578c8e3b6a31f88bc70c9e8cfb9925ed8fc823b13ab69d1059a584"
   },
   {
+    "path": "vault-template/10_智能体与技能/技能/反演与失败条件/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 10576,
+    "sha256": "aa9a7789d409f1c00f6ea367d6a39e8f046015e6631c507ce985f89e445e2ffb"
+  },
+  {
     "path": "vault-template/10_智能体与技能/技能/反演与失败条件/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 1843,
     "sha256": "65431e99fa76f74abea151c3364ddc8fe60e67088739249ed1ce36c8f0bdb480"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/技能/因果与证据检验/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 10234,
-    "sha256": "4ade87a4cbe3c4b5e93f773139d0fbef2076484ef99a8bafe68c6cb516173c3b"
   },
   {
     "path": "vault-template/10_智能体与技能/技能/因果与证据检验/agents/openai.yaml",
@@ -6006,16 +6030,16 @@
     "sha256": "112a43019d578c8e3b6a31f88bc70c9e8cfb9925ed8fc823b13ab69d1059a584"
   },
   {
+    "path": "vault-template/10_智能体与技能/技能/因果与证据检验/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 10234,
+    "sha256": "4ade87a4cbe3c4b5e93f773139d0fbef2076484ef99a8bafe68c6cb516173c3b"
+  },
+  {
     "path": "vault-template/10_智能体与技能/技能/因果与证据检验/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 1830,
     "sha256": "bd243a7c85d3dacd7913d116f6fdee84d36ddb56a8ebb164b87d92a8f403f6a5"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/技能/多视角分析/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 5482,
-    "sha256": "f5d5d23cd85f195cc3474dcd75593186c642e9097b0a9aab0060fa407f9d2b4b"
   },
   {
     "path": "vault-template/10_智能体与技能/技能/多视角分析/agents/openai.yaml",
@@ -6024,16 +6048,16 @@
     "sha256": "9a92b692e95863a39cdc44ee7c9a1b89dde60e0ac16eaa6c10ae0a86a6f54446"
   },
   {
+    "path": "vault-template/10_智能体与技能/技能/多视角分析/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 5482,
+    "sha256": "f5d5d23cd85f195cc3474dcd75593186c642e9097b0a9aab0060fa407f9d2b4b"
+  },
+  {
     "path": "vault-template/10_智能体与技能/技能/多视角分析/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 1000,
     "sha256": "0c4155d4a9acc70919d03265a01dcb366ba72bdfd6fb398fbcac2b1aa0cc17ab"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/技能/对话自动整理/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 1354,
-    "sha256": "f22ec592a3115a089385fcb7a388681a5bf6f4c3931e0db9a6e9080c0e6fdda1"
   },
   {
     "path": "vault-template/10_智能体与技能/技能/对话自动整理/agents/openai.yaml",
@@ -6042,16 +6066,16 @@
     "sha256": "9a92b692e95863a39cdc44ee7c9a1b89dde60e0ac16eaa6c10ae0a86a6f54446"
   },
   {
+    "path": "vault-template/10_智能体与技能/技能/对话自动整理/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 1354,
+    "sha256": "f22ec592a3115a089385fcb7a388681a5bf6f4c3931e0db9a6e9080c0e6fdda1"
+  },
+  {
     "path": "vault-template/10_智能体与技能/技能/对话自动整理/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 1107,
     "sha256": "aee58d2a4cc50c329fbea82f417ce047fd993fc8ee0c934637c7c72fa4ef21e9"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/技能/当前状态梳理/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 2678,
-    "sha256": "dfa5f550185e7189aa6409c8f262ef174529d96a7e7f5b13828f52f60e6cf316"
   },
   {
     "path": "vault-template/10_智能体与技能/技能/当前状态梳理/agents/openai.yaml",
@@ -6060,22 +6084,28 @@
     "sha256": "9a92b692e95863a39cdc44ee7c9a1b89dde60e0ac16eaa6c10ae0a86a6f54446"
   },
   {
+    "path": "vault-template/10_智能体与技能/技能/当前状态梳理/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 2678,
+    "sha256": "dfa5f550185e7189aa6409c8f262ef174529d96a7e7f5b13828f52f60e6cf316"
+  },
+  {
     "path": "vault-template/10_智能体与技能/技能/当前状态梳理/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 1888,
     "sha256": "4373b1c45c766fd5d9a0d0469c8310493baaef13e51258052087897121f30554"
   },
   {
-    "path": "vault-template/10_智能体与技能/技能/成长路径生成/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 2214,
-    "sha256": "a07be6a24d576a3aec7e51b687312b74331b58f7651ce7cb4da5aba5a77dd751"
-  },
-  {
     "path": "vault-template/10_智能体与技能/技能/成长路径生成/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 195,
     "sha256": "9a92b692e95863a39cdc44ee7c9a1b89dde60e0ac16eaa6c10ae0a86a6f54446"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/技能/成长路径生成/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 2214,
+    "sha256": "a07be6a24d576a3aec7e51b687312b74331b58f7651ce7cb4da5aba5a77dd751"
   },
   {
     "path": "vault-template/10_智能体与技能/技能/成长路径生成/技能配置.yaml",
@@ -6090,28 +6120,22 @@
     "sha256": "709a5829683179087483379dc72c58ea781216ea45a37e765c31d723a5a726f4"
   },
   {
-    "path": "vault-template/10_智能体与技能/技能/用户画像演变/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 1365,
-    "sha256": "a01362ab5bcb80ea795190565eb1b33cbaef88fb6fb2d6119d9a29467424fd91"
-  },
-  {
     "path": "vault-template/10_智能体与技能/技能/用户画像演变/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 195,
     "sha256": "9a92b692e95863a39cdc44ee7c9a1b89dde60e0ac16eaa6c10ae0a86a6f54446"
   },
   {
+    "path": "vault-template/10_智能体与技能/技能/用户画像演变/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 1365,
+    "sha256": "a01362ab5bcb80ea795190565eb1b33cbaef88fb6fb2d6119d9a29467424fd91"
+  },
+  {
     "path": "vault-template/10_智能体与技能/技能/用户画像演变/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 1113,
     "sha256": "6e06155024fd3d2e9aa599e4cb0b486a8f61326a25a61b0b528e99ae849b3efa"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/技能/矛盾与阶段分析/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 8762,
-    "sha256": "118c821b9e71ed77a095d9459b30e824b84855553714b35c180dda2545b8c6cd"
   },
   {
     "path": "vault-template/10_智能体与技能/技能/矛盾与阶段分析/agents/openai.yaml",
@@ -6132,16 +6156,16 @@
     "sha256": "112a43019d578c8e3b6a31f88bc70c9e8cfb9925ed8fc823b13ab69d1059a584"
   },
   {
+    "path": "vault-template/10_智能体与技能/技能/矛盾与阶段分析/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 8762,
+    "sha256": "118c821b9e71ed77a095d9459b30e824b84855553714b35c180dda2545b8c6cd"
+  },
+  {
     "path": "vault-template/10_智能体与技能/技能/矛盾与阶段分析/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 1657,
     "sha256": "31a732468bf93b4c783b843e85d045ac911cd00faf34815afdbe9866802db4fb"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/技能/知识分包/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 1333,
-    "sha256": "f237f9d1566ed8d5bfbb4e0d6e04825b38a0735b5c91906be2c175ac63ced438"
   },
   {
     "path": "vault-template/10_智能体与技能/技能/知识分包/agents/openai.yaml",
@@ -6150,16 +6174,16 @@
     "sha256": "9a92b692e95863a39cdc44ee7c9a1b89dde60e0ac16eaa6c10ae0a86a6f54446"
   },
   {
+    "path": "vault-template/10_智能体与技能/技能/知识分包/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 1333,
+    "sha256": "f237f9d1566ed8d5bfbb4e0d6e04825b38a0735b5c91906be2c175ac63ced438"
+  },
+  {
     "path": "vault-template/10_智能体与技能/技能/知识分包/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 1186,
     "sha256": "1662bc882ee80ee7c77134393f04bf3bd9a727183a2973e0638c03019fa264e1"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/技能/知识库整理/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 1298,
-    "sha256": "a3bd4bfc95a07d0f655589e4c3788f8b68a08ce05603d87dd0ee97ea05beb76b"
   },
   {
     "path": "vault-template/10_智能体与技能/技能/知识库整理/agents/openai.yaml",
@@ -6168,16 +6192,16 @@
     "sha256": "9a92b692e95863a39cdc44ee7c9a1b89dde60e0ac16eaa6c10ae0a86a6f54446"
   },
   {
+    "path": "vault-template/10_智能体与技能/技能/知识库整理/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 1298,
+    "sha256": "a3bd4bfc95a07d0f655589e4c3788f8b68a08ce05603d87dd0ee97ea05beb76b"
+  },
+  {
     "path": "vault-template/10_智能体与技能/技能/知识库整理/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 1192,
     "sha256": "1cbb7ec506e5b3b7a9f1033c548b3a8251e314f946749d9d513029f37fdf81bc"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/技能/第一性重建/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 6858,
-    "sha256": "3c233a32e555325530f34b20f977b8ad00489a6445184db862980c7b41e1bbdb"
   },
   {
     "path": "vault-template/10_智能体与技能/技能/第一性重建/agents/openai.yaml",
@@ -6198,16 +6222,16 @@
     "sha256": "112a43019d578c8e3b6a31f88bc70c9e8cfb9925ed8fc823b13ab69d1059a584"
   },
   {
+    "path": "vault-template/10_智能体与技能/技能/第一性重建/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 6858,
+    "sha256": "3c233a32e555325530f34b20f977b8ad00489a6445184db862980c7b41e1bbdb"
+  },
+  {
     "path": "vault-template/10_智能体与技能/技能/第一性重建/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 1598,
     "sha256": "061326f4646cd4e4bb80978b15357787a493c969b43ac724c5e642bbf679ac97"
-  },
-  {
-    "path": "vault-template/10_智能体与技能/技能/系统与反馈分析/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 7717,
-    "sha256": "31c0161d357bbe5872547e2812aa96dd6cfcaffef0b9ff11a4c4ad95d0f31e47"
   },
   {
     "path": "vault-template/10_智能体与技能/技能/系统与反馈分析/agents/openai.yaml",
@@ -6228,22 +6252,28 @@
     "sha256": "112a43019d578c8e3b6a31f88bc70c9e8cfb9925ed8fc823b13ab69d1059a584"
   },
   {
+    "path": "vault-template/10_智能体与技能/技能/系统与反馈分析/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 7717,
+    "sha256": "31c0161d357bbe5872547e2812aa96dd6cfcaffef0b9ff11a4c4ad95d0f31e47"
+  },
+  {
     "path": "vault-template/10_智能体与技能/技能/系统与反馈分析/技能配置.yaml",
     "origin": "capability-or-system-template",
     "bytes": 1651,
     "sha256": "b12eaee8f028cf842f443d8b348a7f2cc8465fb3888ed854ac9ca54d49de93b2"
   },
   {
-    "path": "vault-template/10_智能体与技能/技能/职业路径验证/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 2708,
-    "sha256": "4aedb11fbf74ad73a5d29559d122d99739764d1bd7a6981a3841e52490117b44"
-  },
-  {
     "path": "vault-template/10_智能体与技能/技能/职业路径验证/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 195,
     "sha256": "9a92b692e95863a39cdc44ee7c9a1b89dde60e0ac16eaa6c10ae0a86a6f54446"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/技能/职业路径验证/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 2708,
+    "sha256": "4aedb11fbf74ad73a5d29559d122d99739764d1bd7a6981a3841e52490117b44"
   },
   {
     "path": "vault-template/10_智能体与技能/技能/职业路径验证/技能配置.yaml",
@@ -6264,16 +6294,16 @@
     "sha256": "8739841e7d53a0602315146a440b32857bf482b0285727b1e9681eef1922af74"
   },
   {
-    "path": "vault-template/10_智能体与技能/技能/行动反馈/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 1389,
-    "sha256": "e342e726248916e715b515e83f7b823fc0fc813499c8bd9be6b213c63ae81a00"
-  },
-  {
     "path": "vault-template/10_智能体与技能/技能/行动反馈/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 195,
     "sha256": "9a92b692e95863a39cdc44ee7c9a1b89dde60e0ac16eaa6c10ae0a86a6f54446"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/技能/行动反馈/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 1389,
+    "sha256": "e342e726248916e715b515e83f7b823fc0fc813499c8bd9be6b213c63ae81a00"
   },
   {
     "path": "vault-template/10_智能体与技能/技能/行动反馈/技能配置.yaml",
@@ -6282,16 +6312,16 @@
     "sha256": "e6c690acf6645907d14340bf38577ada4bcd68738c296de2128b3519db7fd47e"
   },
   {
-    "path": "vault-template/10_智能体与技能/技能/训练式回答/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 4245,
-    "sha256": "0e4f3e9e5f913eeaa5270213d9460fea1a5ea4d03c40fad05142d70e7de4b494"
-  },
-  {
     "path": "vault-template/10_智能体与技能/技能/训练式回答/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 195,
     "sha256": "9a92b692e95863a39cdc44ee7c9a1b89dde60e0ac16eaa6c10ae0a86a6f54446"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/技能/训练式回答/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 4245,
+    "sha256": "0e4f3e9e5f913eeaa5270213d9460fea1a5ea4d03c40fad05142d70e7de4b494"
   },
   {
     "path": "vault-template/10_智能体与技能/技能/训练式回答/技能配置.yaml",
@@ -6300,16 +6330,16 @@
     "sha256": "dc8e1d7799e4f059a7835a041d3c2d3e7fa2c9dca1786de75339bbd8758e5c08"
   },
   {
-    "path": "vault-template/10_智能体与技能/技能/资料整合/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 1297,
-    "sha256": "35f294a99942a2dbf8df5d281ab5e2e6217cd516e444b6ce52fb6ab5726a497e"
-  },
-  {
     "path": "vault-template/10_智能体与技能/技能/资料整合/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 195,
     "sha256": "9a92b692e95863a39cdc44ee7c9a1b89dde60e0ac16eaa6c10ae0a86a6f54446"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/技能/资料整合/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 1297,
+    "sha256": "35f294a99942a2dbf8df5d281ab5e2e6217cd516e444b6ce52fb6ab5726a497e"
   },
   {
     "path": "vault-template/10_智能体与技能/技能/资料整合/技能配置.yaml",
@@ -6318,16 +6348,16 @@
     "sha256": "82bb9a427e7781e7808f969d6fef893aa502e944ebe2b98438160bce91b9f869"
   },
   {
-    "path": "vault-template/10_智能体与技能/技能/阶段复盘与路径校准/SKILL.md",
-    "origin": "capability-or-system-template",
-    "bytes": 2467,
-    "sha256": "479926dd684922e0ea8631b8bf66d6c09742cbbce6fa9e854b401866004041f2"
-  },
-  {
     "path": "vault-template/10_智能体与技能/技能/阶段复盘与路径校准/agents/openai.yaml",
     "origin": "capability-or-system-template",
     "bytes": 195,
     "sha256": "9a92b692e95863a39cdc44ee7c9a1b89dde60e0ac16eaa6c10ae0a86a6f54446"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/技能/阶段复盘与路径校准/SKILL.md",
+    "origin": "capability-or-system-template",
+    "bytes": 2467,
+    "sha256": "479926dd684922e0ea8631b8bf66d6c09742cbbce6fa9e854b401866004041f2"
   },
   {
     "path": "vault-template/10_智能体与技能/技能/阶段复盘与路径校准/技能配置.yaml",
@@ -6570,3 +6600,4 @@
     "sha256": "5e49c89980bea3bfbc8a0043d6837572ee0bd2b9eb9a20ebf85ab91de7e6f644"
   }
 ]
+

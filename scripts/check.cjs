@@ -12,6 +12,18 @@ assert.equal(manifest.version, require('../package.json').version, 'Package and 
 assert.equal(manifest.version, require('../src/release-file-contract.cjs').PLUGIN_VERSION, 'Runtime diagnostic version agrees');
 assert.equal(manifest.version, require('../package-lock.json').version, 'Lockfile version agrees');
 assert.equal(require('../versions.json')[manifest.version], manifest.minAppVersion, 'Version compatibility is declared');
+const localReleaseConfigPath = path.join(root, 'release.local.json');
+let authorizationCenter = {configured: false, ok: null};
+if (fs.existsSync(localReleaseConfigPath)) {
+  const localReleaseConfig = JSON.parse(fs.readFileSync(localReleaseConfigPath, 'utf8'));
+  const result = require('../src/authorization-center-sync.cjs').checkAuthorizationCenter({
+    projectRoot: root,
+    installedPluginRoot: path.resolve(localReleaseConfig.installedPluginRoot),
+    authorizationCenterRoot: path.resolve(localReleaseConfig.authorizationCenterRoot),
+  });
+  assert.equal(result.ok, true, `Desktop authorization center is not synchronized: ${result.issues.join('; ')}`);
+  authorizationCenter = {configured: true, ok: true, centerVersion: result.centerVersion};
+}
 // Preserve the initial installed baseline as historical evidence. New releases
 // must reproduce their current source; do not replace the old hashes with new ones.
 const layout = require('../bundler/layout.json');
@@ -56,4 +68,6 @@ for (const folder of ['src', 'companion']) {
 }
 console.log(JSON.stringify({passed: true, version: manifest.version, syntaxChecked, relativeImportsChecked,
   sourceBuildEquivalent: true, installedBaselineVersion: baseline.version,
-  installedReleaseByteEquivalent: Object.entries(baseline.expected).every(([name, expected]) => hashes[name] === expected), hashes}));
+  installedReleaseByteEquivalent: Object.entries(baseline.expected).every(([name, expected]) => hashes[name] === expected),
+  authorizationCenter, hashes}));
+

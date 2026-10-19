@@ -8,6 +8,11 @@
     "build": "node scripts/build.cjs",
     "test": "node --test tests/*.test.cjs",
     "check": "node scripts/check.cjs",
-    "scan": "node scripts/scan.cjs"
+    "scan": "node scripts/scan.cjs",
+    "inventory:update": "node scripts/update-export-inventory.cjs",
+    "auth-center:check": "node scripts/authorization-center.cjs --check",
+    "auth-center:sync": "node scripts/authorization-center.cjs --sync",
+    "release:local": "npm run test && npm run build && npm run auth-center:sync && npm run check && npm run scan && npm run inventory:update"
   }
 }
+
