@@ -357,19 +357,19 @@
     "path": "manifest.json",
     "origin": "installed-manifest",
     "bytes": 311,
-    "sha256": "5be0288dab77b65a144d469ec0463532b0dd2958f52f86c590f288715ee25a78"
+    "sha256": "329bb0040e032ebe401bae905f55ada7bd2802fd3e947a2ed1c79793e6d02a3c"
   },
   {
     "path": "package-lock.json",
     "origin": "portable-project-tooling",
     "bytes": 252,
-    "sha256": "18ba66ecce0c1373d474c5eefb77fc191164d9f97837663f59606d27eecacae4"
+    "sha256": "57f2db004b9c8b5945002c3beac1429840c42468de0dc562aecf5c0d559a0e39"
   },
   {
     "path": "package.json",
     "origin": "portable-project-tooling",
     "bytes": 748,
-    "sha256": "b4652f3d0a0d86be7f4c67452b07404688ffe408fc6edd7b0ef8439fba85b457"
+    "sha256": "31156c2121bdcd32672e9b73825645fbc8ec7188fc5035264a00436a805ecbc9"
   },
   {
     "path": "README.md",
@@ -854,8 +854,8 @@
   {
     "path": "src/journal-storage.cjs",
     "origin": "installed-bundled-module",
-    "bytes": 36603,
-    "sha256": "62fa9afcce7397b79df6b58dac538e908d0e26adb50d9640c13fa15888785410"
+    "bytes": 37327,
+    "sha256": "eca9e7156b2f9f865a452fa6a0bfa4962bf6fee6db1bf67ce6e5049a4e30e9a8"
   },
   {
     "path": "src/knowledge-automation.cjs",
@@ -1101,7 +1101,7 @@
     "path": "src/release-file-contract.cjs",
     "origin": "installed-bundled-module",
     "bytes": 1281,
-    "sha256": "a2da5f7f991c6f28f51c60184c38e2b5f9948a4fb13c33c16e252be72c1c03a8"
+    "sha256": "caef94096066238c18447785d755dca78540f9bec95a819ecc44327033abbee3"
   },
   {
     "path": "src/request-presentation.cjs",
@@ -6596,7 +6596,7 @@
   {
     "path": "versions.json",
     "origin": "installed-manifest",
-    "bytes": 4122,
-    "sha256": "5e49c89980bea3bfbc8a0043d6837572ee0bd2b9eb9a20ebf85ab91de7e6f644"
+    "bytes": 4145,
+    "sha256": "bc35b12be7827c749e20549836c8ea22707a15898c298cc0f5f4940d1b5cee19"
   }
 ]

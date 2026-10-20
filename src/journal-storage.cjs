@@ -167,35 +167,50 @@ function createJournalStore(options = {}) {
     }
   }
 
-  async function ensureDirectory(directoryPath, create) {
-    const parsed = path.parse(directoryPath);
-    const segments = directoryPath.slice(parsed.root.length).split(path.sep).filter(Boolean);
-    let cursor = parsed.root;
-    for (const segment of segments) {
-      cursor = path.join(cursor, segment);
-      let info;
+  async function inspectDirectory(directoryPath, create, recursive = false) {
+    let info;
+    try {
+      info = await io.lstat(directoryPath);
+    } catch (error) {
+      if (!isMissing(error) || !create) {
+        throw storageError("JOURNAL_STORAGE_MISSING", "冷日志目录不完整，已暂停读取和写入。", error);
+      }
       try {
-        info = await io.lstat(cursor);
-      } catch (error) {
-        if (!isMissing(error) || !create) {
-          throw storageError("JOURNAL_STORAGE_MISSING", "冷日志目录不完整，已暂停读取和写入。", error);
-        }
-        try {
-          await io.mkdir(cursor);
-          info = await io.lstat(cursor);
-        } catch (mkdirError) {
-          if (mkdirError?.code === "EEXIST") {
-            try { info = await io.lstat(cursor); } catch (statError) {
-              throw storageError("JOURNAL_STORAGE_MISSING", "冷日志目录无法安全创建。", statError);
-            }
-          } else {
-            throw storageError("JOURNAL_STORAGE_MISSING", "冷日志目录无法安全创建。", mkdirError);
+        await io.mkdir(directoryPath, recursive ? { recursive: true } : undefined);
+        info = await io.lstat(directoryPath);
+      } catch (mkdirError) {
+        if (mkdirError?.code === "EEXIST") {
+          try { info = await io.lstat(directoryPath); } catch (statError) {
+            throw storageError("JOURNAL_STORAGE_MISSING", "冷日志目录无法安全创建。", statError);
           }
+        } else {
+          throw storageError("JOURNAL_STORAGE_MISSING", "冷日志目录无法安全创建。", mkdirError);
         }
       }
-      if (info.isSymbolicLink() || !info.isDirectory()) {
-        throw storageError("JOURNAL_UNSAFE_PATH", "冷日志目录包含符号链接或非目录路径。 ");
-      }
+    }
+    if (info.isSymbolicLink() || !info.isDirectory()) {
+      throw storageError("JOURNAL_UNSAFE_PATH", "冷日志目录包含符号链接或非目录路径。 ");
+    }
+  }
+
+  async function ensureDirectory(directoryPath, create) {
+    const resolved = path.resolve(directoryPath);
+    const relative = path.relative(root, resolved);
+    if (relative === ".." || relative.startsWith(`..${path.sep}`) || path.isAbsolute(relative)) {
+      throw storageError("JOURNAL_UNSAFE_PATH", "冷日志目录越过了受控目录。");
+    }
+
+    // The vault itself may live below a user-configured Windows junction (for
+    // example Documents\\Codex -> another drive). Only the journal root and
+    // descendants are controlled by this store, so inspect that boundary and
+    // every directory below it instead of rejecting unrelated ancestors.
+    await inspectDirectory(root, create, true);
+    if (!relative) return;
+
+    let cursor = root;
+    for (const segment of relative.split(path.sep).filter(Boolean)) {
+      cursor = path.join(cursor, segment);
+      await inspectDirectory(cursor, create);
     }
   }
 
