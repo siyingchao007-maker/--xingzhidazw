@@ -437,10 +437,58 @@ class CommercialLicenseModal extends Modal {
 class StartupRecoveryView extends ItemView {
   constructor(leaf, plugin, viewType) { super(leaf); this.plugin = plugin; this.viewType = viewType; }
   getViewType() { return this.viewType; }
-  getDisplayText() { return "行知启动恢复"; }
-  getIcon() { return "alert-triangle"; }
+  getDisplayText() { return this.plugin.startupFailure ? "行知启动恢复" : "行知正在恢复"; }
+  getIcon() { return this.plugin.startupFailure ? "alert-triangle" : "loader"; }
+  getState() { return this.startupViewState || {}; }
+  async setState(state) { this.startupViewState = state; }
   async onOpen() {
+    this.startupViewClosed = false;
+    this.renderStartup();
+    if (this.plugin.startupViewErrors?.has(this.leaf)) return;
+    void this.plugin.startupPromise?.then(async () => {
+      if (this.startupViewClosed || this.plugin.startupCancelled || this.leaf.view !== this) return;
+      if (!this.plugin.startupReady) { this.renderStartup(); return; }
+      await this.restoreOriginalView();
+    }).catch(() => { if (!this.plugin.startupCancelled) new Notice("行知页面恢复未完成，请从功能区重新打开。历史记录已保留。"); });
+  }
+  async restoreOriginalView() {
+    const state = this.getState();
+    try {
+      await this.leaf.setViewState({ type: "empty" });
+      if (!this.plugin.startupCancelled && this.leaf.view?.getViewType?.() === "empty") {
+        await this.leaf.setViewState({ type: this.viewType, state });
+      }
+    } catch {
+      if (this.plugin.startupCancelled) return;
+      new Notice("行知页面恢复未完成，历史记录已保留。可以重试打开页面。");
+      const type = this.leaf.view?.getViewType?.();
+      if (type !== "empty" && type !== this.viewType) return;
+      this.plugin.startupViewErrors.set(this.leaf, true);
+      await this.leaf.setViewState({ type: "empty" });
+      if (!this.plugin.startupCancelled && this.leaf.view?.getViewType?.() === "empty") {
+        await this.leaf.setViewState({ type: this.viewType, state });
+      }
+    }
+  }
+  async onClose() { this.startupViewClosed = true; }
+  renderStartup() {
     this.contentEl.empty();
+    if (this.plugin.startupViewErrors?.has(this.leaf)) {
+      this.contentEl.createEl("h2", { text: "行知页面恢复未完成" });
+      this.contentEl.createEl("p", { text: "历史记录已恢复，原页面暂时未能打开。你可以重试打开页面。" });
+      const retry = this.contentEl.createEl("button", { text: "重试打开页面" });
+      retry.addEventListener("click", () => {
+        this.plugin.startupViewErrors.delete(this.leaf);
+        void this.restoreOriginalView().catch(() => new Notice("页面暂时无法打开，请从功能区重新打开行知。"));
+      });
+      return;
+    }
+    if (!this.plugin.startupFailure) {
+      this.contentEl.createEl("h2", { text: "正在恢复行知" });
+      this.contentEl.createEl("p", { text: "正在校验并恢复本地历史记录。完成后会自动打开原页面。" });
+      this.contentEl.createEl("p", { text: "恢复期间暂停保存，你可以继续使用 Obsidian 的其他页面。" });
+      return;
+    }
     this.contentEl.createEl("h2", { text: "行知启动未完成" });
     this.contentEl.createEl("p", { text: "原始数据已保护，当前暂停保存。请运行升级包中的只读诊断，并保留升级前备份。" });
     this.contentEl.createEl("p", { text: `失败阶段：${this.plugin.startupFailure?.stage || "unknown"}` });
@@ -454,11 +502,38 @@ const { createJournalStore } = require("./journal-storage.cjs");
 class XingzhiWorkbenchPlugin extends Plugin {
   async onload() {
     this.startupFailure = null;
-    let baseVaultAdapter;
+    this.startupReady = false;
+    this.startupCancelled = false;
+    this.startupViewErrors = new WeakMap();
     this.addCommand({ id: "open-startup-diagnostics", name: "查看启动诊断", callback: () => this.openStartupDiagnostics() });
+    for (const [type, View] of [
+      [VIEW_TYPE_XINGZHI, XingzhiWorkbenchView],
+      [VIEW_TYPE_XINGZHI_ARCHIVE_REVIEW, XingzhiArchiveReviewView],
+      [VIEW_TYPE_XINGZHI_ACTION_CENTER, XingzhiActionCenterView],
+      [VIEW_TYPE_COGNITIVE_HOME, CognitiveHomeView],
+    ]) {
+      this.registerView(type, leaf => this.startupReady && !this.startupViewErrors.has(leaf)
+        ? new View(leaf, this)
+        : new StartupRecoveryView(leaf, this, type));
+    }
+    // Returning lets Obsidian finish its own load while journal recovery remains
+    // a tracked task. Every write stays closed until the full initialization ends.
+    this.startupPromise = Promise.resolve().then(() => {
+      if (!this.startupCancelled) return this._initializeWorkbench();
+    }).catch(error => {
+      if (this.startupCancelled) return;
+      this.startupReady = false;
+      this.startupFailure = { stage: this.startupStage || "initialize", code: /^[A-Z_]+$/u.test(error?.code || "") ? error.code : "STARTUP_FAILED" };
+      new Notice("行知恢复未完成，原始数据已保护。请打开“查看启动诊断”。", 10000);
+    });
+  }
+
+  async _initializeWorkbench() {
+    let baseVaultAdapter;
     try {
     this.startupStage = "read-data";
     let stored = await this.loadData();
+    if (this.startupCancelled) return;
     // Obsidian may return null after a read/parse failure. Existing state must
     // never be treated as a new empty installation in that case.
     if (stored == null) {
@@ -484,6 +559,7 @@ class XingzhiWorkbenchPlugin extends Plugin {
         journalKey: stored.localJournalKey, epoch: marker.epoch,
       });
       stored = { ...stored, ...await this.journalStore.hydrate() };
+      if (this.startupCancelled) return;
     }
     for (const key of ["knowledgeTransactions", "knowledgeIndexTransactions"]) {
       if (stored[key] !== undefined && !Array.isArray(stored[key])) throw new Error("事务日志必须是数组");
@@ -504,10 +580,12 @@ class XingzhiWorkbenchPlugin extends Plugin {
           trustedPublicKeys: TRUSTED_COMMERCIAL_KEYS,
         });
         await this.licenseManager.initialize();
+        if (this.startupCancelled) return;
       }
       this.addCommand({ id: "manage-commercial-license", name: "管理商业版授权", callback: () => this.openCommercialLicenseModal() });
     }
     this.standardBrandEnabled = await this.detectStandardBrandVault();
+    if (this.startupCancelled) return;
     this.brandIconName = XINGZHI_LOGO_ICON;
     this.brandMarkIconName = XINGZHI_LOGO_ICON;
     this.standardBrandRoot = this.app.workspace?.containerEl || null;
@@ -575,10 +653,8 @@ class XingzhiWorkbenchPlugin extends Plugin {
       throw Object.assign(new Error("冷日志中的事务未通过原签名校验。"), { code: "JOURNAL_IMPORT_BLOCKED" });
     }
     } catch (error) {
+      if (this.startupCancelled) return;
       this.startupFailure = { stage: this.startupStage, code: /^[A-Z_]+$/u.test(error?.code || "") ? error.code : "STARTUP_FAILED" };
-      for (const type of [VIEW_TYPE_XINGZHI, VIEW_TYPE_XINGZHI_ARCHIVE_REVIEW, VIEW_TYPE_XINGZHI_ACTION_CENTER, VIEW_TYPE_COGNITIVE_HOME]) {
-        this.registerView(type, leaf => new StartupRecoveryView(leaf, this, type));
-      }
       new Notice("行知启动未完成，已保护原始数据。请打开“查看启动诊断”或运行升级包中的只读诊断。", 10000);
       return;
     }
@@ -593,20 +669,6 @@ class XingzhiWorkbenchPlugin extends Plugin {
       }));
     }
 
-    this.registerView(
-      VIEW_TYPE_XINGZHI,
-      (leaf) => new XingzhiWorkbenchView(leaf, this),
-    );
-    this.registerView(
-      VIEW_TYPE_XINGZHI_ARCHIVE_REVIEW,
-      (leaf) => new XingzhiArchiveReviewView(leaf, this),
-    );
-    this.registerView(
-      VIEW_TYPE_XINGZHI_ACTION_CENTER,
-      (leaf) => new XingzhiActionCenterView(leaf, this),
-    );
-
-    this.registerView(VIEW_TYPE_COGNITIVE_HOME, leaf => new CognitiveHomeView(leaf, this));
     this.addRibbonIcon(XINGZHI_LOGO_ICON, "打开行知工作台", () => {
       void this.openCognitiveHome();
     });
@@ -902,7 +964,9 @@ class XingzhiWorkbenchPlugin extends Plugin {
       },
     });
 
+    this.startupReady = true;
     this.app.workspace.onLayoutReady(() => {
+      if (this.startupCancelled) return;
       const protection = this.getCapabilityProtectionSnapshot();
       if (!protection.present || protection.unlocked) {
         // Skill 与认知透镜只依赖 vault 目录，与引擎无关：先无条件把能力目录读出来，
@@ -933,6 +997,7 @@ class XingzhiWorkbenchPlugin extends Plugin {
   }
 
   onunload() {
+    this.startupCancelled = true;
     this.workbenchRuntime?.stop();
     this.cleanupProtectedSkillRuntime();
     this.app.workspace.detachLeavesOfType(VIEW_TYPE_COGNITIVE_HOME);
@@ -1149,7 +1214,7 @@ class XingzhiWorkbenchPlugin extends Plugin {
   }
 
   async saveWorkbenchState(state = this.state) {
-    if (this.startupFailure) throw new Error("行知启动未完成，已保护原始数据，暂停保存。");
+    if (!this.startupReady || this.startupFailure) throw new Error("行知启动恢复未完成，已保护原始数据，暂停保存。");
     const persisted = {
       ...state,
       ...(this.workbenchRuntime?.journalImportBlocked ? this.workbenchRuntime.journalOriginals : {}),
@@ -1170,6 +1235,8 @@ class XingzhiWorkbenchPlugin extends Plugin {
       modal.contentEl.createEl("h2", { text: "行知启动诊断" });
       modal.contentEl.createEl("p", { text: this.startupFailure
         ? "启动未完成，原始数据暂停保存。运行升级包的只读诊断后检查配置和状态文件。"
+        : !this.startupReady
+          ? "正在校验并恢复本地历史记录。恢复期间暂停保存，完成后会自动打开原页面。"
         : this.workbenchRuntime?.journalImportBlocked
           ? this.state.runtime.journalImportWarning
           : "事务日志导入正常。若 Obsidian 仍白屏，请检查配置、其他插件及 Obsidian 运行环境。" });

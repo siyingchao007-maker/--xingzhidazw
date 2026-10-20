@@ -188,8 +188,8 @@
   {
     "path": "bundler/suffix.txt",
     "origin": "installed-wrapper",
-    "bytes": 3121,
-    "sha256": "c26f1d21f61dde720db5e23b619f948db68178f1a6fcd965e15ab884dd04eccf"
+    "bytes": 3344,
+    "sha256": "31b95687c7d474ae713ced2704476255f8f7ecd553800fddaf62107a1be9c04e"
   },
   {
     "path": "companion/decision-action-feedback.cjs",
@@ -348,6 +348,24 @@
     "sha256": "f50e7a1a560a67eac777882d17692859c72c5a3a99a3c1cdb7e97d6822662828"
   },
   {
+    "path": "docs/RELEASE-0.45.30.md",
+    "origin": "portable-project-tooling",
+    "bytes": 930,
+    "sha256": "87f49e1f76161106614a805945927bfbcd124345d33cc7c90071cce861ffe16b"
+  },
+  {
+    "path": "docs/RELEASE-0.45.31.md",
+    "origin": "portable-project-tooling",
+    "bytes": 1204,
+    "sha256": "c091de6b71a9d812c74fa8b731741e42748460afa333d0e20215b95f856d7e3a"
+  },
+  {
+    "path": "docs/VALIDATION-0.45.31.md",
+    "origin": "portable-project-tooling",
+    "bytes": 1507,
+    "sha256": "f6a7a9c3c2e95242fcd3e1281f4b47d74343b09b9cd475563482ee418c81ecd7"
+  },
+  {
     "path": "docs/VALIDATION.md",
     "origin": "portable-project-tooling",
     "bytes": 3814,
@@ -357,19 +375,19 @@
     "path": "manifest.json",
     "origin": "installed-manifest",
     "bytes": 311,
-    "sha256": "329bb0040e032ebe401bae905f55ada7bd2802fd3e947a2ed1c79793e6d02a3c"
+    "sha256": "f152a81074b2dab8e52291781d51e85a6b6980cc08b4df7bf211442702c826af"
   },
   {
     "path": "package-lock.json",
     "origin": "portable-project-tooling",
     "bytes": 252,
-    "sha256": "57f2db004b9c8b5945002c3beac1429840c42468de0dc562aecf5c0d559a0e39"
+    "sha256": "d7bba39782829b35c68ce3d2d7427ae55385b45b02224c638afc2e64845b4841"
   },
   {
     "path": "package.json",
     "origin": "portable-project-tooling",
     "bytes": 748,
-    "sha256": "31156c2121bdcd32672e9b73825645fbc8ec7188fc5035264a00436a805ecbc9"
+    "sha256": "a2f879e68d7b0e8517d20789794d90d36ec4bb1284e597292344b3c23592a57e"
   },
   {
     "path": "README.md",
@@ -410,8 +428,8 @@
   {
     "path": "scripts/update-export-inventory.cjs",
     "origin": "portable-project-tooling",
-    "bytes": 1371,
-    "sha256": "9d5c966de8c6b62303df38a0c9c665ffc9883bfe25152dcda8df6aa99dd2bb89"
+    "bytes": 1541,
+    "sha256": "b15f1ba3c9861dbcb32394a264236ca4496c54a3f9cec66ce1075baedad1af4f"
   },
   {
     "path": "src/adaptive-retrieval.cjs",
@@ -974,8 +992,8 @@
   {
     "path": "src/main.cjs",
     "origin": "installed-bundled-module",
-    "bytes": 79869,
-    "sha256": "900bbcccbbdaa7ea789beb1de184b493052d9f7c781956ce6a8e735739322e44"
+    "bytes": 83644,
+    "sha256": "d8460cb92437c0edb1ad94a21c73e9c34437e4f46072fbd381980c5e2d0989df"
   },
   {
     "path": "src/memory-entry.cjs",
@@ -1101,7 +1119,7 @@
     "path": "src/release-file-contract.cjs",
     "origin": "installed-bundled-module",
     "bytes": 1281,
-    "sha256": "caef94096066238c18447785d755dca78540f9bec95a819ecc44327033abbee3"
+    "sha256": "fdcfdabf228fc9d943493a6f5cd843111e87ee0e6d840d7646da7d729459e819"
   },
   {
     "path": "src/request-presentation.cjs",
@@ -1524,6 +1542,12 @@
     "sha256": "e9a43d6f8b6cf4e44e4ba3b0bd4c40e9deb99c3bb68553e8c84b83f3aa7e7c54"
   },
   {
+    "path": "tests/journal-storage-paths.test.cjs",
+    "origin": "portable-project-tooling",
+    "bytes": 2015,
+    "sha256": "99dc2667dfcb9c88497fce4207ad30b0db4a0ab495d618c164407858ec0b96a1"
+  },
+  {
     "path": "tests/model-capacity.test.cjs",
     "origin": "prior-offline-regression",
     "bytes": 734,
@@ -1552,6 +1576,12 @@
     "origin": "portable-project-tooling",
     "bytes": 2102,
     "sha256": "0c897e589209dc4dcbd2a7035c0887af22f786a4b5faa04fff72d67c23f6757b"
+  },
+  {
+    "path": "tests/startup-lifecycle.test.cjs",
+    "origin": "portable-project-tooling",
+    "bytes": 6961,
+    "sha256": "9f6e0f16e46376e28d00fb9a079b0aef097dbcf3923b2e9f77fc5bb4951c70ba"
   },
   {
     "path": "vault-template/00_系统/方法与契约/Judgment Kernel V3 使用说明.md",
@@ -6596,7 +6626,7 @@
   {
     "path": "versions.json",
     "origin": "installed-manifest",
-    "bytes": 4145,
-    "sha256": "bc35b12be7827c749e20549836c8ea22707a15898c298cc0f5f4940d1b5cee19"
+    "bytes": 4168,
+    "sha256": "f6ff78de20b3eec4204b385ee8da663cded20d5a7c5792f31051ea2031cd7bb0"
   }
 ]

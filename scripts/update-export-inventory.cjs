@@ -14,6 +14,11 @@ const additional = [
   "scripts/update-export-inventory.cjs",
   "src/authorization-center-sync.cjs",
   "tests/authorization-center-sync.test.cjs",
+  "tests/journal-storage-paths.test.cjs",
+  "tests/startup-lifecycle.test.cjs",
+  "docs/RELEASE-0.45.30.md",
+  "docs/RELEASE-0.45.31.md",
+  "docs/VALIDATION-0.45.31.md",
 ];
 for (const file of additional) {
   if (!byPath.has(file)) byPath.set(file, { path: file, origin: "portable-project-tooling" });
