@@ -19,6 +19,12 @@ const additional = [
   "docs/RELEASE-0.45.30.md",
   "docs/RELEASE-0.45.31.md",
   "docs/VALIDATION-0.45.31.md",
+  "tests/continuity-permissions.test.cjs",
+  "tests/runtime-concurrency.test.cjs",
+  "docs/RELEASE-0.45.32.md",
+  "docs/VALIDATION-0.45.32.md",
+  "docs/RELEASE-0.45.33.md",
+  "docs/VALIDATION-0.45.33.md",
 ];
 for (const file of additional) {
   if (!byPath.has(file)) byPath.set(file, { path: file, origin: "portable-project-tooling" });

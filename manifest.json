@@ -1,7 +1,7 @@
 {
   "id": "xingzhi-workbench",
   "name": "行知",
-  "version": "0.45.31",
+  "version": "0.45.33",
   "minAppVersion": "1.11.4",
   "description": "每轮自动检索获准知识，承接上下文与相关历史；回答完成后自动沉淀，保留现有桌面界面与用户数据。",
   "author": "行知",
