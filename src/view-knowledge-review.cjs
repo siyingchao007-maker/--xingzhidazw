@@ -1,4 +1,4 @@
-const { Modal, setIcon } = require("obsidian");
+const { Modal } = require("obsidian");
 
 function firstText(...values) {
   for (const value of values) {
@@ -43,13 +43,6 @@ function addRelatedNote(parent, relatedPath, onOpenPath) {
   });
   button.disabled = typeof onOpenPath !== "function";
   button.addEventListener("click", () => onOpenPath?.(path));
-}
-
-function addCloseButton(parent, modal) {
-  const actions = parent.createDiv({ cls: "modal-button-container" });
-  const close = actions.createEl("button", { text: "关闭", attr: { type: "button" } });
-  close.addEventListener("click", () => modal.close());
-  setTimeout(() => close.focus(), 0);
 }
 
 function clarificationFieldLabel(clarification) {

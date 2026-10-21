@@ -1418,10 +1418,6 @@ class XingzhiWorkbenchPlugin extends Plugin {
     return this.workbenchRuntime.setConversationReasoningProfile(conversationId, profile);
   }
 
-  recordQuestionCalibrationEvent(event) {
-    return this.workbenchRuntime.recordQuestionCalibrationEvent(event);
-  }
-
   clearQuestionCalibrationEvents() {
     return this.workbenchRuntime.clearQuestionCalibrationEvents();
   }

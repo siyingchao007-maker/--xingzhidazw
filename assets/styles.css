@@ -17585,40 +17585,6 @@ body .xz-workbench.xz-workbench .xz-message-assistant .xz-message-text.is-markdo
 @media (max-width: 680px) { .xh-anchor-session, .xh-runtime { padding: 14px; } .xh-toolbar select { flex-basis: 100%; } .xh-field textarea { min-height: 90px; } .xh-runtime-head, .xh-runtime-work-head { align-items: flex-start; flex-direction: column; } .xh-runtime-badges { justify-content: flex-start; } .xh-runtime-map, .xh-runtime-audit ul { grid-template-columns: 1fr; } }
 /* XINGZHI_HOME_PATH_CSS_END */
 
-/* Xingzhi v0.42.2 question calibration styles; appended to the existing Obsidian theme stylesheet. */
-.xz-question-calibration-modal {
-  width: min(760px, calc(100vw - 24px));
-  max-height: calc(100vh - 32px);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 620px) {
-  
-  
-}
 
 
 /* Xingzhi v0.43.0 Judgment Kernel V3 styles; keep this marker unique. */
@@ -17730,66 +17696,11 @@ body .xz-workbench.xz-workbench .xz-message-assistant .xz-message-text.is-markdo
 
 
 /* Xingzhi v0.45.1 perspective and expression coaching styles; appended after the existing theme. */
-.xz-question-calibration-modal {
-  width: min(760px, calc(100vw - 24px));
-  max-height: calc(100vh - 32px);
-}
-.xz-question-calibration-modal .modal-content {
-  overflow-y: auto;
-  overflow-wrap: anywhere;
-}
-.xz-question-calibration-kicker {
-  display: inline-block;
-  color: var(--text-accent);
-  font-size: var(--xz-ui-fs-meta);
-  font-weight: 650;
-  letter-spacing: .04em;
-  margin: 0 0 10px;
-}
-.xz-question-calibration-intro,
 .xz-question-calibration-privacy {
   color: var(--text-muted);
   font-size: var(--xz-ui-fs-caption);
   line-height: 1.6;
 }
-.xz-question-calibration-reason {
-  background: var(--background-secondary);
-  border: 1px solid var(--background-modifier-border);
-  border-left: 3px solid var(--interactive-accent);
-  border-radius: var(--xz-ui-r-md);
-  margin: 14px 0;
-  padding: 12px 14px;
-}
-.xz-question-calibration-reason > p { margin: 6px 0 0; color: var(--text-muted); font-size: var(--xz-ui-fs-caption); }
-.xz-question-calibration-gap { display: grid; gap: 3px; margin-top: 10px; }
-.xz-question-calibration-gap strong { font-size: var(--xz-ui-fs-caption); }
-.xz-question-calibration-gap span { color: var(--text-muted); font-size: var(--xz-ui-fs-meta); line-height: 1.5; }
-.xz-question-calibration-original { margin: 14px 0; }
-.xz-question-calibration-original summary { color: var(--text-muted); cursor: pointer; font-size: var(--xz-ui-fs-caption); }
-.xz-question-calibration-original blockquote {
-  background: var(--background-secondary);
-  border-left: 2px solid var(--background-modifier-border);
-  margin: 8px 0;
-  padding: 9px 12px;
-  white-space: pre-wrap;
-}
-.xz-question-calibration-editor-label { display: grid; gap: 7px; margin: 14px 0 8px; font-size: var(--xz-ui-fs-caption); font-weight: 600; }
-.xz-question-calibration-editor-label textarea {
-  width: 100%;
-  min-height: 150px;
-  max-height: min(42vh, 380px);
-  resize: vertical;
-  color: var(--text-normal);
-  background: var(--background-primary);
-  border: 1px solid var(--background-modifier-border);
-  border-radius: var(--xz-ui-r-md);
-  padding: 10px 12px;
-  font-size: var(--xz-ui-fs-caption);
-  line-height: 1.65;
-}
-.xz-question-calibration-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; margin-top: 16px; }
-.xz-question-calibration-actions button { min-height: 34px; height: auto; white-space: normal; }
-.xz-question-calibration-cancel { color: var(--text-muted); background: transparent; border: 0; }
 .xz-question-calibration-settings .xz-question-calibration-toggle { display: flex; align-items: flex-start; gap: 10px; margin: 14px 0; }
 .xz-question-calibration-toggle input { flex: 0 0 auto; margin-top: 3px; }
 .xz-question-calibration-toggle > div { display: grid; gap: 4px; }
@@ -17801,34 +17712,6 @@ body .xz-workbench.xz-workbench .xz-message-assistant .xz-message-text.is-markdo
 .xz-question-calibration-audit > strong { font-size: var(--xz-ui-fs-meta); }
 .xz-question-calibration-audit-list { display: grid; gap: 5px; margin: 8px 0; padding-left: 18px; }
 .xz-question-calibration-audit-list li { color: var(--text-muted); font-size: var(--xz-ui-fs-meta); line-height: 1.45; }
-@media (max-width: 620px) {
-  .xz-question-calibration-actions { display: grid; grid-template-columns: 1fr; }
-  .xz-question-calibration-actions button { width: 100%; }
-}
-.xz-question-calibration-perspective {
-  display: grid;
-  grid-template-columns: 18px minmax(0, 1fr);
-  align-items: start;
-  gap: 10px;
-  padding: 12px 0;
-  border-top: 1px solid var(--background-modifier-border);
-  cursor: pointer;
-}
-.xz-question-calibration-perspective input { margin: 3px 0 0; }
-.xz-question-calibration-perspective > div { display: grid; gap: 5px; }
-.xz-question-calibration-perspective strong { font-size: var(--xz-ui-fs-control); }
-.xz-question-calibration-perspective p { margin: 0; font-size: var(--xz-ui-fs-caption); line-height: 1.65; }
-.xz-question-calibration-perspective span,
-.xz-question-calibration-learning span { color: var(--text-muted); font-size: var(--xz-ui-fs-meta); line-height: 1.55; }
-.xz-question-calibration-learning {
-  margin: 12px 0;
-  padding: 10px 12px;
-  background: var(--background-secondary);
-  border: 1px solid var(--background-modifier-border);
-  border-radius: var(--xz-ui-r-md);
-}
-.xz-question-calibration-learning strong { color: var(--text-normal); font-size: var(--xz-ui-fs-caption); }
-.xz-question-calibration-learning p { font-size: var(--xz-ui-fs-caption); line-height: 1.65; margin: 6px 0; }
 .xz-question-thinking-button { color: var(--text-muted); }
 .xz-question-thinking-button:hover { color: var(--text-accent); }
 

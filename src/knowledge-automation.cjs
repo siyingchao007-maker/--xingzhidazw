@@ -17,9 +17,6 @@ const TERMINAL_ORGANIZATION_STATUSES = new Set([
 const ACTIVE_ORGANIZATION_STATUSES = new Set(["queued", "running"]);
 const MAX_ORGANIZATION_RECORDS = 200;
 const MAX_ORGANIZATION_ATTEMPTS = 2;
-const LOW_INFORMATION_MESSAGES = new Set([
-  "好", "好的", "嗯", "可以", "确认", "继续", "下一步", "是", "否", "谢谢", "停止", "取消",
-]);
 
 function boundedText(value, maximum) {
   return typeof value === "string" ? value.trim().slice(0, maximum) : "";
@@ -190,11 +187,6 @@ function restoreConversationOrganizationRecords(value) {
       error: "上次对话整理在完成前中断，可安全重试一次",
     });
   });
-}
-
-function isSubstantiveUserMessage(value) {
-  const text = boundedText(value, 200_001).replace(/[\s。！!？?，,；;]+/gu, "");
-  return Boolean(text) && text.length <= 200_000 && !LOW_INFORMATION_MESSAGES.has(text);
 }
 
 function isCompletedVisibleMessage(message, role) {

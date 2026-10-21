@@ -311,17 +311,6 @@ function buildConversationOrganizationPrompt({ conversation, userMessage, assist
   ].join("\n");
 }
 
-function safePathSegment(value) {
-  const original = boundedText(value, 200);
-  const cleaned = original
-    .normalize("NFKC")
-    .replace(/[^a-zA-Z0-9_-]+/gu, "-")
-    .replace(/-+/gu, "-")
-    .slice(0, 80);
-  if (cleaned && cleaned !== "." && cleaned !== "..") return cleaned;
-  return `id-${crypto.createHash("sha256").update(original || "missing").digest("hex").slice(0, 24)}`;
-}
-
 function safeTitlePathSegment(value) {
   const title = boundedText(value, 160)
     .normalize("NFKC")

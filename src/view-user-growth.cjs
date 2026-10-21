@@ -1,6 +1,6 @@
 "use strict";
 
-const { Component, MarkdownRenderer, Notice, setIcon } = require("obsidian");
+const { Component, MarkdownRenderer, setIcon } = require("obsidian");
 const { renderGrowthContent } = require("./view-growth-content.cjs");
 
 class UserGrowthPanel {

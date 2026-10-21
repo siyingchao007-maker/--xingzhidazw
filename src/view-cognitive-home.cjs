@@ -114,7 +114,6 @@ const ANCHOR_ART_BY_SKIN = {
     ["sheet-c", "xz-ink-hero-main.png"],
   ],
 };
-const ANCHOR_ART = ANCHOR_ART_BY_SKIN.gold;
 const WB_PAGES = ["home", "anchor", "perceive", "test", "hone", "archive", "tune"];
 const WB_STEP_PAGES = ["perceive", "anchor", "test", "hone"];
 // 调律页用的本地常量。打包后每个 .cjs 是独立作用域，workbench-runtime 那边的

@@ -3,7 +3,6 @@
 const MAX_SOURCE_BYTES = 16 * 1024;
 const MAX_LAYERS = 8;
 const MAX_NODES = 24;
-const MAX_DIAGRAMS = 8;
 const MAX_LINKS = 7;
 const STATUS_LABELS = Object.freeze({
   fact: "事实",

@@ -19,12 +19,6 @@ function isCustomProviderId(value) {
   return typeof value === "string" && CUSTOM_PROVIDER_ID_PATTERN.test(value);
 }
 
-function customProviderSecretRef(providerId) {
-  if (providerId === "custom") return "env:XINGZHI_CUSTOM_API_KEY";
-  const suffix = String(providerId).slice("custom-".length);
-  return `env:XINGZHI_CUSTOM_API_KEY_${suffix}`;
-}
-
 function providerCompletionFailureReason(value) {
   if (!value) return null;
   if (value.incompleteReason) return value.incompleteReason;
@@ -138,7 +132,6 @@ const {
 } = require("./contracts.cjs");
 const {
   CONVERSATION_PROCESSING_MODES,
-  ORGANIZATION_VERSION,
   archiveMessageCoverage,
   createConversationOrganizationRecord,
   restoreConversationOrganizationRecords,
@@ -177,7 +170,6 @@ const {
 const {
   MESSAGE_CONTENT_DELETED_SENTINEL,
   deleteMessageBlocks: removeSelectedMessageBlocks,
-  hashMessageBlockText,
   parseMessageBlocks,
   restoreMessageBlockDeletion: restoreDeletedMessageBlocks,
   selectMessageBlocks,
@@ -244,7 +236,6 @@ const {
   buildSourceRoutingBlock,
   classifySourceRoute,
   decideOnlineGapFailure,
-  externalProviderBridgeDegradation,
   externalProviderDirectRoute,
   isExternalProviderConversation,
   isKnowledgeOptOutRequest,
@@ -252,7 +243,6 @@ const {
   isConversationOperationRequest,
   mergeOnlineEvidenceItems,
   resolveSourceRoute,
-  shouldRunOnlineContextProbe,
   shouldUseCodexOnlineBridge,
 } = require("./source-routing.cjs");
 const {
@@ -310,12 +300,9 @@ const { CognitiveWorkspace } = require("./cognitive-workspace.cjs");
 const { buildGrowthSnapshot, growthReplayPreview } = require("./growth-snapshot.cjs");
 const {
   CURRENT_PROFILE_PATH,
-  GROWTH_EVENTS_PATH,
-  GROWTH_PATH_PATH,
   buildProfileAnalysisPrompt,
   buildInteractionEvent,
   buildStablePreferenceCapsule,
-  buildUserContinuityCardSummary,
   extractProfileEntries,
   interactionLedgerPath,
   parseProfileAnalysis,
@@ -362,11 +349,8 @@ const {
 } = require("./token-budget.cjs");
 const {
   PROFILE_IDS,
-  PROFILE_OPTIONS,
   normalizeReasoningExecution,
   normalizeReasoningProfile,
-  profileLabel,
-  reasoningExecutionLabel,
   resolveReasoningExecution,
 } = require("./reasoning-profile.cjs");
 const { archiveRecoveryAction } = require("./archive-workflow.cjs");
@@ -424,7 +408,6 @@ const {
 } = require("./knowledge-merge-synthesis.cjs");
 const {
   filterAutoInvocableResults,
-  normalizeKnowledgeUsage,
   rankKnowledgeCards,
   recordKnowledgeUsage,
 } = require("./knowledge-usage.cjs");
@@ -464,7 +447,6 @@ const KNOWLEDGE_PREFETCH_LIMIT = 10;
 const WORK_PANEL_LIMIT = 200;
 const MAX_ASSISTANT_MESSAGE_BYTES = 200 * 1024;
 const DEFAULT_TURN_TIMEOUT_MS = 15 * 60 * 1000;
-const MAX_ARCHIVE_SOURCE_BYTES = 100 * 1024;
 const MAX_DOCUMENTS_PER_IMPORT = 5;
 const MAX_DOCUMENT_IMPORT_TEXT = 160_000;
 const MAX_DOCUMENT_VISUALS_PER_IMPORT = 5;
@@ -9133,30 +9115,6 @@ class WorkbenchRuntime extends EventEmitter {
     conversation.updatedAt = nowIso();
     this._notify();
     return this._save();
-  }
-
-  async recordQuestionCalibrationEvent(event) {
-    if (this.state.settings?.questionCalibrationEnabled === false) return null;
-    const {
-      MAX_QUESTION_CALIBRATION_EVENTS,
-      normalizeQuestionCalibrationEvent,
-      normalizeQuestionCalibrationEvents,
-    } = require("./question-calibration.cjs");
-    const normalized = normalizeQuestionCalibrationEvent(event);
-    if (!normalized) throw new Error("提问校准记录格式不正确");
-    const previousEvents = this.state.questionCalibrationEvents;
-    const nextEvents = normalizeQuestionCalibrationEvents([
-      ...(Array.isArray(this.state.questionCalibrationEvents) ? this.state.questionCalibrationEvents : []),
-      normalized,
-    ]).slice(-MAX_QUESTION_CALIBRATION_EVENTS);
-    this.state.questionCalibrationEvents = nextEvents;
-    try { await this._save(); }
-    catch (error) {
-      if (this.state.questionCalibrationEvents === nextEvents) this.state.questionCalibrationEvents = previousEvents;
-      throw error;
-    }
-    this._notify();
-    return normalized;
   }
 
   async clearQuestionCalibrationEvents() {

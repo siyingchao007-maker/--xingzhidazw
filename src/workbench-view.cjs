@@ -902,138 +902,9 @@ class XingzhiConfirmationModal extends Modal {
 const {
   TASK_TYPES,
   assessQuestion,
-  buildSuggestedQuestion,
   buildQuestionHabitHints,
-  shouldShowQuestionCalibration,
-  createQuestionCalibrationEvent,
 } = require("./question-calibration.cjs");
 const { buildDynamicThinkingRequest } = require("./dynamic-thinking-policy.cjs");
-
-class QuestionCalibrationModal extends Modal {
-  constructor(app, { assessment, original, mode = "send", habitHints = [] } = {}) {
-    super(app);
-    this.assessment = assessment;
-    this.original = original || assessment?.original || "";
-    this.mode = mode;
-    this.habitHints = habitHints;
-    this.selectedPerspectiveCodes = new Set();
-    this.suggested = this.original;
-    this.resolveValue = null;
-    this.promise = new Promise((resolve) => { this.resolveValue = resolve; });
-  }
-
-  onOpen() {
-    this.modalEl.addClass("xz-question-calibration-modal");
-    this.titleEl.setText("补充思考，让问题更清楚");
-    this.contentEl.empty();
-    const type = this.assessment?.taskType || TASK_TYPES.analysis;
-    this.contentEl.createSpan({ cls: "xz-question-calibration-kicker", text: `可选视角 · ${type.label} · 本地规则建议` });
-    this.contentEl.createEl("p", {
-      cls: "xz-question-calibration-intro",
-      text: "保留你的原话，看看有没有值得继续想的角度。选择后会把对应问题接在原话后面；你仍可编辑或直接使用原话。",
-    });
-    const reason = this.contentEl.createDiv({ cls: "xz-question-calibration-reason", attr: { role: "note" } });
-    reason.createEl("strong", { text: "可能值得考虑的角度" });
-    reason.createEl("p", { text: this.assessment?.reason || "补充少量关键上下文可能让回答更贴合你的处境。" });
-    for (const item of this.assessment?.perspectives || []) {
-      const row = reason.createEl("label", { cls: "xz-question-calibration-perspective" });
-      const check = row.createEl("input", { attr: { type: "checkbox", "aria-label": `加入：${item.label}` } });
-      const copy = row.createDiv();
-      copy.createEl("strong", { text: item.label });
-      copy.createEl("p", { text: item.question });
-      copy.createSpan({ text: `为什么值得想：${item.reason}` });
-      copy.createSpan({ text: `关联：${item.source}「${item.anchor}」` });
-      check.addEventListener("change", () => {
-        if (this.editor.value !== this.suggested) {
-          check.checked = this.selectedPerspectiveCodes.has(item.id);
-          new Notice("你已编辑预览。请先保留手动修改，再调整角度；不会覆盖你的文字。");
-          return;
-        }
-        if (check.checked) this.selectedPerspectiveCodes.add(item.id);
-        else this.selectedPerspectiveCodes.delete(item.id);
-        this.suggested = buildSuggestedQuestion(this.assessment, { selectedPerspectiveCodes: [...this.selectedPerspectiveCodes] });
-        this.editor.value = this.suggested;
-      });
-    }
-    if (!this.assessment?.perspectives?.length) reason.createEl("p", { text: "当前没有明确匹配的补充角度。可以在下面自行整理表达，也可以保持原话。" });
-    const learning = this.contentEl.createDiv({ cls: "xz-question-calibration-learning", attr: { role: "note" } });
-    learning.createEl("strong", { text: "下次可以自己这样问" });
-    learning.createEl("p", { text: this.assessment?.learningHint || "先说清当前处境和这一轮希望得到什么。" });
-    learning.createSpan({ text: "只是一种可选表达方法，不要求你按固定模板说话。" });
-    for (const item of this.habitHints.slice(0, 1)) {
-      const hint = this.contentEl.createDiv({ cls: "xz-question-calibration-learning" });
-      hint.createEl("strong", { text: "近期表达回顾" });
-      hint.createEl("p", { text: item.text });
-      hint.createEl("p", { text: item.nextTime });
-      hint.createSpan({ text: item.boundary });
-    }
-    const originalDetails = this.contentEl.createEl("details", { cls: "xz-question-calibration-original" });
-    originalDetails.createEl("summary", { text: "查看本次保留的原问题" });
-    originalDetails.createEl("blockquote", { text: this.original });
-    const editorLabel = this.contentEl.createEl("label", { cls: "xz-question-calibration-editor-label" });
-    editorLabel.createSpan({ text: "原话与所选补充（可编辑）" });
-    this.editor = editorLabel.createEl("textarea", {
-      attr: { rows: "11", "aria-label": "可编辑的提问建议版本" },
-    });
-    this.editor.value = this.suggested;
-    this.contentEl.createEl("p", {
-      cls: "xz-question-calibration-privacy",
-      text: "提示由本地规则生成，不额外调用模型。正式回答仍由你已配置的模型处理。校准记录只保留角度编号和选择；表达回顾可在设置中开启、关闭或清空记录。",
-    });
-    const actions = this.contentEl.createDiv({ cls: "xz-question-calibration-actions" });
-    const originalButton = actions.createEl("button", {
-      cls: "xz-secondary-button",
-      text: this.mode === "send" ? "按原话发送" : "保留原话",
-      attr: { type: "button" },
-    });
-    originalButton.addEventListener("click", () => this.resolve({ decision: "sent-original", text: this.original, selectedPerspectiveCodes: [] }));
-    const suggestedButton = actions.createEl("button", {
-      cls: "mod-cta",
-      text: this.mode === "send" ? "采用当前版本发送" : "放回输入框",
-      attr: { type: "button" },
-    });
-    suggestedButton.addEventListener("click", () => {
-      const value = this.editor.value.trim();
-      if (!value) {
-        new Notice("建议版本不能为空；也可以按原问题发送");
-        this.editor.focus();
-        return;
-      }
-      this.resolve({
-        decision: value === this.original.trim() ? "sent-original" : value === this.suggested.trim() ? "accepted-suggestion" : "edited-suggestion",
-        text: value,
-        selectedPerspectiveCodes: value === this.original.trim() ? [] : [...this.selectedPerspectiveCodes]
-          .filter((id) => value.includes(this.assessment.perspectives.find((item) => item.id === id)?.question || "\u0000")),
-      });
-    });
-    const cancel = actions.createEl("button", {
-      cls: "xz-question-calibration-cancel",
-      text: "返回输入框",
-      attr: { type: "button" },
-    });
-    cancel.addEventListener("click", () => this.close());
-    setTimeout(() => this.editor?.focus(), 0);
-  }
-
-  resolve(value) {
-    if (!this.resolveValue) return;
-    const resolve = this.resolveValue;
-    this.resolveValue = null;
-    resolve(value);
-    this.close();
-  }
-
-  onClose() {
-    this.resolveValue?.(null);
-    this.resolveValue = null;
-    this.contentEl.empty();
-  }
-
-  waitForChoice() {
-    this.open();
-    return this.promise;
-  }
-}
 
 // Attachment previews use existing evidence links; image bytes stay in the Vault.
 function uploadedImagePath(value) {
@@ -1265,7 +1136,6 @@ class XingzhiWorkbenchView extends ItemView {
     this.pendingSkillSelection = new Set();
     this.nextTurnSkillSelections = new Map();
     this.sendingConversationIds = new Set();
-    this.pendingQuestionCalibrationConversations = new Set();
     this.preparedQuestionCalibrations = new Map();
     this.pendingOutgoingMessages = new Map();
     this.pendingThinkingTurns = new Map();
@@ -6041,7 +5911,7 @@ class XingzhiWorkbenchView extends ItemView {
       hasAttachments,
       turnActive: visibleTurnActive,
       isSending,
-      hasPendingCapabilityChoice: hasPendingCapabilityChoice || this.pendingQuestionCalibrationConversations.has(activeConversationId),
+      hasPendingCapabilityChoice,
       hasExternalConsent,
       hasRequiredModel,
       canSend: hasAttachments
@@ -6089,7 +5959,7 @@ class XingzhiWorkbenchView extends ItemView {
     this.refs.clearAttachments.disabled = attachmentControlsDisabled;
     if (this.refs.sourceScopeSelect) this.refs.sourceScopeSelect.disabled = visibleTurnActive || isSending;
     if (this.refs.questionThinkingButton) {
-      this.refs.questionThinkingButton.disabled = visibleTurnActive || isSending || this.pendingQuestionCalibrationConversations.has(activeConversationId) || !this.refs.composerInput?.value.trim();
+      this.refs.questionThinkingButton.disabled = visibleTurnActive || isSending || !this.refs.composerInput?.value.trim();
       this.refs.questionThinkingButton.toggleAttribute("hidden", stateSettings(this.plugin).questionCalibrationEnabled === false);
     }
   }
@@ -6607,8 +6477,7 @@ class XingzhiWorkbenchView extends ItemView {
   async prepareQuestionThinking() {
     const original = this.refs.composerInput?.value.trim() || "";
     const conversationId = normalizeId(this.getActiveConversation());
-    if (!original || !conversationId || stateSettings(this.plugin).questionCalibrationEnabled === false
-      || this.pendingQuestionCalibrationConversations.has(conversationId)) return;
+    if (!original || !conversationId || stateSettings(this.plugin).questionCalibrationEnabled === false) return;
     this.setComposerDraft(buildDynamicThinkingRequest(original), { focus: true });
   }
 

@@ -2,7 +2,6 @@
 
 const MAX_LENS_RESULTS = 16;
 const MAX_BASELINE_FINDINGS = 128;
-const MATERIALITY_SCORE = Object.freeze({ low: 1, medium: 2, high: 3 });
 const CONFIDENCE_SCORE = Object.freeze({ low: 1, medium: 2, high: 3 });
 const EPISTEMIC_SCORE = Object.freeze({
   unknown: 0,

@@ -1,6 +1,6 @@
 "use strict";
 
-const { copyFile, mkdir, readdir, readFile, stat, writeFile } = require("node:fs/promises");
+const { copyFile, mkdir, readdir, readFile, writeFile } = require("node:fs/promises");
 const { dirname, join, relative } = require("node:path");
 const { DEFAULT_CAPABILITY_FILES } = require("./vault-capability-package.cjs");
 
@@ -37,7 +37,6 @@ const STANDARD_FOLDERS = [
 ];
 
 const { PLUGIN_FILES } = require("./release-file-contract.cjs");
-const PLUGIN_STATE = ["data.json"];
 const EXCLUDED_NAMES = [
   "data.json",
   ".secrets",

@@ -28,7 +28,6 @@ const {
 } = require("./cognitive-lens-router.cjs");
 const {
   DOCUMENT_SYNTHESIS_PATTERN,
-  FINAL_SOLUTION_PATTERN,
   KNOWLEDGE_ORGANIZATION_PATTERN,
   detectIntentSignals,
 } = require("./intent-signals.cjs");

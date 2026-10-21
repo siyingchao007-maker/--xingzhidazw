@@ -233,10 +233,6 @@ function scoreSearchFields(fields, tokens) {
   }, 0);
 }
 
-function scoreNote(note, tokens) {
-  return scoreSearchFields(noteSearchFields(note), tokens);
-}
-
 function normalizeSearchText(value) {
   return String(value || "").normalize("NFKC").toLowerCase();
 }
