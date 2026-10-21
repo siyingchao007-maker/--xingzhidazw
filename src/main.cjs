@@ -1092,8 +1092,14 @@ class XingzhiWorkbenchPlugin extends Plugin {
   }
 
   cleanupProtectedSkillRuntime() {
+    // Invalidate any in-flight materialization; it removes its own directory.
+    this.protectedSkillGeneration = (this.protectedSkillGeneration || 0) + 1;
     const runtimeDir = this.protectedSkillRuntimeDir;
     this.protectedSkillRuntimeDir = null;
+    this._removeProtectedSkillRuntimeDir(runtimeDir);
+  }
+
+  _removeProtectedSkillRuntimeDir(runtimeDir) {
     if (!runtimeDir) return;
     try {
       const resolved = nodePath.resolve(runtimeDir);
@@ -1105,21 +1111,41 @@ class XingzhiWorkbenchPlugin extends Plugin {
     } catch (_) {}
   }
 
-  _materializeProtectedSkillTree(sourceRoot, targetRoot) {
+  async _materializeProtectedSkillTree(sourceRoot, targetRoot, isCancelled = () => false) {
     const vaultRoot = nodePath.resolve(this.vaultPath || this.getVaultPath());
     const source = nodePath.resolve(sourceRoot);
     if (source !== vaultRoot && !source.startsWith(`${vaultRoot}${nodePath.sep}`)) {
       throw new Error("受保护 Skill 源目录越过 Vault 边界");
     }
-    fs.mkdirSync(targetRoot, { recursive: true, mode: 0o700 });
-    const walk = (fromDir, toDir) => {
-      for (const entry of fs.readdirSync(fromDir, { withFileTypes: true })) {
+    const checkCancelled = () => {
+      if (isCancelled()) {
+        throw Object.assign(new Error("受保护 Skill 准备已取消"), { code: "PROTECTED_SKILL_CANCELLED" });
+      }
+    };
+    await fs.promises.mkdir(targetRoot, { recursive: true, mode: 0o700 });
+    let realSource;
+    try {
+      realSource = await fs.promises.realpath(source);
+    } catch (error) {
+      if (error?.code === "ENOENT") return targetRoot;
+      throw error;
+    }
+    // The lexical check above cannot see a symlinked source root; compare real
+    // paths too so the copy can never read outside the Vault.
+    const realVault = await fs.promises.realpath(vaultRoot);
+    if (realSource !== realVault && !realSource.startsWith(`${realVault}${nodePath.sep}`)) {
+      throw new Error("受保护 Skill 源目录越过 Vault 边界");
+    }
+    const walk = async (fromDir, toDir) => {
+      checkCancelled();
+      for (const entry of await fs.promises.readdir(fromDir, { withFileTypes: true })) {
+        checkCancelled();
         if (entry.isSymbolicLink()) continue;
         const from = nodePath.join(fromDir, entry.name);
         const to = nodePath.join(toDir, entry.name);
         if (entry.isDirectory()) {
-          fs.mkdirSync(to, { recursive: true, mode: 0o700 });
-          walk(from, to);
+          await fs.promises.mkdir(to, { recursive: true, mode: 0o700 });
+          await walk(from, to);
           continue;
         }
         if (!entry.isFile()) continue;
@@ -1128,34 +1154,52 @@ class XingzhiWorkbenchPlugin extends Plugin {
         if (this.capabilityPack?.present && this.capabilityPack.has(relative)) {
           bytes = Buffer.from(this.capabilityPack.readText(relative), "utf8");
         } else {
-          bytes = fs.readFileSync(from);
+          bytes = await fs.promises.readFile(from);
         }
-        fs.writeFileSync(to, bytes, { mode: 0o600 });
+        checkCancelled();
+        await fs.promises.writeFile(to, bytes, { mode: 0o600 });
       }
     };
-    if (fs.existsSync(source)) walk(source, targetRoot);
+    await walk(source, targetRoot);
     return targetRoot;
   }
 
-  prepareProtectedSkillExtraRoots() {
+  async prepareProtectedSkillExtraRoots() {
     const protection = this.getCapabilityProtectionSnapshot();
     if (!protection.present) return null;
     if (!protection.unlocked) {
       throw new Error(`本地能力包尚未解锁：${protection.error || "请输入能力解锁码"}`);
     }
     this.cleanupProtectedSkillRuntime();
-    const runtimeDir = fs.mkdtempSync(nodePath.join(os.tmpdir(), "xingzhi-cap-"));
-    try { fs.chmodSync(runtimeDir, 0o700); } catch (_) {}
+    const generation = this.protectedSkillGeneration;
+    const isCancelled = () => this.protectedSkillGeneration !== generation;
+    const runtimeDir = await fs.promises.mkdtemp(nodePath.join(os.tmpdir(), "xingzhi-cap-"));
+    if (isCancelled()) {
+      this._removeProtectedSkillRuntimeDir(runtimeDir);
+      throw Object.assign(new Error("受保护 Skill 准备已取消"), { code: "PROTECTED_SKILL_CANCELLED" });
+    }
     this.protectedSkillRuntimeDir = runtimeDir;
-    const skillRoot = nodePath.join(this.vaultPath, "10_智能体与技能", "技能");
-    const releaseRoot = nodePath.join(this.vaultPath, "00_系统", "能力运行时", "skill-releases");
-    const materializedSkillRoot = this._materializeProtectedSkillTree(
-      skillRoot, nodePath.join(runtimeDir, "skills"),
-    );
-    const materializedReleaseRoot = this._materializeProtectedSkillTree(
-      releaseRoot, nodePath.join(runtimeDir, "releases"),
-    );
-    return [materializedSkillRoot, materializedReleaseRoot];
+    try {
+      try { await fs.promises.chmod(runtimeDir, 0o700); } catch (_) {}
+      const skillRoot = nodePath.join(this.vaultPath, "10_智能体与技能", "技能");
+      const releaseRoot = nodePath.join(this.vaultPath, "00_系统", "能力运行时", "skill-releases");
+      const materializedSkillRoot = await this._materializeProtectedSkillTree(
+        skillRoot, nodePath.join(runtimeDir, "skills"), isCancelled,
+      );
+      const materializedReleaseRoot = await this._materializeProtectedSkillTree(
+        releaseRoot, nodePath.join(runtimeDir, "releases"), isCancelled,
+      );
+      if (isCancelled()) {
+        throw Object.assign(new Error("受保护 Skill 准备已取消"), { code: "PROTECTED_SKILL_CANCELLED" });
+      }
+      return [materializedSkillRoot, materializedReleaseRoot];
+    } catch (error) {
+      // Never leave decrypted protected Skill text behind after a failed or
+      // cancelled preparation.
+      if (this.protectedSkillRuntimeDir === runtimeDir) this.protectedSkillRuntimeDir = null;
+      this._removeProtectedSkillRuntimeDir(runtimeDir);
+      throw error;
+    }
   }
 
   _storedCapabilityUnlockCode() {
