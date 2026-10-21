@@ -15,6 +15,8 @@ function createLoader(options = {}) {
   function load(id) {
     if (cache.has(id)) return cache.get(id).exports;
     if (id === 'obsidian') return host;
+    // Opt-in substitutes, e.g. real node:fs for a test confined to a temp directory.
+    if (options.modules && Object.hasOwn(options.modules, id)) return options.modules[id];
     if (['fs', 'node:fs', 'node:fs/promises', 'node:child_process', 'node:http', 'node:https', 'node:net'].includes(id)) return denied;
     if (['node:crypto', 'node:path', 'path', 'node:events', 'node:os', 'os', 'node:zlib', 'node:string_decoder', 'node:util'].includes(id)) return require(id);
     assert.match(id, /^\.\/[a-z0-9-]+\.cjs$/u);
