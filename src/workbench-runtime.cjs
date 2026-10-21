@@ -3292,7 +3292,7 @@ class WorkbenchRuntime extends EventEmitter {
     if (this.journalImportBlocked) {
       const count = Object.values(report).reduce((total, item) => total + item.rejected.length, 0);
       this.state.runtime.journalImportWarning = `发现 ${count} 项事务日志异常；对话与查看仍可用，知识写入和撤销已暂停。原始日志全部保留。请打开“查看启动诊断”。`;
-      this.state.runtime.connection.warnings.push(this.state.runtime.journalImportWarning);
+      boundedPush(this.state.runtime.connection.warnings, this.state.runtime.journalImportWarning);
       this.state.runtime.knowledgeRecovery = { transactionId: "journal-import", error: this.state.runtime.journalImportWarning, createdAt: nowIso() };
     }
     this._initializeConversationRuntimeState();
@@ -4059,7 +4059,7 @@ class WorkbenchRuntime extends EventEmitter {
           error: authenticationRequired ? CODEX_AUTHENTICATION_REQUIRED_MESSAGE : null,
           ...(authenticationRequired ? { label: "需要重新登录", authenticationRequired: true } : {}),
         };
-        this.state.runtime.connection.warnings.push(`Codex 正在自动重连：${message}`);
+        boundedPush(this.state.runtime.connection.warnings, `Codex 正在自动重连：${message}`);
         this._notify();
       }
     });
@@ -5093,7 +5093,7 @@ class WorkbenchRuntime extends EventEmitter {
       try {
         await this.appServer.setSkillExtraRoots(skillExtraRoots);
       } catch (error) {
-        this.state.runtime.connection.warnings.push(`Skill 目录注册失败：${safeErrorMessage(error)}`);
+        boundedPush(this.state.runtime.connection.warnings, `Skill 目录注册失败：${safeErrorMessage(error)}`);
       }
       const [models, skills] = await Promise.all([
         this.appServer.listModels({ limit: 100, includeHidden: false }),
@@ -10220,7 +10220,8 @@ class WorkbenchRuntime extends EventEmitter {
       this._noteContextReminder(conversation, contextCompaction);
       conversation.threadId = null;
       conversation.updatedAt = nowIso();
-      this.state.runtime.connection.warnings.push(
+      boundedPush(
+        this.state.runtime.connection.warnings,
         `对话上下文已达到上限，自动整理了 ${contextCompaction.newlyArchivedMessageCount} 条旧消息；原文仍保存在本地对话记录中。`,
       );
     }
@@ -13637,6 +13638,7 @@ Object.assign(WorkbenchRuntime.prototype, createDemandSkillRuntimeMethods());
 module.exports = {
   AUXILIARY_APP_SERVER_CONFIG_OVERRIDES,
   BASE_INSTRUCTIONS,
+  boundedPush,
   buildSkillAdvisoryBlock,
   buildSkillCoordinationBlock,
   guardKnowledgeAbsenceClaim,

@@ -21,6 +21,7 @@ const { normalizeVaultPath } = require("./core.cjs");
 const { openVaultFile } = require("./obsidian-file-opener.cjs");
 const {
   WorkbenchRuntime,
+  boundedPush,
   createObsidianVaultAdapter,
   createRuntimeState,
 } = require("./workbench-runtime.cjs");
@@ -977,7 +978,7 @@ class XingzhiWorkbenchPlugin extends Plugin {
           try {
             await this.workbenchRuntime.refreshCapabilityCatalog();
           } catch (error) {
-            this.state.runtime.connection.warnings.push(`能力目录加载失败：${String(error?.message || error).slice(0, 200)}`);
+            boundedPush(this.state.runtime.connection.warnings, `能力目录加载失败：${String(error?.message || error).slice(0, 200)}`);
           }
           try {
             await this.refreshCapabilities(startupProviderId);
@@ -1736,14 +1737,13 @@ class XingzhiWorkbenchPlugin extends Plugin {
       // Skill 与认知透镜只依赖 vault 目录，与引擎无关。
       // 不经过这一步，capabilityCatalog 会保持构造时的空数组，
       // 导致外部 API 路径下 _availableSkills 返回空、Skill 与透镜全部不可选。
-      // 本类是委托层，作用域内没有 boundedPush / safeErrorMessage，
-      // 因此失败时静默降级，不阻断模型发现。
+      // 失败时降级并记录有上限的警告，不阻断模型发现。
       try {
         await this.workbenchRuntime.refreshCapabilityCatalog();
       } catch (error) {
         // 不阻断外部提供商连接，但必须留下线索：
         // 静默失败会让「透镜为空」完全无法定位。
-        this.state.runtime.connection.warnings.push(`能力目录加载失败：${String(error?.message || error).slice(0, 200)}`);
+        boundedPush(this.state.runtime.connection.warnings, `能力目录加载失败：${String(error?.message || error).slice(0, 200)}`);
       }
       return this.workbenchRuntime.discoverProviderModels(providerId);
     })();
