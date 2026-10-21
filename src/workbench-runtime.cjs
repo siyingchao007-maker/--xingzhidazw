@@ -5042,41 +5042,34 @@ class WorkbenchRuntime extends EventEmitter {
     this._notify();
     try {
       await this._restoreKnowledgeRecoveryMarker();
-      for (const conversation of Array.isArray(this.state.conversations) ? this.state.conversations : []) {
-        if (!conversation?.id || conversation.deletedAt) continue;
-        try {
-          await this._persistConversationLedger(conversation);
-        } catch (error) {
-          boundedPush(
-            this.state.runtime.connection.warnings,
-            `历史对话总账回填失败：${conversation.title || conversation.id}；${safeErrorMessage(error)}`,
-          );
-        }
-      }
-      try {
-        await ensureDefaultCapabilityFiles(this.vault);
-        this.capabilityCatalog = await loadVaultCapabilityCatalog(this.vault, {
-          enabledExtensions: this.state.settings.capabilityStates,
-        });
-        await this._refreshCapabilityReleaseInspections();
-        this.state.runtime.agents = this.capabilityCatalog.agents.map((agent) => ({ ...agent }));
-        this.state.runtime.skills = this._projectCatalogSkills([]);
-      } catch (error) {
-        this.state.runtime.connection.warnings.push(`Vault 能力注册表未加载，已使用安全后备：${safeErrorMessage(error)}`);
+      // Historical ledgers are derived evidence; backfilling every conversation
+      // must not hold up the Codex connection, so it runs as a background task.
+      this._startConversationLedgerBackfill();
+      // The Vault capability catalog and the Codex app-server are independent,
+      // so load them concurrently. The catalog is always settled before skills
+      // are listed, including when the app-server fails to start.
+      const catalogLoad = this.refreshCapabilityCatalog().catch((error) => {
+        boundedPush(this.state.runtime.connection.warnings, `Vault 能力注册表未加载，已使用安全后备：${safeErrorMessage(error)}`);
         this.capabilityCatalog = {
           agents: listAgents().map((agent) => ({ ...agent, enabled: true, protected: true, source: "core" })),
           skills: [],
           issues: [{ kind: "catalog", path: "10_智能体与技能", severity: "error", message: safeErrorMessage(error) }],
         };
+      });
+      let initialized;
+      try {
+        initialized = await this.appServer.start();
+      } finally {
+        await catalogLoad;
       }
-      const initialized = await this.appServer.start();
       if (this.onlineContextAppServer
         && this.onlineContextAppServer !== this.appServer
         && this.onlineContextAppServer !== this.semanticAppServer) {
         try {
           await this._ensureAuxiliaryAppServer(this.onlineContextAppServer, "联网资料桥接通道");
         } catch (error) {
-          this.state.runtime.connection.warnings.push(
+          boundedPush(
+            this.state.runtime.connection.warnings,
             `联网资料桥接通道暂时不可用；Codex 主回答不受影响，外部 API 发送时将自动重连：${safeErrorMessage(error)}`,
           );
         }
@@ -5143,6 +5136,9 @@ class WorkbenchRuntime extends EventEmitter {
 
   stop() {
     const existingStopPersistence = this.stopPersistence;
+    // Cancel any startup ledger backfill; an in-flight write for one
+    // conversation still completes through its serialized write chain.
+    this.ledgerBackfillGeneration = (this.ledgerBackfillGeneration || 0) + 1;
     const snapshots = [];
     const conversationsToPersist = new Map();
     let activeStateChanged = false;
@@ -9815,7 +9811,53 @@ class WorkbenchRuntime extends EventEmitter {
     return message;
   }
 
+  // The ledger is an append-only hash chain stored as one file, so every write
+  // is a read-modify-write cycle. Serialize them per conversation: otherwise the
+  // background backfill and a finishing turn could both append to the same
+  // head and fork the chain.
   async _persistConversationLedger(conversation) {
+    if (!this.conversationLedgerWrites) this.conversationLedgerWrites = new Map();
+    const key = conversation.id;
+    const previous = this.conversationLedgerWrites.get(key) || Promise.resolve();
+    const write = previous.then(() => this._writeConversationLedger(conversation));
+    const settled = write.then(() => {}, () => {});
+    this.conversationLedgerWrites.set(key, settled);
+    settled.then(() => {
+      if (this.conversationLedgerWrites.get(key) === settled) this.conversationLedgerWrites.delete(key);
+    });
+    return write;
+  }
+
+  _startConversationLedgerBackfill() {
+    const generation = (this.ledgerBackfillGeneration || 0) + 1;
+    this.ledgerBackfillGeneration = generation;
+    const active = () => this.ledgerBackfillGeneration === generation;
+    const conversations = (Array.isArray(this.state.conversations) ? this.state.conversations : [])
+      .filter((conversation) => conversation?.id && !conversation.deletedAt);
+    this.ledgerBackfill = (async () => {
+      let failed = false;
+      for (const conversation of conversations) {
+        // Yield between conversations so hashing and page rendering for a long
+        // history never monopolise the renderer thread.
+        await new Promise((resolve) => setTimeout(resolve, 0));
+        if (!active()) return;
+        if (conversation.deletedAt || !this.state.conversations?.includes?.(conversation)) continue;
+        try {
+          await this._persistConversationLedger(conversation);
+        } catch (error) {
+          failed = true;
+          boundedPush(
+            this.state.runtime.connection.warnings,
+            `历史对话总账回填失败：${conversation.title || conversation.id}；${safeErrorMessage(error)}`,
+          );
+        }
+      }
+      if (failed && active()) this._notify();
+    })().catch(() => {});
+    return this.ledgerBackfill;
+  }
+
+  async _writeConversationLedger(conversation) {
     const ledgerPath = conversationLedgerPath(conversation.id, conversation);
     const viewPath = conversationLedgerViewPath(conversation.id, conversation);
     await this.vault.ensureFolder(path.posix.dirname(ledgerPath));
