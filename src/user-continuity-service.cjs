@@ -118,7 +118,7 @@ class UserContinuityService {
       : { operation: "create", path, content };
   }
 
-  async recordInteraction(turn) {
+  async recordInteraction(turn, { canRecord = null } = {}) {
     const event = buildInteractionEvent(turn);
     const path = interactionLedgerPath(event.occurredAt);
     const current = await this._read(path);
@@ -127,6 +127,9 @@ class UserContinuityService {
       return { status: "already-recorded", event, path, transactionId: null, undoAvailable: false };
     }
     const mutation = await this._upsertMutation(path, content, current);
+    if (typeof canRecord === "function" && canRecord() !== true) {
+      return { status: "skipped-read-only", event, path: null, transactionId: null, undoAvailable: false };
+    }
     const transaction = await this.commitPlan(this.writer.plan([mutation]));
     return {
       status: "written",
@@ -137,10 +140,17 @@ class UserContinuityService {
     };
   }
 
-  async applyAnalysis({ interactionEvent, analysis, automaticOrganization }) {
+  async applyAnalysis({ interactionEvent, analysis, automaticOrganization, canApply = null }) {
     if (!interactionEvent?.sourceMessageId || !interactionEvent?.occurredAt) {
       throw new Error("画像分析缺少可信交互事件");
     }
+    const writeAllowed = () => typeof canApply !== "function" || canApply() === true;
+    const withheld = () => ({
+      status: "recorded-only", written: 0, pending: 0, blocked: [],
+      ignored: [], growthEventsWritten: 0, paths: [], transactionId: null, undoAvailable: false,
+      reason: "处理期间整理设置、权限或对话状态已改变；未更新画像或成长档案，原始交互记录保留。",
+    });
+    if (!writeAllowed()) return withheld();
     const observations = Array.isArray(analysis?.observations) ? analysis.observations : [];
     const growthEvents = Array.isArray(analysis?.growthEvents) ? analysis.growthEvents : [];
     const blocked = [];
@@ -253,6 +263,9 @@ class UserContinuityService {
         undoAvailable: false,
       };
     }
+    // Reads and planning can outlive the user's authorization. An already
+    // started transaction keeps the writer's existing atomic/rollback semantics.
+    if (!writeAllowed()) return withheld();
     const transaction = await this.commitPlan(this.writer.plan(planned));
     return {
       status: blocked.length ? "written-with-pending" : "written",

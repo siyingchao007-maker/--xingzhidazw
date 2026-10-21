@@ -8322,7 +8322,12 @@ class WorkbenchRuntime extends EventEmitter {
       )) || null;
     }
     const startedAt = this.clock();
-    const permissionMode = conversation.permissionMode || this.state.settings.permissionMode;
+    const permissionMode = () => this.state.conversations.find(item => item.id === conversationId)?.permissionMode
+      || this.state.settings.permissionMode;
+    const canRecord = () => this.state.conversations.some(item => item.id === conversationId && !item.deletedAt && !item.archivedAt)
+      && ["auto-write", "confirm-write"].includes(permissionMode());
+    const canApply = () => canRecord() && permissionMode() === "auto-write"
+      && this.state.settings.conversationProcessingMode === "automatic";
     this.state.runtime.userContinuity = {
       status: "running",
       conversationId,
@@ -8337,7 +8342,7 @@ class WorkbenchRuntime extends EventEmitter {
     };
     await this._save().catch(() => {});
     this._notify();
-    if (permissionMode === "read-only") {
+    if (!canRecord()) {
       const result = {
         status: "skipped-read-only",
         analysisStatus: "disabled",
@@ -8359,9 +8364,9 @@ class WorkbenchRuntime extends EventEmitter {
         conversation,
         userMessage,
         assistantMessage,
-      });
+      }, { canRecord });
       this.state.knowledgeTransactions = this.knowledgeWriter.exportJournal();
-      const automaticOrganization = this.state.settings.conversationProcessingMode === "automatic";
+      const automaticOrganization = recorded.status !== "skipped-read-only" && canApply();
       if (automaticOrganization) {
         const analysis = await this.userContinuityAnalyzer({
           conversation,
@@ -8373,10 +8378,12 @@ class WorkbenchRuntime extends EventEmitter {
           interactionEvent: recorded.event,
           analysis,
           automaticOrganization: true,
+          canApply,
         });
         this.state.knowledgeTransactions = this.knowledgeWriter.exportJournal();
         const result = {
           ...continuityOutcome(applied),
+          ...(applied.status === "recorded-only" ? { status: applied.status, reason: applied.reason } : {}),
           eventPath: recorded.path,
           eventTransactionId: recorded.transactionId || null,
           analysisStatus: applied.status,
@@ -8403,12 +8410,16 @@ class WorkbenchRuntime extends EventEmitter {
         return result;
       }
       const result = {
-        status: "recorded-only",
+        status: recorded.status === "skipped-read-only" ? recorded.status : "recorded-only",
         eventPath: recorded.path,
         eventTransactionId: recorded.transactionId || null,
         analysisStatus: "disabled",
         undoAvailable: recorded.undoAvailable === true,
-        reason: "本轮功能选择为仅记录；已保存交互事件，但未运行画像与成长路径分析",
+        reason: permissionMode() === "confirm-write"
+          ? "已保存交互事件；当前为整理前确认，未自动更新画像与成长档案。"
+          : !canRecord()
+            ? "当前权限或对话状态不允许继续写入；未更新画像或成长档案，已存在的原始记录保留。"
+            : "本轮功能选择为仅记录；已保存交互事件，但未运行画像与成长路径分析",
       };
       this.state.runtime.userContinuity = {
         ...this.state.runtime.userContinuity,

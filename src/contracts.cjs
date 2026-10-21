@@ -196,9 +196,9 @@ function normalizeConversationState(stored = {}) {
     settings: {
       controlledSkillLoadingDefault: stored.settings?.controlledSkillLoadingDefault === true,
       permissionMode,
-      // Automatic organization is the product default. Older record-only
-      // selections are upgraded when the workspace loads.
-      conversationProcessingMode: "automatic",
+      // A default must not overwrite the user's saved opt-out on restart.
+      conversationProcessingMode: CONVERSATION_PROCESSING_MODES.has(stored.settings?.conversationProcessingMode)
+        ? stored.settings.conversationProcessingMode : "automatic",
       readScope: stored.settings?.readScope || "whole-vault",
       networkAccess: stored.settings?.networkAccess === true,
       showWorkPanel: stored.settings?.showWorkPanel !== false,
