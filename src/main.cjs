@@ -7,7 +7,7 @@ const os = require("node:os");
 const zlib = require("node:zlib");
 const { ItemView, Modal, Notice, Plugin, TFile, loadPdfJs } = require("obsidian");
 const { LicenseManager } = require("./commercial-licensing.cjs");
-const { getCurrentDeviceIdentity } = require("./commercial-device-identity.cjs");
+const { getCurrentDeviceIdentityAsync } = require("./commercial-device-identity.cjs");
 const { createCommercialVaultGate } = require("./commercial-vault-gate.cjs");
 const TRUSTED_COMMERCIAL_KEYS = require("./commercial-public-key.cjs");
 const COMMERCIAL_BUILD = typeof true !== "undefined" && true;
@@ -571,8 +571,10 @@ class XingzhiWorkbenchPlugin extends Plugin {
     this.capabilityPack = null;
     this.protectedSkillRuntimeDir = null;
     if (COMMERCIAL_BUILD) {
-      try { this.deviceIdentity = getCurrentDeviceIdentity(); }
+      // Asynchronous: reg.exe / ioreg can take seconds and must not freeze the UI.
+      try { this.deviceIdentity = await getCurrentDeviceIdentityAsync(); }
       catch (error) { this.deviceIdentityError = String(error?.message || "设备识别失败").slice(0, 200); }
+      if (this.startupCancelled) return;
       if (this.deviceIdentity) {
         this.licenseManager = new LicenseManager({
           load: async () => ({ licenseKey: stored.licenseKey }),
