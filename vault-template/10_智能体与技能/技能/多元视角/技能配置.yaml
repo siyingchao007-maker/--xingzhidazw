@@ -1,0 +1,47 @@
+{
+  "formatVersion": 3,
+  "id": "multi-lens",
+  "label": "多元视角",
+  "description": "多元视角透镜（行知）。PATH 观境阶段的盲区检查：先联网画出领域地图，标出用户所处的位置，再找出判断里缺失和丢失的东西，并把问题改写得更准。当用户要做有分量的决策（该不该、选哪个）、进入陌生的新领域、反复卡住想不明白、或想看清自己现在的处境时使用；也适用于“我是什么样的人”“我适不适合”“有没有什么我没考虑到的”“帮我全面分析”“为什么总做不成”“我是不是想错了”这类只站在单一角度的提问，用户不必说出“多元视角”。普通事实问答、文字改写或翻译、纯执行类请求、用户明确只要结论不要分析时不使用；情绪危机时先关心人，不走本流程。选中后第一步必须联网检索，不得先凭记忆回答。",
+  "version": "3.1.0",
+  "source": "extension",
+  "protected": false,
+  "enabled": false,
+  "loadMode": "on-demand",
+  "skillPath": "10_智能体与技能/技能/多元视角/SKILL.md",
+  "surface": "user",
+  "invocation": "implicit",
+  "skillType": "task",
+  "primaryEligible": true,
+  "controlsFinalLayout": false,
+  "returnsStructuredResult": false,
+  "capabilities": [
+    "领域地图",
+    "处境定位",
+    "盲区检查",
+    "大盘与近邻参照",
+    "缺失与丢失",
+    "问题改写"
+  ],
+  "intents": [
+    "做决策",
+    "进入新领域",
+    "反复卡住",
+    "看清处境",
+    "有没有什么没考虑到",
+    "全面分析"
+  ],
+  "tags": [
+    "多元视角",
+    "PATH观境",
+    "盲区检查"
+  ],
+  "requires": [],
+  "optionalDependencies": [],
+  "conflicts": [],
+  "recommendedOperators": [],
+  "readScopes": [],
+  "riskLevel": "bounded",
+  "maxDependencyDepth": 2,
+  "toolRequests": []
+}

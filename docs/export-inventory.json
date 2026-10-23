@@ -330,6 +330,12 @@
     "sha256": "709ab3fa28d5ac2347f5dbf0ebf5db4e4851523eabe303e705897991b548353a"
   },
   {
+    "path": "docs/MULTI-LENS-3.1.md",
+    "origin": "portable-project-tooling",
+    "bytes": 3495,
+    "sha256": "74d3aa744c73328b158d5110e46aaedc550370f8f30c2f3ac0a63ae89a8d0ed0"
+  },
+  {
     "path": "docs/PACKAGING.md",
     "origin": "portable-project-tooling",
     "bytes": 2248,
@@ -452,8 +458,8 @@
   {
     "path": "scripts/update-export-inventory.cjs",
     "origin": "portable-project-tooling",
-    "bytes": 1746,
-    "sha256": "d69420f64a29c17654b3427872cb17e4f5058af4d5fa7a54bb36ec8eb0fdb0fc"
+    "bytes": 1966,
+    "sha256": "3bfed163f87001800b2e948a122e898c4002ab727e1a6c542d6edbab95a5ad76"
   },
   {
     "path": "src/adaptive-retrieval.cjs",
@@ -1582,6 +1588,12 @@
     "origin": "prior-offline-regression",
     "bytes": 734,
     "sha256": "8eee780c150b1c0c335ba2aa92432e0cc14679508af6f64219790c39e6a19ca6"
+  },
+  {
+    "path": "tests/multi-lens-extension.test.cjs",
+    "origin": "portable-project-tooling",
+    "bytes": 6953,
+    "sha256": "203ebf60608b37cf2b5341c18f29d233682ed71a530706bec5d259863fa2a2f6"
   },
   {
     "path": "tests/picker-v2.test.cjs",
@@ -6106,6 +6118,18 @@
     "origin": "capability-or-system-template",
     "bytes": 1830,
     "sha256": "bd243a7c85d3dacd7913d116f6fdee84d36ddb56a8ebb164b87d92a8f403f6a5"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/技能/多元视角/SKILL.md",
+    "origin": "portable-project-tooling",
+    "bytes": 22514,
+    "sha256": "97e65833b767e8d4c08b83d795a1b8d375f4b7d91badd30937906b872aba1976"
+  },
+  {
+    "path": "vault-template/10_智能体与技能/技能/多元视角/技能配置.yaml",
+    "origin": "portable-project-tooling",
+    "bytes": 1874,
+    "sha256": "12bc00e74ea06bc3ccc78c362e6e40d489e2fdfd556835cf5b68e237e4e7ba95"
   },
   {
     "path": "vault-template/10_智能体与技能/技能/多视角分析/agents/openai.yaml",
