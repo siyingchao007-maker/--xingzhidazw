@@ -29,6 +29,7 @@ const additional = [
   "vault-template/10_智能体与技能/技能/多元视角/技能配置.yaml",
   "tests/multi-lens-extension.test.cjs",
   "docs/MULTI-LENS-3.1.md",
+  "docs/RELEASE-0.45.34.md",
 ];
 for (const file of additional) {
   if (!byPath.has(file)) byPath.set(file, { path: file, origin: "portable-project-tooling" });

@@ -1788,13 +1788,6 @@ class XingzhiWorkbenchView extends ItemView {
     this.refs.agentSelect = this.createCompactSelect(routingPanel, "智能体", "bot");
     this.refs.skillPicker = this.createCapabilityPicker(routingPanel, "skill");
     this.refs.lensPicker = this.createCapabilityPicker(routingPanel, "lens");
-    this.refs.capabilityManagerButton = createIconButton(
-      routingPanel,
-      "blocks",
-      "打开 Agent、Skill、透镜与受控工具管理",
-      () => this.openCapabilityManager(),
-    );
-    this.refs.capabilityManagerButton.addClass("xz-capability-manager-trigger");
 
     this.refs.agentModeSelect.addEventListener("change", () => {
       const agentMode = this.refs.agentModeSelect.value;
@@ -4397,7 +4390,6 @@ class XingzhiWorkbenchView extends ItemView {
       this.refs.agentModeSelect.disabled = settingsLocked;
       this.refs.agentSelect.disabled = settingsLocked || agents.length === 0;
       this.refs.agentSelect.closest(".xz-compact-select")?.toggleAttribute("hidden", agentMode !== "locked");
-      if (this.refs.capabilityManagerButton) this.refs.capabilityManagerButton.disabled = turnActive;
       this.refs.skillPicker.toggleAttribute("hidden", false);
       this.refs.lensPicker.toggleAttribute("hidden", false);
     }

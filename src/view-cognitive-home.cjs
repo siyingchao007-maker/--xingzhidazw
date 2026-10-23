@@ -3164,7 +3164,6 @@ function cognitiveWorkspaceClass(Base) { return class CognitiveWorkspace extends
     hexian.addClass("wb-tune-hexian");
     hexian.createDiv({ cls: "wb-art wb-art-tune-chord", attr: { "aria-hidden": "true" } });
     this.refs.tuneHexian = hexian.createDiv({ cls: "wb-tune-hexian-host" });
-    this.wbMore(hexian, "能力管理", "tune-caps", "package", () => this.tuneOpenCapabilities());
 
     const row2 = content.createDiv({ cls: "wb-row wb-tune-row2" });
     // 音色：外观（走 setPreference，另一条通道）
@@ -3191,10 +3190,6 @@ function cognitiveWorkspaceClass(Base) { return class CognitiveWorkspace extends
   }
   tuneOpenSettings() {
     if (typeof this.plugin?.openWorkbenchSettings === "function") return this.plugin.openWorkbenchSettings();
-    return this.plugin?.activateWorkbench?.("settings");
-  }
-  tuneOpenCapabilities() {
-    if (typeof this.plugin?.openCapabilityManager === "function") return this.plugin.openCapabilityManager();
     return this.plugin?.activateWorkbench?.("settings");
   }
   // 所有写入都经这里：busy 时不提交，updateSettings 抛错兜住转成 Notice。
@@ -3385,7 +3380,7 @@ function cognitiveWorkspaceClass(Base) { return class CognitiveWorkspace extends
     if (!licensed) {
       lensField.createEl("p", { cls: "wb-hint", text: "能力包还没解锁，认知透镜暂时不可用。去下面「校音」里解锁。" });
     } else if (!lenses.length) {
-      lensField.createEl("p", { cls: "wb-hint", text: "运行时还没报告可用透镜。打开一次对话，或在「能力管理」里刷新能力目录。" });
+      lensField.createEl("p", { cls: "wb-hint", text: "运行时还没报告可用透镜。重新打开行知后，能力目录会自动加载。" });
     } else {
       const wrap = lensField.createDiv({ cls: "wb-lenses" });
       for (const lens of lenses) {
@@ -3415,7 +3410,7 @@ function cognitiveWorkspaceClass(Base) { return class CognitiveWorkspace extends
       const field = host.createDiv({ cls: "wb-field" });
       field.createDiv({ cls: "wb-label" }).createSpan({ text: "锁定到" });
       if (!agents.length) {
-        field.createEl("p", { cls: "wb-hint", text: "运行时还没报告可用 Agent。去「能力管理」刷新能力目录。" });
+        field.createEl("p", { cls: "wb-hint", text: "运行时还没报告可用 Agent。重新打开行知后，能力目录会自动加载。" });
       } else {
         const wrap = field.createDiv({ cls: "wb-select-wrap" });
         const select = wrap.createEl("select", { cls: "wb-select", attr: { "aria-label": "锁定到哪个 Agent", ...(busy ? { disabled: "true" } : {}) } });

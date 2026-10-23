@@ -378,6 +378,12 @@
     "sha256": "76b732f4f1e89d322dd53974543c1236ab31af482886a8ae8010d3109a41612d"
   },
   {
+    "path": "docs/RELEASE-0.45.34.md",
+    "origin": "portable-project-tooling",
+    "bytes": 2241,
+    "sha256": "0a5fd7c34354ea92cd8e0893d225bbe8eca5906314b29658d6185f42919d0da2"
+  },
+  {
     "path": "docs/VALIDATION-0.45.31.md",
     "origin": "portable-project-tooling",
     "bytes": 1507,
@@ -405,25 +411,25 @@
     "path": "manifest.json",
     "origin": "installed-manifest",
     "bytes": 311,
-    "sha256": "8d84141483042e788bbba6fe6f1499721cadf427e97a464c4971737e2fe6a4fc"
+    "sha256": "736738236d0f226508e6888faccb3965550fb3ec0c50383f6ce66902637ac3ff"
   },
   {
     "path": "package-lock.json",
     "origin": "portable-project-tooling",
     "bytes": 252,
-    "sha256": "9864d2100240975639a1f36517772c3b89ad890ee80fa85d56157fd7fc93cdca"
+    "sha256": "114ad93b706eb83cafbed09ac3c36a9a1f3480f4f6d7eac15e67729d4260eb6a"
   },
   {
     "path": "package.json",
     "origin": "portable-project-tooling",
     "bytes": 748,
-    "sha256": "a5962b294efe398dea9b44e0e719356220876d8bf1fc92dc82114bf6f058d18e"
+    "sha256": "88eca57502ed0221bfd3f81171cc58d0da79ab883fe43d502c85cadf107a67eb"
   },
   {
     "path": "README.md",
     "origin": "portable-project-tooling",
-    "bytes": 3153,
-    "sha256": "15058005931dc9ad4449bd4db5f756ae5b8c563d5b606bea925e978457890c45"
+    "bytes": 3340,
+    "sha256": "45fe126bd3a190bf24920497b3bce707d8d868b3ee8b92c68d752f1bb4cadb0a"
   },
   {
     "path": "release.local.example.json",
@@ -458,8 +464,8 @@
   {
     "path": "scripts/update-export-inventory.cjs",
     "origin": "portable-project-tooling",
-    "bytes": 1966,
-    "sha256": "3bfed163f87001800b2e948a122e898c4002ab727e1a6c542d6edbab95a5ad76"
+    "bytes": 1995,
+    "sha256": "680368dc0e0e79cbf6aaa968f679b65eba8c4be8cc973996f451db26d7e9f4bc"
   },
   {
     "path": "src/adaptive-retrieval.cjs",
@@ -1149,7 +1155,7 @@
     "path": "src/release-file-contract.cjs",
     "origin": "installed-bundled-module",
     "bytes": 1281,
-    "sha256": "1ba011cae8e8f2092f40ad348ea32eec7bb9a9c59ba7b93c2c1c43bda7fcd6f4"
+    "sha256": "2dd99940936eeeb08365813919bb754da8cd588ba008c40c92c0e2da759ef1cf"
   },
   {
     "path": "src/request-presentation.cjs",
@@ -1376,8 +1382,8 @@
   {
     "path": "src/view-cognitive-home.cjs",
     "origin": "installed-bundled-module",
-    "bytes": 239009,
-    "sha256": "fbc5a364f83ec114b32bbf6e3093a7d12d1287fd3f5a94cd3a2431db2f95ae83"
+    "bytes": 238708,
+    "sha256": "59864db2ae1bf362e5a826e4c7a226d828cc8a8c66462453012163db315a16fd"
   },
   {
     "path": "src/view-connections.cjs",
@@ -1508,8 +1514,8 @@
   {
     "path": "src/workbench-view.cjs",
     "origin": "installed-bundled-module",
-    "bytes": 335053,
-    "sha256": "a5df71e338d1758f099a586b6bcf5d4b6b4a6c04234b6ffb53d7684ade1550f4"
+    "bytes": 334667,
+    "sha256": "4c51bd1bd13d60a4074181f52d4dde5f1819bd9e72b60d4edbe94fa722508e44"
   },
   {
     "path": "tests/authorization-center-sync.test.cjs",
@@ -6686,7 +6692,7 @@
   {
     "path": "versions.json",
     "origin": "installed-manifest",
-    "bytes": 4214,
-    "sha256": "56f1952c8aa6495f7522926209de7e9a0b7210c2e024c42c065c0ccb8b775f7c"
+    "bytes": 4237,
+    "sha256": "bfb84bdd91c8a536fa7fd1e75cc3628359b2543303161934e18a6838e51f603e"
   }
 ]
